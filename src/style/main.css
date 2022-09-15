@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "ElectronicArtsDisplay-Regular";
+}
+
+html {
+  font-size: 10px;
+  /* overflow-x: hidden; */
+}
+
+/* VARIABLES */
+/* COLORS */
+/* TYPOGRAPHY */
+/* MIXINS */
+/* FLEX-DIRECTION ROW */
+/* FLEX-DIRECTION COLUMN */
+/* MEDIA QUERIES */
+/* HEADING 1 */
+/* HEADING 2 */
+/* HEADING 3 */
+/* HEADING 4 */
+/* SPAN */
+/* LINK */
+/* FONT FAMILY */
+/* FONT AND ASSETS */
+@font-face {
+  font-family: "ElectronicArtsDisplay-Regular";
+  src: url("../font/ElectronicArtsDisplay-Regular.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ElectronicArtsDisplay-Bold";
+  src: url("../font/ElectronicArtsDisplay-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+/* PARTIALS *//*# sourceMappingURL=main.css.map */

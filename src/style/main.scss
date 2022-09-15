@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "ElectronicArtsDisplay-Regular";
+  }
+  
+  html {
+    font-size: 10px;
+    /* overflow-x: hidden; */
+  }
+  
+  /* VARIABLES */
+  @import "./scss/content/variables";
+  
+  /* MIXINS */
+  @import "./scss/content/mixins";
+  
+  /* FONT AND ASSETS */
+  @import "./scss/content/fonts";
+  @import "./scss/content/button";
+  @import "./scss/content/card";
+  @import "./scss/content/tab";
+  
+  /* PARTIALS */
+  @import "./scss/content/all-partials";
