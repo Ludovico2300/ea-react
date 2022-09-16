@@ -11,13 +11,39 @@ export default function AllCards() {
             <div className="first-line">
 
               <Card
-                img="https://ichef.bbci.co.uk/news/976/cpsprodpb/17638/production/_124800859_gettyimages-817514614.jpg"
-                logo="../assets/cards/fifa-logo.svg"
+                source="https://media.contentapi.ea.com/content/dam/gin/images/2022/07/eas-fifa22-gen5-ue-keyart-horz-f23logo.jpg.adapt.crop1x1.767p.jpg"
+                logo="./assets/cards/fifa-logo.svg"
+                game="fifa"
+              />
+              <Card
+                source="./assets/cards/apex.jpg"
+                logo="./assets/cards/apex-logo.svg"
+                game="fifa"
+              />
+              <Card
+                source="./assets/cards/fifa.jpg"
+                logo="./assets/cards/fifa-logo.svg"
                 game="fifa"
               />
 
             </div>
-            <div className="second-line"></div>
+            <div className="second-line">
+            <Card
+                source="https://media.contentapi.ea.com/content/dam/gin/images/2022/07/eas-fifa22-gen5-ue-keyart-horz-f23logo.jpg.adapt.crop1x1.767p.jpg"
+                logo="./assets/cards/fifa-logo.svg"
+                game="fifa"
+              />
+              <Card
+                source="./assets/cards/apex.jpg"
+                logo="./assets/cards/apex-logo.svg"
+                game="fifa"
+              />
+              <Card
+                source="./assets/cards/fifa.jpg"
+                logo="./assets/cards/fifa-logo.svg"
+                game="fifa"
+              />
+            </div>
           </div>
           <Button buttonSize="btn--medium" buttonStyle="btn--outline-black">
             Ultimi giochi
@@ -27,3 +53,7 @@ export default function AllCards() {
     </>
   );
 }
+
+/**
+ * * FARE UN DRIVE CON LE IMMAGINI
+ */
