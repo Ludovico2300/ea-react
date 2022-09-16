@@ -37,4 +37,369 @@ html {
   font-weight: bold;
   font-style: normal;
 }
-/* PARTIALS *//*# sourceMappingURL=main.css.map */
+.btn, .btn--outline-white, .btn--outline-black, .btn--primary {
+  padding: 1.6rem 2.4rem;
+  font-size: 1.8rem;
+  border-radius: 3px;
+  transition: all 0.1s linear;
+  cursor: pointer;
+}
+.btn:hover, .btn--outline-white:hover, .btn--outline-black:hover, .btn--primary:hover {
+  transition: all 0.1s ease-in-out;
+  transform: scale(1.05);
+}
+
+.btn--primary {
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid rgba(0, 0, 0, 0);
+}
+
+.btn--outline-black {
+  border: 2px solid #000000;
+  background-color: transparent;
+}
+
+.btn--outline-white {
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  background-color: transparent;
+}
+
+.btn--medium {
+  padding: 1.6rem 2.4rem;
+}
+
+.btn--large {
+  font-size: 1.6rem;
+  width: 100% !important;
+}
+
+/* PARTIALS */
+/* INIZIO GABBO */
+#card-section {
+  width: auto;
+  height: auto;
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#card-section .title {
+  font-size: 4.4rem;
+  line-height: 1.15;
+  letter-spacing: normal;
+  font-weight: bolder;
+  color: "$black-2";
+  margin: 6rem 0rem 3rem 0rem;
+  font-family: "ElectronicArtsDisplay-Bold";
+}
+#card-section .cards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#card-section .cards .first-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#card-section .cards .first-line .card {
+  width: 35rem;
+  height: 35rem;
+  margin: 0rem 1.4rem 1.4rem 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#card-section .cards .first-line .card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#card-section .cards .first-line .card .filter {
+  width: 35rem;
+  height: 35rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  display: none;
+  z-index: 0;
+  transition: 0.3s linear;
+}
+#card-section .cards .first-line .card .cover {
+  width: auto;
+  height: auto;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: scale(0.3);
+}
+#card-section .cards .first-line .card .apex {
+  transition: 0.3s linear;
+}
+#card-section .cards .first-line .card .fifa {
+  transition: 0.3s linear;
+}
+#card-section .cards .first-line .card .battle {
+  transition: 0.3s linear;
+}
+#card-section .cards .first-line .card h4 {
+  font-size: 1.8rem;
+  line-height: 1.15;
+  letter-spacing: normal;
+  font-weight: 550;
+  color: "$black-2";
+  display: none;
+  position: absolute;
+  color: #ffffff;
+}
+#card-section .cards .first-line .card:hover img {
+  z-index: 0;
+}
+#card-section .cards .first-line .card:hover .filter {
+  display: flex;
+  background-color: #42378f;
+  background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
+  z-index: 1;
+  opacity: 0.8;
+  transition: 0.3s linear;
+}
+#card-section .cards .first-line .card:hover .cover {
+  z-index: 2;
+}
+#card-section .cards .first-line .card:hover .apex {
+  transition: 0.3s linear;
+  transform: translateY(-7.8rem) scale(0.3);
+}
+#card-section .cards .first-line .card:hover .fifa {
+  transition: 0.3s linear;
+  transform: translateY(-8.8rem) scale(0.3);
+}
+#card-section .cards .first-line .card:hover .battle {
+  transition: 0.3s linear;
+  transform: translateY(-7rem) scale(0.3);
+}
+#card-section .cards .first-line .card:hover h4 {
+  z-index: 2;
+  display: flex;
+  cursor: pointer;
+}
+#card-section .cards .second-line {
+  margin: 0rem 0rem 3rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#card-section .cards .second-line .card {
+  width: 35rem;
+  height: 35rem;
+  margin: 1.4rem 1.4rem 0rem 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#card-section .cards .second-line .card img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 1;
+}
+#card-section .cards .second-line .card .filter {
+  width: 35rem;
+  height: 35rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  display: none;
+  z-index: 0;
+  transition: 0.3s linear;
+}
+#card-section .cards .second-line .card .cover {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: scale(0.3);
+}
+#card-section .cards .second-line .card .sims {
+  transform: scale(0.15);
+  transition: 0.3s linear;
+}
+#card-section .cards .second-line .card .car {
+  transform: scale(1);
+  transition: 0.3s linear;
+}
+#card-section .cards .second-line .card .two {
+  transform: scale(0.25);
+  transition: 0.3s linear;
+}
+#card-section .cards .second-line .card h4 {
+  font-size: 1.8rem;
+  line-height: 1.15;
+  letter-spacing: normal;
+  font-weight: 550;
+  color: "$black-2";
+  display: none;
+  position: absolute;
+  color: #ffffff;
+  font-weight: 550;
+}
+#card-section .cards .second-line .card:hover img {
+  z-index: 0;
+}
+#card-section .cards .second-line .card:hover .filter {
+  display: flex;
+  background-color: #42378f;
+  background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
+  z-index: 1;
+  opacity: 0.8;
+  transition: 0.3s linear;
+}
+#card-section .cards .second-line .card:hover .cover {
+  z-index: 2;
+}
+#card-section .cards .second-line .card:hover .car {
+  transform: translateY(-7.8rem);
+  transition: 0.3s linear;
+}
+#card-section .cards .second-line .card:hover .two {
+  transform: translateY(-8.4rem) scale(0.25);
+  transition: 0.3s linear;
+}
+#card-section .cards .second-line .card:hover .sims {
+  transform: translateY(-7.6rem) scale(0.15);
+  transition: 0.3s linear;
+}
+#card-section .cards .second-line .card:hover h4 {
+  z-index: 2;
+  display: flex;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  #card-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #card-section .title {
+    font-size: 3.2rem;
+    line-height: 1.15;
+    letter-spacing: normal;
+    font-weight: 600;
+    color: "$black-2";
+    font-weight: bold;
+  }
+  #card-section .cards .sub-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #card-section .cards .sub-container .first-line {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #card-section .cards .sub-container .first-line .card {
+    width: 35rem;
+    height: 35rem;
+    margin: 1.2rem;
+  }
+  #card-section .cards .sub-container .first-line .card .filter {
+    width: 35rem;
+    height: 35rem;
+  }
+  #card-section .cards .sub-container .second-line {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #card-section .cards .sub-container .second-line .card {
+    width: 35rem;
+    height: 35rem;
+    margin: 1.2rem;
+  }
+  #card-section .cards .sub-container .second-line .card .filter {
+    width: 35rem;
+    height: 35rem;
+  }
+}
+@media (max-width: 767px) {
+  #card-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #card-section .title {
+    font-size: 3.2rem;
+    line-height: 1.15;
+    letter-spacing: normal;
+    font-weight: 600;
+    color: "$black-2";
+    font-weight: bold;
+    margin-top: 4rem;
+  }
+  #card-section .cards .sub-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #card-section .cards .sub-container .first-line {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #card-section .cards .sub-container .first-line .card {
+    width: 33.5rem;
+    height: 33.5rem;
+    margin: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  #card-section .cards .sub-container .first-line .card:first-child {
+    margin-top: 0;
+  }
+  #card-section .cards .sub-container .first-line .card .filter {
+    width: 33.5rem;
+    height: 33.5rem;
+  }
+  #card-section .cards .sub-container .second-line {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #card-section .cards .sub-container .second-line .card {
+    width: 33.5rem;
+    height: 33.5rem;
+    margin: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  #card-section .cards .sub-container .second-line .card .filter {
+    width: 33.5rem;
+    height: 33.5rem;
+  }
+  #card-section .buttonCards {
+    width: 100% !important;
+  }
+  .btn--medium {
+    width: 33.5rem;
+    font-size: 1.6rem;
+  }
+}
+/* FINE GABBO *//*# sourceMappingURL=main.css.map */
