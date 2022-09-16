@@ -30,12 +30,12 @@
   background-color: transparent;
 }
 
-.btn-medium {
+.btn--medium {
   padding: 1.6rem 2.4rem;
 }
 
 //USE ONLY SMARTPHONE SCREEN
 .btn--large {
   font-size: $h4-smartphone;
-  width: 100%;
+  width: 100% !important;
 }
