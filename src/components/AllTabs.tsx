@@ -6,8 +6,7 @@ export default function AllTabs() {
     <>
       <div id="content-section">
         <h3 className="title-content">Ultime novità</h3>
-
-        <div className="btn-content-container">
+        <div className="card-content-container">
           <Tab
             source="./assets/tabs/inside-ea/maxiswebsite-brand-logo.jpg"
             tag="Inside EA"
@@ -61,15 +60,13 @@ export default function AllTabs() {
             date="1-apr-2022"
             content="La nostra ambizione: ispirare tutti a creare un mondo migliore
         attraverso il gioco creativo"
-          />f
-          <Button
-            buttonSize="btn--medium"
-            buttonStyle="btn--outline-black"
-          >
-            Più dettagli
-          </Button>
+          />
         </div>
+
+        <Button buttonSize="btn--medium" buttonStyle="btn--outline-black">
+          Più dettagli
+        </Button>
       </div>
     </>
-  )
+  );
 }

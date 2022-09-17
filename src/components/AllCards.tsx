@@ -2,7 +2,6 @@ import { Button } from "./utils/Button";
 import Card from "./utils/Card";
 
 export default function AllCards() {
-  console.log(window.innerWidth);
 
   return (
     <>

@@ -11,7 +11,7 @@ export default function Tab(props: TabProps) {
 
   return (
 
-    <article className="card-content">
+    <div className="card-content">
       <img
         className={`img-content ${game}`}
         src={source}
@@ -33,6 +33,6 @@ export default function Tab(props: TabProps) {
           </div>
         </div>
       </div>
-    </article>
+    </div>
   )
 }
