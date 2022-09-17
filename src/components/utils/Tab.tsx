@@ -1,19 +1,19 @@
 export type TabProps = {
   source: string;
   tag: string;
-  game: string;
+  
   date: string;
   title: string;
   content: string;
 };
 export default function Tab(props: TabProps) {
-  const { source, tag, game, date, title, content } = props;
+  const { source, tag,  date, title, content } = props;
 
   return (
 
     <div className="card-content">
       <img
-        className={`img-content ${game}`}
+        className={`img-content`}
         src={source}
         alt=""
       />
