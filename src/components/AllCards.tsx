@@ -49,7 +49,7 @@ export default function AllCards() {
             buttonSize="btn--medium"
             buttonStyle="btn--outline-black"
           >
-            Ultimi giochi
+            Più dettagli
           </Button>
         </div>
       </div>
