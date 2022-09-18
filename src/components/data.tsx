@@ -108,8 +108,8 @@ let cards: Array<Card> = [
         source: "./assets/tabs/fifa/pitchnotes-22.jpg",
         tag: "FIFA",
         date: "06-lug-2022",
-        title: "FIFA 22 | Note degli sviluppatori - Aggiornamento #14 - EA SPORTS",
-        content: `L'aggiornamento #14 sarà presto disponibile in FIFA 22 e introdurrà diverse novità per la fase difensiva e offensiva. Puoi consultare le note complete dell'aggiornamento qui. In questo articolo ci occuperemo di alcune delle p…`
+        title: "Aggiornamento #14 - EA SPORTS",
+        content: `L'aggiornamento #14 sarà presto disponibile in FIFA 22 e introdurrà diverse novità per la fase difensiva e offensiva. Puoi consultare le note complete dell'aggiornamento qui.`
     },
     {
         id: 13,
@@ -124,7 +124,7 @@ let cards: Array<Card> = [
         source: "./assets/tabs/fifa/pitchnotes-22.png",
         tag: "FIFA",
         date: "15-giu-2022",
-        title: "FIFA 22 | Note degli sviluppatori - Aggiornamento reattività di gioco",
+        title: "Aggiornamento reattività di gioco",
         content: `In queste Note degli sviluppatori vogliamo informarvi su ciò a cui sta lavorando il team di sviluppo di FIFA per migliorare la reattività di gioco online.`
     },
     {
@@ -140,15 +140,15 @@ let cards: Array<Card> = [
         source: "./assets/tabs/fifa/fifa-22-featured.png",
         tag: "FIFA",
         date: "31-mag-2022",
-        title: "AGGIORNAMENTO SULLA PARTNERSHIP MARKETING TRA EA SPORTS FIFA E INTER",
-        content: `Sebbene l'esperienza di gioco non cambierà, a partire dal 1° luglio 2022 terminerà la nostra partnership marketing esclusiva con l'Inter. Lo stemma del club, l'identità, i nomi e le sembianze dello stadio e dei giocatori, ecc…`
+        title: "PARTNERSHIP MARKETING TRA EA SPORTS FIFA E INTER",
+        content: `Sebbene l'esperienza di gioco non cambierà, a partire dal 1° luglio 2022 terminerà la nostra partnership marketing esclusiva con l'Inter.`
     },
     {
         id: 17,
         source: "./assets/tabs/fifa/pitchnotes-22.png",
         tag: "FIFA",
         date: "2-mag-2022",
-        title: "FIFA 22 | Note degli sviluppatori - FAQ test Cross-Play",
+        title: "FAQ test Cross-Play",
         content: `Testeremo a breve la funzionalità Cross-Play in Stagioni Online e in Amichevoli Online nelle versioni per PlayStation®5, Xbox Series X|S e Stadia di EA SPORTS FIFA 22.`
     },
     {
@@ -212,7 +212,7 @@ let cards: Array<Card> = [
         source: "./assets/tabs/apex-legends/apex-s13-team-bundles.png",
         tag: "Apex Legends",
         date: "5-lug-2022",
-        title: "TI DIAMO IL BENVENUTO ALLA SECONDA EDIZIONE DELL'ALGS CHAMPIONSHIP, 7-10 LU…",
+        title: "TI DIAMO IL BENVENUTO",
         content: `Ecco tutto quello che c'è da sapere sulla seconda edizione dell'ALGS Championship nella PNC Arena di Raleigh, Carolina del Nord!`
     },
     {
@@ -236,7 +236,7 @@ let cards: Array<Card> = [
         source: "./assets/tabs/apex-legends/apex-thumbnail-storiesfromtheoutlands.jpg",
         tag: "Apex Legends",
         date: "14-giu-2022",
-        title: `GUARDA APEX LEGENDS | STORIE DI FRONTIERA: "AFFARI DI FAMIGLIA"`,
+        title: `STORIE DI FRONTIERA: "AFFARI DI FAMIGLIA"`,
         content: `Ajay, una vivace adolescente decisa a riscattarsi dal lascito della sua famiglia, si scontra con la sua prima dose di realtà quando il suo ospedale da campo esaurisce i medicinali. Con l'aiuto di una vecchia conoscenza, dovrà…`
     },
     {
@@ -425,7 +425,7 @@ let cards: Array<Card> = [
     },
     {
         id: 52,
-        source: "./assets/tabs/team-5/Capy-famo-er-bagno.webp",
+        source: "https://thumbs.gfycat.com/MassiveMiserlyLabradorretriever-size_restricted.gif",
         tag: "Team 5",
         date: "17-09-2022",
         title: "Niente da vedere",

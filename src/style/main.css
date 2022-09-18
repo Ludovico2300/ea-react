@@ -337,6 +337,10 @@ html {
     width: 35rem;
     height: 35rem;
   }
+  #card-section .btn--medium {
+    margin-top: 1.5rem;
+    margin-bottom: 4rem;
+  }
 }
 @media (max-width: 767px) {
   #card-section {
@@ -525,6 +529,7 @@ html {
   letter-spacing: normal;
   font-weight: 550;
   color: "$black-2";
+  /* height: 100%; */
 }
 #content-section .btn--medium {
   margin-top: 3rem;
@@ -539,13 +544,27 @@ html {
     background-color: #f3f3f3;
   }
   #content-section .title-content {
-    font-size: 4.4rem;
+    font-size: 3.2rem;
     line-height: 1.15;
     letter-spacing: normal;
-    font-weight: bolder;
+    font-weight: 600;
     color: "$black-2";
     margin-top: 3rem;
     font-family: "ElectronicArtsDisplay-Bold";
+  }
+  #content-section .tab-bar-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+    padding: 0;
+    height: auto;
+  }
+  #content-section .tab-bar-content .second-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   #content-section .card-content-container {
     display: flex;
@@ -614,12 +633,21 @@ html {
     font-family: "ElectronicArtsDisplay-Bold";
   }
   #content-section .card-content-container .card-content .info-card-content-container .text-card-content {
+    font-family: "ElectronicArtsDisplay-Regular";
+    width: 32rem;
+    height: 100%;
+  }
+  #content-section .card-content-container .card-content .info-card-content-container .text-card-content h4 {
     font-size: 1.6rem;
     line-height: 1.65;
     letter-spacing: normal;
     font-weight: 550;
     color: "$black-2";
-    font-family: "ElectronicArtsDisplay-Regular";
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
   #content-section .card-content-container .card-content .info-card-content-container .text-card-content .pride {
     width: 29rem;
@@ -644,12 +672,17 @@ html {
   }
   #content-section .tab-bar-content {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin-top: 3rem;
-    margin-left: 28rem;
     padding: 0;
-    height: 5rem;
+    height: auto;
+  }
+  #content-section .tab-bar-content .second-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   #content-section .tab-bar-content button {
     background-color: inherit;
@@ -660,9 +693,11 @@ html {
     padding: 14px 16px;
     transition: 0.3s;
     font-size: 1.6rem;
+    margin: 0.3rem 0rem;
+    border-bottom: 1px solid #f3f3f3;
   }
   #content-section .tab-bar-content button:hover {
-    background-color: #ddd;
+    background-color: transparent;
   }
   #content-section .tab-bar-content button.active {
     background-color: #ccc;

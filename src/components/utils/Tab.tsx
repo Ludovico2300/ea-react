@@ -28,9 +28,9 @@ export default function Tab(props: TabProps) {
           <h3>{title}</h3>
         </div>
         <div className="text-card-content">
-          <div>
+          <h4>
             {content}
-          </div>
+          </h4>
         </div>
       </div>
     </div>

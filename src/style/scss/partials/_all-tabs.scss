@@ -110,6 +110,7 @@
 
         .text-card-content {
           @include h4("desktop");
+          /* height: 100%; */
         }
       }
     }
@@ -125,9 +126,20 @@
     background-color: $white-3;
 
     .title-content {
-      @include h1("desktop");
+      @include h1("tablet");
       margin-top: 3rem;
       font-family: "ElectronicArtsDisplay-Bold";
+    }
+
+    .tab-bar-content {
+      @include flex-column-center;
+      margin-top: 3rem;
+      padding: 0;
+      height: auto;
+
+      .second-section {
+        @include flex-center-center;
+      }
     }
 
     .card-content-container {
@@ -189,8 +201,18 @@
           }
 
           .text-card-content {
-            @include h4("tablet");
             font-family: "ElectronicArtsDisplay-Regular";
+            width: 32rem;
+            height: 100%;
+
+            h4 {
+              @include h4("tablet");
+              display: -webkit-box;
+              max-width: 100%;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+            }
 
             .pride {
               width: 29rem;
@@ -218,11 +240,14 @@
     }
 
     .tab-bar-content {
-      @include flex-center-start;
+      @include flex-column-center;
       margin-top: 3rem;
-      margin-left: 28rem;
       padding: 0;
-      height: 5rem;
+      height: auto;
+
+      .second-section {
+        @include flex-center-center;
+      }
 
       button {
         background-color: inherit;
@@ -233,9 +258,11 @@
         padding: 14px 16px;
         transition: 0.3s;
         font-size: 1.6rem;
+        margin: 0.3rem 0rem;
+        border-bottom: 1px solid $white-3;
 
         &:hover {
-          background-color: #ddd;
+          background-color: transparent;
         }
       }
 
