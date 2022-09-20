@@ -1,4 +1,5 @@
 import { Button } from "./utils/Button";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -34,14 +35,14 @@ export default function Footer() {
 
       <div id="sub-footer-1">
         <div id="sub-footer-link">
-          <a href="#">Lavora con noi</a>
-          <a href="#">Dirigenza</a>
-          <a href="#">Rapporto sull'impatto</a>
-          <a href="#">Attività politiche</a>
+          <Link to="#">Lavora con noi</Link>
+          <Link to="#">Dirigenza</Link>
+          <Link to="#">Rapporto sull'impatto</Link>
+          <Link to="#">Attività politiche</Link>
           <br />
-          <a href="#">Segnala un problema</a>
-          <a href="#">Dichiarazione globale sul rispetto dei diritti umani</a>
-          <a href="#">Sicurezza e privacy</a>
+          <Link to="#">Segnala un problema</Link>
+          <Link to="#">Dichiarazione globale sul rispetto dei diritti umani</Link>
+          <Link to="#">Sicurezza e privacy</Link>
         </div>
         <div id="sub-footer-social">
           <h3>Partecipa alla conversazione</h3>
@@ -64,54 +65,54 @@ export default function Footer() {
 
         <div id="sub-footer-part2">
           <div id="sub-footer-accessibilità">
-            <a href="#" className="sup-span">
+            <Link to="#" className="sup-span">
               Libreria dei giochi
-            </a>
-            <a href="#" className="sup-span">
+            </Link>
+            <Link to="#" className="sup-span">
               Registrati
-            </a>
-            <a href="#" className="sup-span">
+            </Link>
+            <Link to="#" className="sup-span">
               Riscatta codice
-            </a>
-            <a href="#" className="sup-span">
+            </Link>
+            <Link to="#" className="sup-span">
               {" "}
               Origin
-            </a>
-            <a href="#" className="sup-span">
+            </Link>
+            <Link to="#" className="sup-span">
               Informazioni
-            </a>
-            <a href="#" className="sup-span">
+            </Link>
+            <Link to="#" className="sup-span">
               Accessibilità
-            </a>
-            <a href="#" className="sup-span">
+            </Link>
+            <Link to="#" className="sup-span">
               Aiuto
-            </a>
+            </Link>
           </div>
           <div id="sub-footer-privacy">
-            <a href="#" className="sub-span">
+            <Link to="#" className="sub-span">
               Note legali e privacy
-            </a>
-            <a href="#" className="sub-span">
+            </Link>
+            <Link to="#" className="sub-span">
               Accordo con l’utente
-            </a>
-            <a href="#" className="sub-span">
+            </Link>
+            <Link to="#" className="sub-span">
               Politica sulla privacy e sui cookie (i tuoi diritti sulla privacy)
-            </a>
-            <a href="#" className="sub-span">
+            </Link>
+            <Link to="#" className="sub-span">
               Aggiornamenti sui servizi online
-            </a>
-            <a href="#" className="sub-span yt">
+            </Link>
+            <Link to="#" className="sub-span yt">
               Termini di servizio di YouTube
-            </a>
-            <a href="#" className="sub-span">
+            </Link>
+            <Link to="#" className="sub-span">
               Norme sulla privacy di Google
-            </a>
-            <a href="#" className="sub-span">
+            </Link>
+            <Link to="#" className="sub-span">
               Cookie Preferenze
-            </a>
-            <a href="#" className="sub-span">
+            </Link>
+            <Link to="#" className="sub-span">
               © 2022 Electronic Arts Inc.
-            </a>
+            </Link>
           </div>
         </div>
 
