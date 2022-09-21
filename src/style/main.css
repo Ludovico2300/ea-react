@@ -77,6 +77,103 @@ html {
 }
 
 /* PARTIALS */
+/* Inizio parte Tiziano */
+.hero-img {
+  position: relative;
+  text-align: center;
+  width: 100vw;
+  height: 69vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.hero-img .hero-img-one {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.apex-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  left: -17%;
+  top: 22%;
+  align-content: space-between;
+}
+
+p {
+  font-size: 2.4rem;
+  line-height: 1.15;
+  letter-spacing: normal;
+  color: "$black-2";
+  color: #ffffff;
+  padding: 10px;
+  margin-bottom: 20px;
+  -ms-flex-align: start;
+}
+
+.bottom-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+@media (max-width: 767px) {
+  .hero-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+  }
+  .hero-img-one {
+    transform: scale(2);
+    filter: blur(18px);
+  }
+  .apex-hero {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  p {
+    font-size: 2rem;
+    line-height: 1.15;
+    letter-spacing: normal;
+    color: "$black-2";
+    color: #ffffff;
+  }
+  .default {
+    width: 84%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-img {
+    height: 40vh;
+    width: 100vw;
+  }
+  .hero-img-one {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -15rem;
+    transform: scale(1.03);
+  }
+  .apex-hero {
+    width: 35rem;
+    height: 45rem;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+}
+/* Fine parte Tziano */
 /* INIZIO GABBO */
 #card-section {
   width: auto;
