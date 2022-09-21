@@ -18,6 +18,10 @@ export default function Hero() {
             game=""
             logo=""
           />
+          <p>Unisciti a EA Play* e risparmia alla grande**</p>
+          <Button buttonStyle="btn--outline-white" buttonSize="btn--medium">
+            Iscriviti Subito
+          </Button>
         </div>
       </div>
       <div className="apex-hero">
@@ -26,12 +30,15 @@ export default function Hero() {
           game="Fifa"
           logo=""
         />
-
         <p>
           È più di un numero. Scopri subito i giocatori con valutazione più
           elevata di <br></br>FIFA 23!
         </p>
-        <Button buttonSize="btn-medium" buttonStyle="btn--primary">
+        <Button
+          buttonSize="btn-medium"
+          buttonStyle="btn--primary"
+          className="Button"
+        >
           Scopri le valutazioni
         </Button>
       </div>

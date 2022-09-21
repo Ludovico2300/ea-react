@@ -123,7 +123,25 @@ p {
   width: 100%;
   position: relative;
   bottom: 17%;
-  right: 28%;
+  right: 25%;
+}
+.bottom-img p {
+  font-size: 1.8rem;
+  line-height: 1.15;
+  letter-spacing: normal;
+  font-weight: 550;
+  color: "$black-2";
+  top: 6%;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  left: 45%;
+}
+.bottom-img Button {
+  position: absolute;
+  right: -5%;
+  top: 5%;
 }
 
 @media (max-width: 767px) {

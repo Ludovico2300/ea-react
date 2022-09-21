@@ -46,7 +46,25 @@ p {
   width: 100%;
   position: relative;
   bottom: 17%;
-  right: 28%;
+  right: 25%;
+
+
+
+  p {
+    @include h4("desktop");
+    top: 6%;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    left: 45%;
+  }
+
+  Button {
+    position: absolute;
+    right: -5%;
+    top: 5%
+  }
 }
 
 @include smartphone-media-query {
