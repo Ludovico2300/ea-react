@@ -30,15 +30,12 @@ export default function Hero() {
           game="Fifa"
           logo=""
         />
+
         <p>
           È più di un numero. Scopri subito i giocatori con valutazione più
           elevata di <br></br>FIFA 23!
         </p>
-        <Button
-          buttonSize="btn-medium"
-          buttonStyle="btn--primary"
-          className="Button"
-        >
+        <Button buttonSize="btn-medium" buttonStyle="btn--primary">
           Scopri le valutazioni
         </Button>
       </div>

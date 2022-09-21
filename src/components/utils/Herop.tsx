@@ -9,7 +9,7 @@ export type HeroProps = {
   
     return (
         <div>
-          <img src={source} alt="" />
+          <img src={source} alt="cover" />
           <img className={`cover ${game}`} src={logo} alt="" />     
         </div>
     );
