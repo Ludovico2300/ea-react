@@ -24,13 +24,13 @@ export default function Hero() {
         </div>
       </div>
       <div className="apex-hero">
-        <div className="apex-img">
+        
           <Herop
             source="https://media.contentapi.ea.com/content/dam/eacom/images/2022/09/f23-logo-hero-med-7x2-xl.png"
             game="Fifa"
             logo=""
           />
-        </div>
+        
         <p>
           È più di un numero. Scopri subito i giocatori con valutazione più
           elevata <br></br>di FIFA 23!
