@@ -1,11 +1,19 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
-const colors = ["#252525", "#00C49F", "#FFBB28", "#0088FE", "#00C49F"];
-const delay = 1000;
+const textArray = [
+  "TIZIANO È FORTE",
+  "LUDO FUMA WWF",
+  "GABBO MANGIA ANACARDI",
+  "WWF FUMA LUDO",
+  "ITALO BEVE",
+  "VIVA LA FREGNA",
+  "ANGELO WOW PELATO!",
+  "A GIULIA PIACE DEVELHOPE",
+];
 
 export default function Slideshow() {
-  const [index, setIndex] = React.useState(0);
-  const timeoutRef: any = useRef(null);
+  /*   const [index, setIndex] = useState(0);
+  const timeoutRef: any = useRef(false);
 
   function resetTimeout() {
     if (timeoutRef.current) {
@@ -17,8 +25,8 @@ export default function Slideshow() {
     resetTimeout();
     timeoutRef.current = setTimeout(
       () =>
-        setIndex((prevIndex) =>
-          prevIndex === colors.length - 1 ? 0 : prevIndex + 1
+        setIndex((prevIndex: number): any =>
+          prevIndex === textArray.length - 1 ? 0 : prevIndex + 1
         ),
       delay
     );
@@ -26,18 +34,18 @@ export default function Slideshow() {
     return () => {
       resetTimeout();
     };
-  }, [index]);
+  },[index]); */  
 
   return (
     <div className="slideshow">
-      <div
-        className="slideshowSlider"
-        style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
-      >
-        Hello
-        {colors.map((backgroundColor, index) => (
-          <div className="slide" key={index} style={{ backgroundColor }}></div>
-        ))}
+      <div className="slideshowSlider">
+        {textArray.map((text, index): any => {
+          return (
+            <div className="slide" key={index}>
+              <h1 className="text-slider">{text}</h1>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

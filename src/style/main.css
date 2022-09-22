@@ -87,6 +87,7 @@ html {
 /* Inizio parte Tiziano */
 .hero {
   /*  border: 2px solid red; */
+  /* Slideshow */
 }
 .hero .hero-img {
   position: relative;
@@ -149,6 +150,60 @@ html {
   position: absolute;
   right: -5%;
   top: 5%;
+}
+.hero .slideshow {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 100%;
+  background: rgb(138, 37, 222);
+  background: linear-gradient(90deg, rgb(138, 37, 222) 0%, rgb(207, 46, 138) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8a25de",endColorstr="#cf2e8a",GradientType=1);
+}
+.hero .slideshowSlider {
+  width: 100%;
+  white-space: nowrap;
+  -webkit-animation: slideShow 15s linear infinite;
+          animation: slideShow 15s linear infinite;
+  transform-style: preserve-3d;
+}
+@-webkit-keyframes slideShow {
+  0% {
+    transform: translateX(0%);
+  }
+  /* 50% {
+    transform: translateX(0%);
+  } */
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes slideShow {
+  0% {
+    transform: translateX(0%);
+  }
+  /* 50% {
+    transform: translateX(0%);
+  } */
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.hero .slide {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: inline-block;
+  height: 10vh;
+  width: auto;
+  padding-top: 2rem;
+  margin: 0rem 10rem 0rem 0rem;
+}
+.hero .text-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  color: #fff;
 }
 
 @media (max-width: 767px) {
