@@ -11,10 +11,17 @@ html {
   /* overflow-x: hidden; */
 }
 
+::-moz-selection {
+  background: transparent;
+}
+
+::selection {
+  background: transparent;
+}
+
 /* VARIABLES */
 /* COLORS */
-/* TYPOGRAPHY */
-/* MIXINS */
+/* TYPOGRAPHY */ /* MIXINS */
 /* FLEX-DIRECTION ROW */
 /* FLEX-DIRECTION COLUMN */
 /* MEDIA QUERIES */
@@ -78,23 +85,25 @@ html {
 
 /* PARTIALS */
 /* Inizio parte Tiziano */
-.hero-img {
+.hero {
+  /*  border: 2px solid red; */
+}
+.hero .hero-img {
   position: relative;
   text-align: center;
-  width: 100vw;
+  width: 100%;
   height: 70vh;
   overflow: hidden;
   box-sizing: border-box;
   background-size: contain;
+  /* .hero-img-one {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  } */
 }
-.hero-img .hero-img-one {
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.apex-hero {
+.hero .apex-hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -106,7 +115,7 @@ html {
   top: 20%;
   align-items: flex-start;
 }
-.apex-hero p {
+.hero .apex-hero p {
   font-size: 2.4rem;
   line-height: 1.15;
   letter-spacing: normal;
@@ -117,14 +126,13 @@ html {
   text-align: left;
   font-size: 1.8rem;
 }
-
-.bottom-img {
+.hero .bottom-img {
   width: 100%;
   position: relative;
   bottom: 17%;
   right: 25%;
 }
-.bottom-img p {
+.hero .bottom-img p {
   font-size: 1.8rem;
   line-height: 1.15;
   letter-spacing: normal;
@@ -137,7 +145,7 @@ html {
   position: absolute;
   left: 45%;
 }
-.bottom-img .btn--outline-white {
+.hero .bottom-img .btn--outline-white {
   position: absolute;
   right: -5%;
   top: 5%;

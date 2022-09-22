@@ -9,6 +9,10 @@
     font-size: 10px;
     /* overflow-x: hidden; */
   }
+
+  ::selection {
+    background: transparent;
+  }
   
   /* VARIABLES */
   @import "./scss/content/variables";
