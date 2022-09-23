@@ -635,7 +635,7 @@ html {
 }
 #content-section .tab-bar-content button.active {
   background-color: #ccc;
-  border-bottom: 2px solid #ff4747;
+  border-bottom: 2px solid #8423de;
 }
 #content-section .tabcontent {
   display: none;
@@ -698,7 +698,7 @@ html {
   color: "$black-2";
 }
 #content-section .card-content-container .card-content .info-card-content-container .mark-date-content .mark {
-  color: #ff4747;
+  color: #8423de;
   font-family: "ElectronicArtsDisplay-Bold";
 }
 #content-section .card-content-container .card-content .info-card-content-container .mark-date-content div,
@@ -812,7 +812,7 @@ html {
     font-family: "ElectronicArtsDisplay-Bold";
   }
   #content-section .card-content-container .card-content .info-card-content-container .mark-date-content .mark {
-    color: #ff4747;
+    color: #8423de;
   }
   #content-section .card-content-container .card-content .info-card-content-container .mark-date-content div,
 #content-section .card-content-container .card-content .info-card-content-container .mark-date-content h2 {
@@ -895,7 +895,7 @@ html {
   }
   #content-section .tab-bar-content button.active {
     background-color: #ccc;
-    border-bottom: 1px solid #ff4747;
+    border-bottom: 1px solid #8423de;
   }
   #content-section .tabcontent {
     display: none;
@@ -969,7 +969,7 @@ html {
     font-family: "ElectronicArtsDisplay-Bold";
   }
   #content-section .card-content-container .card-content .info-card-content-container .mark-date-content .mark {
-    color: #ff4747;
+    color: #8423de;
   }
   #content-section .card-content-container .card-content .info-card-content-container .mark-date-content div,
 #content-section .card-content-container .card-content .info-card-content-container .mark-date-content h2 {
@@ -1077,7 +1077,7 @@ html {
   color: #161616;
 }
 .footer #sub-footer-1 #sub-footer-link a:hover {
-  color: #ff4747;
+  color: #8423de;
 }
 .footer #sub-footer-1 #sub-footer-social {
   margin-right: 21%;
@@ -1358,7 +1358,7 @@ html {
     line-height: 2;
   }
   .footer #sub-footer-1 #sub-footer-link a:hover {
-    color: #ff4747;
+    color: #8423de;
   }
   .footer #sub-footer-1 #sub-footer-social {
     margin: 0;
@@ -1653,7 +1653,7 @@ html {
     line-height: 2;
   }
   .footer #sub-footer-1 #sub-footer-link a:hover {
-    color: #ff4747;
+    color: #8423de;
   }
   .footer #sub-footer-1 #sub-footer-social {
     margin: 0;
