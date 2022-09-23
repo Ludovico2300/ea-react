@@ -85,8 +85,10 @@ html {
 
 /* PARTIALS */
 /* Inizio parte Tiziano */
+/* * {
+  border: 1px solid red;
+} */
 .hero {
-  /*  border: 2px solid red; */
   /* Slideshow */
 }
 .hero .hero-img {
@@ -97,12 +99,6 @@ html {
   overflow: hidden;
   box-sizing: border-box;
   background-size: contain;
-  /* .hero-img-one {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-  } */
 }
 .hero .apex-hero {
   display: flex;
@@ -152,58 +148,72 @@ html {
   top: 5%;
 }
 .hero .slideshow {
-  margin: 0 auto;
-  overflow: hidden;
-  max-width: 100%;
-  background: rgb(138, 37, 222);
-  background: linear-gradient(90deg, rgb(138, 37, 222) 0%, rgb(207, 46, 138) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8a25de",endColorstr="#cf2e8a",GradientType=1);
-}
-.hero .slideshowSlider {
-  width: 100%;
-  white-space: nowrap;
-  -webkit-animation: slideShow 15s linear infinite;
-          animation: slideShow 15s linear infinite;
-  transform-style: preserve-3d;
-}
-@-webkit-keyframes slideShow {
-  0% {
-    transform: translateX(0%);
-  }
-  /* 50% {
-    transform: translateX(0%);
-  } */
-  100% {
-    transform: translateX(-100%);
-  }
-}
-@keyframes slideShow {
-  0% {
-    transform: translateX(0%);
-  }
-  /* 50% {
-    transform: translateX(0%);
-  } */
-  100% {
-    transform: translateX(-100%);
-  }
-}
-.hero .slide {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  display: inline-block;
-  height: 10vh;
   width: auto;
-  padding-top: 2rem;
-  margin: 0rem 10rem 0rem 0rem;
+  height: 10vh;
+  background: rgb(132, 35, 222);
+  background: linear-gradient(30deg, rgb(132, 35, 222) 0%, rgb(255, 88, 184) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8423de", endColorstr="#ff58b8", GradientType=1);
 }
-.hero .text-slider {
+.hero .slideshow .slideshowSlider {
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.hero .slideshow .slideshowSlider .element-slider {
+  width: auto;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: hidden;
+}
+.hero .slideshow .slideshowSlider .element-slider .fifa {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding-top: 2.5rem;
+}
+.hero .slideshow .slideshowSlider .element-slider .f-one {
+  width: 70%;
+  height: 70%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding-top: 1rem;
+}
+.hero .slideshow .slideshowSlider .element-slider .apex {
+  width: 80% !important;
+  height: 80%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding-bottom: 0.5rem;
+}
+.hero .slideshow .slideshowSlider .element-slider .battlefield {
+  width: 20rem !important;
+  height: 15rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  padding-top: 0.5rem;
+}
+.hero .slideshow .slideshowSlider .element-slider .team {
+  width: 15.5rem;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.hero .slideshow .slideshowSlider .element-slider h1 {
   font-size: 4rem;
-  color: #fff;
+  text-transform: uppercase;
+  font-family: "ElectronicArtsDisplay-Bold";
+  margin: 0rem 10rem;
+}
+.hero .text-slider {
+  font-size: 4rem;
+  color: #ffffff;
+  width: 100vw;
+  letter-spacing: 0.3rem;
 }
 
 @media (max-width: 767px) {

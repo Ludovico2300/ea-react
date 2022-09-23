@@ -6,7 +6,7 @@ export default function Hero() {
     {
       /* url: "https://media.contentapi.ea.com/content/dam/eacom/images/2022/09/f23-hero-medium-ratings-7x2-xl.jpg.adapt.crop7x2.1920w.jpg", */
       /* url: "https://calciodangolo.com/wp-content/uploads/Totti_DSC_9351.jpg", */
-      url:"https://cdn2.unrealengine.com/ea-sports-fifa-23-is-coming-to-the-epic-games-store-vinicus-1920x1033-b34edb1f8674.jpg",
+      url: "https://cdn2.unrealengine.com/ea-sports-fifa-23-is-coming-to-the-epic-games-store-vinicus-1920x1033-b34edb1f8674.jpg",
       title: "Fifa",
     },
     {
@@ -29,7 +29,6 @@ export default function Hero() {
     height: "70vh",
     margin: "0 auto",
   };
-  
 
   return (
     <div className="hero">
@@ -49,7 +48,7 @@ export default function Hero() {
           </Button>
         </div> */}
       </div>
-      <Slideshow/>
+      <Slideshow />
     </div>
   );
 }
