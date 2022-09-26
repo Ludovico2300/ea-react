@@ -10,7 +10,6 @@ export default function Slideshow() {
           speed={95}
           gradient={false}
           loop={0}
-          pauseOnHover={true}
         >
           <SlideElement />
         </Marquee>
