@@ -1,0 +1,192 @@
+/* Inizio parte Tiziano */
+/* * {
+  border: 1px solid red;
+} */
+.hero {
+  cursor: pointer;
+  .hero-img {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-size: contain;
+  }
+
+  .apex-hero {
+    @include flex-column-center;
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 20%;
+    top: 20%;
+    align-items: flex-start;
+
+    p {
+      @include h3("desktop");
+      color: $white-1;
+      padding: 1rem 0rem;
+      margin-bottom: 15px;
+      text-align: left;
+      font-size: 1.8rem;
+    }
+  }
+
+  .bottom-img {
+    width: 100%;
+    position: relative;
+    bottom: 17%;
+    right: 25%;
+
+    p {
+      @include h4("desktop");
+      top: 6%;
+      font-size: 3rem;
+      font-weight: bold;
+      color: white;
+      position: absolute;
+      left: 45%;
+    }
+
+    .btn--outline-white {
+      position: absolute;
+      right: -5%;
+      top: 5%;
+    }
+  }
+
+  /* Slideshow */
+
+  .slideshow {
+    width: auto;
+    height: 10vh;
+    background: rgb(132, 35, 222);
+    background: -moz-linear-gradient(30deg,
+        rgba(132, 35, 222, 1) 0%,
+        rgba(255, 88, 184, 1) 100%);
+    background: -webkit-linear-gradient(30deg,
+        rgba(132, 35, 222, 1) 0%,
+        rgba(255, 88, 184, 1) 100%);
+    background: linear-gradient(30deg,
+        rgba(132, 35, 222, 1) 0%,
+        rgba(255, 88, 184, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8423de", endColorstr="#ff58b8", GradientType=1);
+
+    .slideshowSlider {
+      width: 100%;
+      height: 100%;
+      @include flex-center-center;
+
+      .element-slider {
+        width: auto;
+        height: 10vh;
+        @include flex-center-center;
+        overflow-y: hidden;
+
+        .fifa {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          padding-top: 2.5rem;
+        }
+
+        .f-one {
+          width: 70%;
+          height: 70%;
+          object-fit: contain;
+          padding-top: 1rem;
+        }
+
+        .apex {
+          width: 80% !important;
+          height: 80%;
+          object-fit: contain;
+          padding-bottom: 0.5rem;
+        }
+
+        .battlefield {
+          width: 20rem !important;
+          height: 15rem;
+          object-fit: contain;
+          padding-top: 0.5rem;
+        }
+
+        .team {
+          width: 15.5rem;
+          height: auto;
+          object-fit: contain;
+        }
+
+        h1 {
+          font-size: 4rem;
+          text-transform: uppercase;
+          @include bold;
+          margin: 0rem 10rem;
+        }
+      }
+    }
+  }
+
+  .text-slider {
+    font-size: 4rem;
+    color: $white-1;
+    width: 100vw;
+    letter-spacing: 0.3rem;
+  }
+}
+
+@include smartphone-media-query {
+  .hero-img {
+    @include flex-center-center;
+    height: 75vh;
+  }
+
+  .hero-img-one {
+    transform: scale(1);
+    filter: blur(18px);
+  }
+
+  .apex-hero {
+    position: absolute;
+    top: 40%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+  }
+
+  p {
+    @include h3("smartphone");
+    color: $white-1;
+  }
+
+  .default {
+    width: 84%;
+  }
+}
+
+@include tablet-media-query {
+  .hero-img {
+    height: 40vh;
+    width: 100vw;
+  }
+
+  .hero-img-one {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -15rem;
+    transform: scale(1.03);
+  }
+
+  .apex-hero {
+    width: 35rem;
+    height: 45rem;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+}
+
+/* Fine parte Tziano */
