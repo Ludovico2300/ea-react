@@ -1848,7 +1848,7 @@ html {
 }
 .footer #sub-footer-2 {
   width: 100%;
-  height: 34.5rem;
+  height: auto;
   background-color: #f3f3f3;
   display: flex;
   justify-content: flex-start;
@@ -1868,13 +1868,12 @@ html {
 }
 .footer #sub-footer-2 #sub-footer-part2 {
   width: 28%;
-  height: 90%;
+  height: auto;
   margin: 3rem 0rem 3rem 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  justify-content: space-between;
 }
 .footer #sub-footer-2 #sub-footer-part2 #sub-footer-accessibilità {
   height: auto;
@@ -1914,21 +1913,21 @@ html {
   margin-top: 0;
   margin-bottom: 0;
   color: #161616;
+  line-height: 3rem;
 }
 .footer #sub-footer-2 #sub-footer-part2 #sub-footer-privacy .yt {
   margin-right: 2rem;
 }
-.footer #sub-footer-2 #sub-footer-select {
-  width: 28%;
-  height: 90%;
-  margin: 3rem 0rem 3rem 2rem;
+.footer #sub-footer-2 #sub-footer-part2 #sub-footer-select {
+  width: 100%;
+  height: auto;
+  margin: 2rem 0rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   align-items: start;
-  padding-top: 1rem;
 }
-.footer #sub-footer-2 #sub-footer-select .first-select {
+.footer #sub-footer-2 #sub-footer-part2 #sub-footer-select .first-select {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1937,10 +1936,11 @@ html {
   align-items: start;
   border: 2px solid #aaa;
   border-radius: 2px;
-  width: 20rem;
+  width: 30rem;
   height: 6rem;
+  margin-right: 4rem;
 }
-.footer #sub-footer-2 #sub-footer-select .first-select .sup-text {
+.footer #sub-footer-2 #sub-footer-part2 #sub-footer-select .first-select .sup-text {
   font-size: 1.6rem;
   line-height: 1.15;
   letter-spacing: normal;
@@ -1949,13 +1949,13 @@ html {
   margin: 1rem 2rem 0.5rem 2rem;
   opacity: 0.7;
 }
-.footer #sub-footer-2 #sub-footer-select .first-select .option-select {
+.footer #sub-footer-2 #sub-footer-part2 #sub-footer-select .first-select .option-select {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-.footer #sub-footer-2 #sub-footer-select .first-select .option-select .sub-text {
+.footer #sub-footer-2 #sub-footer-part2 #sub-footer-select .first-select .option-select .sub-text {
   font-size: 1.6rem;
   line-height: 1.15;
   letter-spacing: normal;
@@ -1963,17 +1963,17 @@ html {
   color: "$black-2";
   margin: 0rem 2rem;
 }
-.footer #sub-footer-2 #sub-footer-select .first-select .option-select .fa-angle-down {
+.footer #sub-footer-2 #sub-footer-part2 #sub-footer-select .first-select .option-select .fa-angle-down {
   font-size: 1.6rem;
   margin-right: 2rem;
 }
-.footer #sub-footer-2 #sub-footer-select .first-select:hover {
+.footer #sub-footer-2 #sub-footer-part2 #sub-footer-select .first-select:hover {
   box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028), 12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042), 41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05), 100px 100px 80px rgba(0, 0, 0, 0.07);
 }
-.footer #sub-footer-2 #sub-footer-select .first-select:hover .fa-angle-down {
+.footer #sub-footer-2 #sub-footer-part2 #sub-footer-select .first-select:hover .fa-angle-down {
   transform: rotate(180deg);
 }
-.footer #sub-footer-2 #sub-footer-select .second-select {
+.footer #sub-footer-2 #sub-footer-part2 #sub-footer-select .second-select {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1982,10 +1982,10 @@ html {
   align-items: start;
   border: 2px solid #aaa;
   border-radius: 2px;
-  width: 20rem;
+  width: 30rem;
   height: 6rem;
 }
-.footer #sub-footer-2 #sub-footer-select .second-select .sup-text {
+.footer #sub-footer-2 #sub-footer-part2 #sub-footer-select .second-select .sup-text {
   font-size: 1.6rem;
   line-height: 1.15;
   letter-spacing: normal;
@@ -1994,13 +1994,13 @@ html {
   margin: 1rem 2rem 0.5rem 2rem;
   opacity: 0.7;
 }
-.footer #sub-footer-2 #sub-footer-select .second-select .option-select {
+.footer #sub-footer-2 #sub-footer-part2 #sub-footer-select .second-select .option-select {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
-.footer #sub-footer-2 #sub-footer-select .second-select .option-select .sub-text {
+.footer #sub-footer-2 #sub-footer-part2 #sub-footer-select .second-select .option-select .sub-text {
   font-size: 1.6rem;
   line-height: 1.15;
   letter-spacing: normal;
@@ -2008,14 +2008,14 @@ html {
   color: "$black-2";
   margin: 0rem 2rem;
 }
-.footer #sub-footer-2 #sub-footer-select .second-select .option-select .fa-angle-down {
+.footer #sub-footer-2 #sub-footer-part2 #sub-footer-select .second-select .option-select .fa-angle-down {
   font-size: 1.6rem;
   margin-right: 2rem;
 }
-.footer #sub-footer-2 #sub-footer-select .second-select:hover {
+.footer #sub-footer-2 #sub-footer-part2 #sub-footer-select .second-select:hover {
   box-shadow: 2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02), 6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028), 12.5px 12.5px 10px rgba(0, 0, 0, 0.035), 22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042), 41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05), 100px 100px 80px rgba(0, 0, 0, 0.07);
 }
-.footer #sub-footer-2 #sub-footer-select .second-select:hover .fa-angle-down {
+.footer #sub-footer-2 #sub-footer-part2 #sub-footer-select .second-select:hover .fa-angle-down {
   transform: rotate(180deg);
 }
 
@@ -2505,13 +2505,13 @@ html {
   .footer #sub-footer-2 #sub-footer-select {
     width: 90%;
     height: auto;
-    margin: 3rem 0rem 3rem 2rem;
+    margin: 3rem 0rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-items: start;
-    padding-top: 1rem;
+    padding-left: 3rem;
     position: absolute;
     top: 18rem;
   }
