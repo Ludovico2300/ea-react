@@ -8,9 +8,7 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   //media queris
   let x = window.matchMedia("(min-width: 1024px)").matches;
-  let y = window.matchMedia(
-    "(min-width: 768px) and (max-width: 1024px)"
-  ).matches;
+  let y = window.matchMedia("(min-width: 768px) and (max-width: 1024px)").matches;
   let z = window.matchMedia("(max-width: 767px)").matches;
   let prevScrollpos = window.pageYOffset; // scroll page
 
@@ -46,6 +44,7 @@ export default function Navbar() {
 
   function asideShow() {
     setAside(true);
+    
   }
 
   function asideHidden() {
@@ -136,7 +135,7 @@ export default function Navbar() {
               </div>
 
               {y && (
-                <div  id="dropdown-menu-nav">
+                <div  id="dropdown-menu-nav-media">
                   {text.map((text) => (
                     <Dropdown content={text} />
                   ))}
@@ -144,7 +143,7 @@ export default function Navbar() {
               )}
 
               {z && (
-                <div className="flex-between-center" id="dropdown-menu-nav">
+                <div className="flex-between-center" id="dropdown-menu-nav-media">
                   {text.map((text) => (
                     <Dropdown content={text} />
                   ))}
