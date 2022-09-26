@@ -88,6 +88,22 @@ export default function Footer() {
               Aiuto
             </Link>
           </div>
+          <div id="sub-footer-select">
+          <div className="first-select">
+            <h4 className="sup-text">Prezzi Regionali</h4>
+            <div className="option-select">
+              <h4 className="sub-text">Italia</h4>
+              <i className="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+          <div className="second-select">
+            <h4 className="sup-text">Lingua</h4>
+            <div className="option-select">
+              <h4 className="sub-text">🍕 Italia</h4>
+              <i className="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+        </div>
           <div id="sub-footer-privacy">
             <Link to="#" className="sub-span">
               Note legali e privacy
@@ -114,24 +130,11 @@ export default function Footer() {
               © 2022 Electronic Arts Inc.
             </Link>
           </div>
+
+
+        
         </div>
 
-        <div id="sub-footer-select">
-          <div className="first-select">
-            <h4 className="sup-text">Prezzi Regionali</h4>
-            <div className="option-select">
-              <h4 className="sub-text">Italia</h4>
-              <i className="fa-solid fa-angle-down"></i>
-            </div>
-          </div>
-          <div className="second-select">
-            <h4 className="sup-text">Lingua</h4>
-            <div className="option-select">
-              <h4 className="sub-text">🍕 Italia</h4>
-              <i className="fa-solid fa-angle-down"></i>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   );
