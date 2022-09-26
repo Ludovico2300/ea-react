@@ -15,6 +15,6 @@ export default function Slideshow() {
           <SlideElement />
         </Marquee>
       </div>
-    </div>
+    </div>//Gabbo  Mode
   );
 }
