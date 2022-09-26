@@ -1,5 +1,3 @@
-import React, { useEffect, useRef, useState } from "react";
-
 const textArray = [
   "TIZIANO È FORTE",
   "LUDO FUMA WWF",
