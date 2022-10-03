@@ -837,12 +837,18 @@ html {
 }
 .hero .hero-img {
   position: relative;
-  text-align: center;
   width: 100%;
-  height: 70vh;
+  height: 62vh;
   overflow: hidden;
   box-sizing: border-box;
+  background-size: cover;
+}
+.hero .hero-img .herop-img {
+  height: 100%;
+  display: flex;
   background-size: contain;
+  overflow: hidden;
+  margin-top: -25px;
 }
 .hero .apex-hero {
   display: flex;
