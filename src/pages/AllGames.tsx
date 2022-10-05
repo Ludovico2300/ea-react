@@ -1,14 +1,11 @@
-import React from "react";
-import AllCards from "../components/AllCards";
-import AllTabs from "../components/AllTabs";
+import AllCardGames from "../components/AllCardGames";
 import Hero from "../components/Hero";
 
 export default function AllGames() {
   return (
     <div>
       <Hero />
-      <AllCards />
-      <AllTabs />
+      <AllCardGames/>
     </div>
   );
 }
