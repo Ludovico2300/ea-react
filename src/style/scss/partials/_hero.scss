@@ -1,31 +1,56 @@
 /* Inizio parte Tiziano */
 
-
 .hero {
   cursor: pointer;
   margin-top: 10rem;
 
-
   .hero-img {
     position: relative;
     width: 100%;
-    height: 62vh;
+    height: 63vh;
     overflow: hidden;
     box-sizing: border-box;
-    background-size: cover;
 
-    .herop-img { 
-    height: 100%;
-    display: flex;
-    background-size: contain; 
-    overflow: hidden;
-    margin-top: -25px;
+    .herop-img {
+      display: flex;
+      overflow: hidden;
+      width: auto;
+      height: 100%;
+
+      .fifa-hero {
+        object-fit: cover;
+        width: 20% !important;
+        height: 100%;
+      }
+
+      .battlefield-hero {
+        width: 20% !important;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .apex-slide-hero {
+        width: 20% !important;
+        height: 100%;
+        object-fit: cover;
+        margin-top: -50px;
+      }
+
+      .f1-hero {
+        object-fit: cover;
+        width: 20% !important;
+        height: 100%;
+        margin-top: -100px;
+      }
+
+      .thesims-hero {
+        object-fit: cover;
+        width: 20% !important;
+        height: 100%;
+        margin-top: -50px;
+      }
     }
-
-
   }
-
-
 
   .apex-hero {
     @include flex-column-center;
@@ -75,15 +100,21 @@
     width: auto;
     height: 10vh;
     background: rgb(132, 35, 222);
-    background: -moz-linear-gradient(30deg,
-        rgba(132, 35, 222, 1) 0%,
-        rgba(255, 88, 184, 1) 100%);
-    background: -webkit-linear-gradient(30deg,
-        rgba(132, 35, 222, 1) 0%,
-        rgba(255, 88, 184, 1) 100%);
-    background: linear-gradient(30deg,
-        rgba(132, 35, 222, 1) 0%,
-        rgba(255, 88, 184, 1) 100%);
+    background: -moz-linear-gradient(
+      30deg,
+      rgba(132, 35, 222, 1) 0%,
+      rgba(255, 88, 184, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      30deg,
+      rgba(132, 35, 222, 1) 0%,
+      rgba(255, 88, 184, 1) 100%
+    );
+    background: linear-gradient(
+      30deg,
+      rgba(132, 35, 222, 1) 0%,
+      rgba(255, 88, 184, 1) 100%
+    );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8423de", endColorstr="#ff58b8", GradientType=1);
 
     .slideshowSlider {
@@ -150,56 +181,54 @@
 }
 
 @include smartphone-media-query {
-  .hero-img {
-    @include flex-center-center;
-    height: 75vh;
-  }
+  .hero {
+    width: 100vw;
+    height: 70vh;
+    margin-bottom: 5.8rem;
 
-  .hero-img-one {
-    transform: scale(1);
-    filter: blur(18px);
-  }
+    .hero-img {
+      @include flex-center-center;
+      width: 100vw;
+      height: 100%;
 
-  .apex-hero {
-    position: absolute;
-    top: 40%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-  }
+      .herop-img {
+        @include flex-center-center;
+        width: auto;
+        height: 50rem !important;
+        object-fit: contain;
 
-  p {
-    @include h3("smartphone");
-    color: $white-1;
-  }
+        .fifa-hero,
+        .battlefield-hero,
+        .apex-slide-hero,
+        .f1-hero,
+        .thesims-hero {
+          object-fit: contain !important;
+          width: 100% !important;
+          height: 100%;
+          margin-top: 20px;
+        }
+      }
+    }
 
-  .default {
-    width: 84%;
+    p {
+      @include h3("smartphone");
+      color: $white-1;
+    }
+
+    .default {
+      width: 84%;
+    }
+
+    .slideshow {
+      height: 10vh;
+      position: absolute;
+    }
   }
 }
 
 @include tablet-media-query {
   .hero-img {
-    height: 40vh;
+    height: 45vh;
     width: 100vw;
   }
-
-  .hero-img-one {
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: -15rem;
-    transform: scale(1.03);
-  }
-
-  .apex-hero {
-    width: 35rem;
-    height: 45rem;
-    position: absolute;
-    top: 20%;
-    left: 30%;
-    transform: translate(-50%, -50%) scale(0.9);
-  }
 }
-
-/* Fine parte Tziano */

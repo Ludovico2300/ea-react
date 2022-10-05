@@ -2,10 +2,11 @@ export type HeroProps = {
     source: string;
     logo: string;
     game: string;
+    className: string;
   };
   
   export default function Herop(props: HeroProps) {
-    const { source, logo, game } = props;
+    const { source, logo, game} = props;
   
     return (
         <div>
