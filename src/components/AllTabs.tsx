@@ -2,10 +2,12 @@ import { useState } from "react";
 import { Button } from "./utils/Button";
 import Tab from "./utils/Tab";
 import { cards } from "./data";
+import { useNavigate } from "react-router-dom";
 
 export default function AllTabs() {
   const [activeTag, setActiveTag] = useState<string>("Electronic Arts Inc.");
   const [activeTab, setActiveTab] = useState<string>("Electronic Arts Inc.");
+  const navigate = useNavigate();
 
   function handleTag(tag: string, tab: string) {
     setActiveTag(tag);
@@ -104,7 +106,7 @@ export default function AllTabs() {
               );
             })}
         </div>
-        <Button buttonSize="btn--medium" buttonStyle="btn--outline-black">
+        <Button buttonSize="btn--medium" buttonStyle="btn--outline-black" onClick={navigate("/allnews")}>
           {activeTab === "The Sims 4" ? "Espandi" : "Più dettagli"}
         </Button>
       </div>
