@@ -12,7 +12,7 @@ export default function Hero() {
           direction={"right"}
           loop={0}
           pauseOnHover={true}
-          delay={0}
+          delay={1}
         >
           <div>
             <SlideHero />

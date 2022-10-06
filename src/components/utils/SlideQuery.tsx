@@ -5,7 +5,7 @@ const Desktop = ({ children }: any) => {
   return isDesktop ? children : null;
 };
 const Tablet = ({ children }: any) => {
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
   return isTablet ? children : null;
 };
 const Mobile = ({ children }: any) => {
@@ -59,7 +59,7 @@ const SlideQuery = () => (
         className="apex-slide-hero"
       />
       <img
-        src="https://media.contentapi.ea.com/content/dam/ea/f1/f1-2022/common/china-return-fpo-1-jpg.adapt.1456w."
+        src="https://www.vr-italia.org/wp-content/uploads/2022/06/f1-2022-copertina.jpg"
         alt=""
         className="f1-hero"
       />

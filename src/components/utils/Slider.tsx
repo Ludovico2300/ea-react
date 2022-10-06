@@ -10,7 +10,7 @@ export default function Slideshow() {
           speed={50}
           gradient={false}
           loop={0}
-          delay={0}
+          delay={1}
         >
           <SlideElement />
         </Marquee>

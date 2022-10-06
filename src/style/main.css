@@ -1047,7 +1047,7 @@ html {
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .hero-img {
-    height: 45vh;
+    height: 50vh;
     width: 100vw;
   }
 }
