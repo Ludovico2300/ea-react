@@ -183,13 +183,14 @@
 @include smartphone-media-query {
   .hero {
     width: 100vw;
-    height: 70vh;
+    height: 100%;
     margin-bottom: 5.8rem;
 
     .hero-img {
       @include flex-center-center;
-      width: 100vw;
+      width: 100%;
       height: 100%;
+      
 
       .herop-img {
         @include flex-center-center;
@@ -222,6 +223,7 @@
     .slideshow {
       height: 10vh;
       position: absolute;
+     
     }
   }
 }
