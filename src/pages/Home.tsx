@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <div>
-      {/*     <Hero /> */}
+     <Hero />
       <AllCards />
       <AllTabs />
     </div>

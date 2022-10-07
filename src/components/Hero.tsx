@@ -4,7 +4,7 @@ import Slideshow from "./utils/Slider";
 
 export default function Hero() {
   return (
-    <div className="hero">
+    <div className="hero">  
       <div className="hero-img">
         <Marquee
           gradient={false}
