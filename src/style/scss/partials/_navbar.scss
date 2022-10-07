@@ -1,5 +1,3 @@
-
-
 .header {
   z-index: 100;
   position: fixed;
@@ -9,6 +7,7 @@
 
   .nav {
     width: 100%;
+
     .title-ul:before {
       color: $black-1;
       content: attr(aria-label);
@@ -111,7 +110,7 @@
       width: 100%;
       transition: margin-top 0.3s ease-in-out;
 
-      a {
+      .icon-darknav {
         width: 5rem;
 
         i {
@@ -133,13 +132,249 @@
       &:not(.up) {
         margin-top: -4rem;
       }
+
+      .menu-darknav {
+        width: 100%;
+        background-color: $black-1;
+        position: absolute;
+        transition: all 0.5s ease-in-out;
+        z-index: 10;
+
+        &.Show-menu {
+          height: 40rem;
+
+          i {
+            color: $white-1;
+            position: absolute;
+            height: 1.3rem;
+            width: 1.3rem;
+            font-size: 1.5rem;
+            top: 5rem;
+            right: 2rem;
+          }
+
+        }
+
+        &:not(.Show-menu) {
+          height: 0;
+
+          i {
+            position: hidden;
+          }
+        }
+
+
+
+        .login-menu {
+          width: 100%;
+          transition: all 0.5s ease-out;
+          width: auto;
+          @include smartphone-media-query {
+            flex-direction: column;
+
+
+          }
+
+          .icon {
+            margin: 0 10rem 0 10rem;
+            transition: all 0.2s ease-out;
+            width: 16rem;
+
+            @include tablet-media-query {
+              flex-direction: row;
+              margin-top: 2rem;
+
+
+            }
+
+            @include smartphone-media-query {
+              flex-direction: row;
+              margin-top: 2rem;
+              justify-content: start;
+
+
+            }
+
+            &:hover {
+
+              transform: translateY(-8%);
+
+            }
+
+            h4 {
+              margin-top: 1rem;
+              color: $grey-2;
+
+              @include tablet-media-query {
+                margin-left: 1rem;
+              }
+
+              @include smartphone-media-query {
+                margin-left: 1rem;
+              }
+            }
+          }
+
+          &.Show {
+            height: 40rem;
+          }
+
+          &:not(.Show) {
+            height: 0;
+            opacity: 0;
+            z-index: -5;
+          }
+
+          .login {
+            transition: all 0.3s ease-out;
+            /*             box-shadow: 5px 0px 6px $grey-1; */
+            height: 100%;
+
+            &.Show {
+              height: 0;
+              opacity: 0;
+
+              i {
+                position: absolute;
+
+              }
+
+              .conteiner-login {
+                form {
+                  height: 0%;
+
+                  .input-container {
+
+                    margin: 0rem;
+                  }
+
+                  h4 {
+                    color: $black-2;
+                  }
+
+                }
+              }
+            }
+
+            &:not(.Show) {
+              opacity: 1;
+              height: 100%;
+
+              i {
+                position: relative;
+                top: 30%;
+                left: 50%;
+                transform: translate(-50%, -50%) ;
+                z-index: 3;
+              }
+
+              .conteiner-login {
+                height: 100%;
+
+                form {
+                  height: 100%;
+                  position: relative;
+
+                  .input-container {
+
+                    margin: 1rem;
+                  }
+
+                  h4 {
+                    color: $grey-2;
+                  }
+                  .button-container{
+                    border: 3px solid red;
+                  }
+                }
+              }
+
+            }
+          }
+        }
+
+        .Help-menu {
+          width: 100%;
+          transition: all 0.5s ease-out;
+
+
+          h4,
+          h1 {
+            color: $grey-2;
+          }
+
+          .conteiner {
+            width: 50%;
+            flex-wrap: wrap;
+            margin: 2rem 0 2rem 0;
+
+            z-index: -10;
+
+            @include smartphone-media-query {
+              flex-direction: column;
+
+
+            }
+
+          }
+
+          &.Show {
+            height: 40rem;
+
+            .icon {
+              width: 50%;
+              margin: 1rem 0 2rem 0;
+              transition: all 0.2s ease-out;
+              height: auto;
+
+              @include tablet-media-query {
+                flex-direction: row;
+
+
+
+
+              }
+
+              @include smartphone-media-query {
+                flex-direction: row;
+                margin: 1rem 0 0 1rem;
+                justify-content: start;
+                width: 25rem;
+
+
+              }
+
+              &:hover {
+                transform: translateY(-8%);
+              }
+
+              h4 {
+                margin-top: 1rem;
+                margin-left: 2rem;
+              }
+            }
+          }
+
+          &:not(.Show) {
+            height: 0;
+            opacity: 0;
+            z-index: -10;
+
+            .icon {
+              height: 0;
+            }
+          }
+        }
+
+      }
+
     }
 
     #white-navbar {
       background-color: $white-1;
       height: 6rem;
       width: 100%;
-     
+
 
       #aside-menu-icon {
         height: 100%;
@@ -322,7 +557,7 @@
       }
 
       &:not(.margin) {
-        margin-left: -180%;
+        margin-left: -300%;
       }
 
       @include desktop-media-query {
@@ -420,22 +655,16 @@
               .filter {
                 display: flex;
                 background: rgb(132, 35, 222);
-            background: -moz-linear-gradient(
-              180deg,
-              rgba(132, 35, 222, 1) 0%,
-              rgba(255, 88, 184, 1) 100%
-            );
-            background: -webkit-linear-gradient(
-              180deg,
-              rgba(132, 35, 222, 1) 0%, 
-              rgba(255, 88, 184, 1) 100%
-            );
-            background: linear-gradient(
-              180deg,
-              rgba(132, 35, 222, 1) 0%,
-              rgba(255, 88, 184, 1) 100%
-            );
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8423de",endColorstr="#ff58b8",GradientType=1);
+                background: -moz-linear-gradient(180deg,
+                    rgba(132, 35, 222, 1) 0%,
+                    rgba(255, 88, 184, 1) 100%);
+                background: -webkit-linear-gradient(180deg,
+                    rgba(132, 35, 222, 1) 0%,
+                    rgba(255, 88, 184, 1) 100%);
+                background: linear-gradient(180deg,
+                    rgba(132, 35, 222, 1) 0%,
+                    rgba(255, 88, 184, 1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8423de", endColorstr="#ff58b8", GradientType=1);
                 z-index: 1;
                 top: 0%;
                 opacity: 0.8;
@@ -553,10 +782,11 @@
                       height: auto;
                       opacity: 1;
 
-                      li{
+                      li {
                         height: auto;
                         border-bottom: none;
-                        a{
+
+                        a {
                           color: $black-1;
                         }
                       }
@@ -816,9 +1046,12 @@
       width: 100%;
     }
   }
+
   @include smartphone-media-query {
     .nav {
       width: 100%;
     }
   }
 }
+
+// ITALO OUT
