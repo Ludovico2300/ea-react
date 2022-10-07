@@ -31,6 +31,7 @@ export default function Navbar() {
     clearInterval(interval);
   }, []);
 
+
   //scroll functiont to darknav shows
   window.onscroll = function () {
     let currentScrollPos = window.pageYOffset;
@@ -44,7 +45,7 @@ export default function Navbar() {
 
   function asideShow() {
     setAside(true);
-    
+
   }
 
   function asideHidden() {
@@ -65,7 +66,7 @@ export default function Navbar() {
             <i className="fa-solid fa-ellipsis-vertical"></i>
             <i className="fa-solid fa-bars hidden"></i>
           </div>
-          <Link id="logo-home-navbar" to="#">
+          <Link id="logo-home-navbar" to="/">
             <img
               className=""
               src="./assets/navbar/ea-wordmark-network-nav-coral.svg"
@@ -88,7 +89,7 @@ export default function Navbar() {
                 {z && (
                   <Link id="logo-home-navbar" to="#">
                     <img
-                        
+
                       src="./assets/navbar/ea-wordmark-network-nav-coral.svg"
                       alt="Electronics Arts Home"
                     />
@@ -135,7 +136,7 @@ export default function Navbar() {
               </div>
 
               {y && (
-                <div  id="dropdown-menu-nav-media">
+                <div id="dropdown-menu-nav-media">
                   {text.map((text) => (
                     <Dropdown content={text} />
                   ))}
