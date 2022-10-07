@@ -1,3 +1,4 @@
+import { fstat } from "fs";
 import Marquee from "react-fast-marquee";
 import SlideHero from "./utils/Slidehero";
 import Slideshow from "./utils/Slider";
