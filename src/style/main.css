@@ -360,7 +360,7 @@ html {
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) i {
   position: relative;
-  top: 30%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
@@ -373,13 +373,40 @@ html {
   position: relative;
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login form .input-container {
+  margin: 0.5rem;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login form .input-container .input {
   margin: 1rem;
+  padding: 0.4rem 1rem;
+  border-radius: 0.5rem;
+  width: 16rem;
+  font-family: "ElectronicArtsDisplay-Bold";
+  border: 2px solid transparent;
+  font-size: 1.6rem;
+  line-height: 1.65;
+  letter-spacing: normal;
+  font-weight: 550;
+  color: "$black-2";
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login form .input-container .input:focus {
+  outline: none;
+  border: 2px solid #ff1e3c;
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login form h4 {
   color: #a3a3a3;
 }
-.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login form .button-container {
-  border: 3px solid red;
+.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login form .button-container .signin {
+  background-color: #ff1e3c;
+  padding: 0.8rem 1.2rem;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1.65;
+  letter-spacing: normal;
+  font-weight: 550;
+  color: "$black-2";
+  font-family: "ElectronicArtsDisplay-Bold";
+  border-radius: 0.5rem;
+  width: 16rem;
 }
 .header .nav #dark-navbar .menu-darknav .Help-menu {
   width: 100%;

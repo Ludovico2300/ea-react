@@ -126,7 +126,6 @@
 
       &.up {
         margin-top: 0;
-
       }
 
       &:not(.up) {
@@ -152,7 +151,6 @@
             top: 5rem;
             right: 2rem;
           }
-
         }
 
         &:not(.Show-menu) {
@@ -163,16 +161,12 @@
           }
         }
 
-
-
         .login-menu {
           width: 100%;
           transition: all 0.5s ease-out;
           width: auto;
           @include smartphone-media-query {
             flex-direction: column;
-
-
           }
 
           .icon {
@@ -183,22 +177,16 @@
             @include tablet-media-query {
               flex-direction: row;
               margin-top: 2rem;
-
-
             }
 
             @include smartphone-media-query {
               flex-direction: row;
               margin-top: 2rem;
               justify-content: start;
-
-
             }
 
             &:hover {
-
               transform: translateY(-8%);
-
             }
 
             h4 {
@@ -236,7 +224,6 @@
 
               i {
                 position: absolute;
-
               }
 
               .conteiner-login {
@@ -244,14 +231,12 @@
                   height: 0%;
 
                   .input-container {
-
                     margin: 0rem;
                   }
 
                   h4 {
                     color: $black-2;
                   }
-
                 }
               }
             }
@@ -262,9 +247,9 @@
 
               i {
                 position: relative;
-                top: 30%;
+                top: 20%;
                 left: 50%;
-                transform: translate(-50%, -50%) ;
+                transform: translate(-50%, -50%);
                 z-index: 3;
               }
 
@@ -276,19 +261,39 @@
                   position: relative;
 
                   .input-container {
+                    margin: 0.5rem;
+                    .input {
+                      margin: 1rem;
+                      padding: 0.4rem 1rem;
+                      border-radius: 0.5rem;
+                      width: 16rem;
+                      @include bold;
+                      border: 2px solid transparent;
+                      @include h4(smartphone);
 
-                    margin: 1rem;
+                      &:focus{
+                        outline: none;
+                        border: 2px solid #ff1e3c;
+                      }
+                    }
                   }
 
                   h4 {
                     color: $grey-2;
                   }
-                  .button-container{
-                    border: 3px solid red;
+                  .button-container {
+                    .signin {
+                      background-color: #ff1e3c;
+                      padding: 0.8rem 1.2rem;
+                      color: #fff;
+                      @include h4(smartphone);
+                      @include bold;
+                      border-radius: 0.5rem;
+                      width: 16rem;
+                    }
                   }
                 }
               }
-
             }
           }
         }
@@ -296,7 +301,6 @@
         .Help-menu {
           width: 100%;
           transition: all 0.5s ease-out;
-
 
           h4,
           h1 {
@@ -312,10 +316,7 @@
 
             @include smartphone-media-query {
               flex-direction: column;
-
-
             }
-
           }
 
           &.Show {
@@ -329,10 +330,6 @@
 
               @include tablet-media-query {
                 flex-direction: row;
-
-
-
-
               }
 
               @include smartphone-media-query {
@@ -340,8 +337,6 @@
                 margin: 1rem 0 0 1rem;
                 justify-content: start;
                 width: 25rem;
-
-
               }
 
               &:hover {
@@ -365,16 +360,13 @@
             }
           }
         }
-
       }
-
     }
 
     #white-navbar {
       background-color: $white-1;
       height: 6rem;
       width: 100%;
-
 
       #aside-menu-icon {
         height: 100%;
@@ -465,10 +457,12 @@
               height: 0;
               transition: all 0.3s ease-in-out;
               background: rgb(0, 0, 0);
-              color: linear-gradient(90deg,
-                  rgba(0, 0, 0, 0) 0%,
-                  rgba(255, 255, 255, 0.49933476808692223) 50%,
-                  rgba(255, 255, 255, 1) 100%);
+              color: linear-gradient(
+                90deg,
+                rgba(0, 0, 0, 0) 0%,
+                rgba(255, 255, 255, 0.49933476808692223) 50%,
+                rgba(255, 255, 255, 1) 100%
+              );
 
               Copy to Clipboard a {
                 color: gradient;
@@ -477,7 +471,6 @@
               .divide {
                 display: flex;
                 align-items: flex-start;
-
               }
             }
           }
@@ -655,15 +648,21 @@
               .filter {
                 display: flex;
                 background: rgb(132, 35, 222);
-                background: -moz-linear-gradient(180deg,
-                    rgba(132, 35, 222, 1) 0%,
-                    rgba(255, 88, 184, 1) 100%);
-                background: -webkit-linear-gradient(180deg,
-                    rgba(132, 35, 222, 1) 0%,
-                    rgba(255, 88, 184, 1) 100%);
-                background: linear-gradient(180deg,
-                    rgba(132, 35, 222, 1) 0%,
-                    rgba(255, 88, 184, 1) 100%);
+                background: -moz-linear-gradient(
+                  180deg,
+                  rgba(132, 35, 222, 1) 0%,
+                  rgba(255, 88, 184, 1) 100%
+                );
+                background: -webkit-linear-gradient(
+                  180deg,
+                  rgba(132, 35, 222, 1) 0%,
+                  rgba(255, 88, 184, 1) 100%
+                );
+                background: linear-gradient(
+                  180deg,
+                  rgba(132, 35, 222, 1) 0%,
+                  rgba(255, 88, 184, 1) 100%
+                );
                 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8423de", endColorstr="#ff58b8", GradientType=1);
                 z-index: 1;
                 top: 0%;
@@ -719,14 +718,11 @@
             border-bottom: 1px solid $black-1;
             @include flex-column-center;
 
-
-
             #drop-title {
               height: 5.3rem;
               width: 100%;
               @include flex-between-center;
               transition: all 0.5s ease-in-out;
-
 
               i {
                 font-size: 1.6rem;
@@ -745,15 +741,12 @@
               }
             }
 
-
-
             &.show {
               border-bottom: 2px solid $primary-color;
 
               #drop-title {
                 color: $primary-color;
                 transition: all 0.5s ease-in-out;
-
 
                 i {
                   rotate: x 180deg;
@@ -762,7 +755,6 @@
               }
 
               .dropdown-menu {
-
                 height: max-content;
                 position: inherit;
                 flex-wrap: nowrap;
@@ -773,7 +765,6 @@
 
                 .media {
                   display: block;
-
 
                   ul {
                     height: 4rem;
@@ -799,7 +790,6 @@
                       }
                     }
                   }
-
                 }
 
                 ul {
@@ -812,22 +802,18 @@
                   }
                 }
 
-
                 .title-ul:before {
                   margin-left: 1.5rem;
                   color: $grey-2;
                   text-decoration: none;
                   display: flex;
                 }
-
               }
             }
 
             &:not(.show) {
-
               .dropdown-menu {
                 height: 0rem;
-
               }
 
               .flex-between-center {
@@ -903,14 +889,11 @@
             border-bottom: 2px solid $grey-2;
             @include flex-column-center;
 
-
-
             #drop-title {
               height: 5.3rem;
               width: 100%;
               @include flex-between-center;
               transition: all 0.5s ease-in-out;
-
 
               i {
                 font-size: 1.6rem;
@@ -929,15 +912,12 @@
               }
             }
 
-
-
             &.show {
               border-bottom: 2px solid $primary-color;
 
               #drop-title {
                 color: $primary-color;
                 transition: all 0.5s ease-in-out;
-
 
                 i {
                   rotate: x 180deg;
@@ -946,7 +926,6 @@
               }
 
               .dropdown-menu {
-
                 height: max-content;
                 position: inherit;
                 flex-wrap: nowrap;
@@ -957,7 +936,6 @@
 
                 .media {
                   display: block;
-
 
                   ul {
                     height: 5.3rem;
@@ -974,7 +952,6 @@
                       }
                     }
                   }
-
                 }
 
                 .title-ul:before {
@@ -993,15 +970,12 @@
                     padding-left: 0.5rem;
                   }
                 }
-
               }
             }
 
             &:not(.show) {
-
               .dropdown-menu {
                 height: 0rem;
-
               }
 
               .flex-between-center {
