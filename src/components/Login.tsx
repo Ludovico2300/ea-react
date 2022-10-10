@@ -1,44 +1,33 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 export function Login() {
-  const handleSubmit = (event: any) => {
-    // Prevent page reload
-    event.preventDefault();
-  };
+  const inputRefEmail: any = useRef();
+  const inputRefPass: any = useRef();
+  const [res, setRes] = useState()
+  const [dataSend, setDataSend] = useState({ email: inputRefEmail, password: inputRefPass })
 
-  const [values, setValues] = useState("");
-  
-  const handleChangevalues = (value: any) => {
-    setValues((prevValue) => ({
-      //@ts-ignore
-      ...prevValue,
-      [value.target.name]: value.target.value,
-    }));
-    console.log(values)
-  };
 
-  const sendToServer = () => {
-    console.log("Inviato!")
-  }
-
-  /* const handleLogin=() =>{
-    this.setState({
-        login : true
-    })       
-}
-const handleResetState =() => {
-    this.setState({
-        username: '',
-        password :'',
-        checked : '',
-        login: false ,
-        disabled : ''
+  function sendToServer() {
+    setDataSend({
+      email: inputRefEmail.current.value,
+      password: inputRefPass.current.value
     })
-} */
+ 
+  const requestOptions = {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(dataSend)
+  };
+  fetch('http://localhost:3030/EA-server/signup', requestOptions)
+    .then(response => response.json())
+    .then(res => setRes(res));
+ }
+
+
 
   return (
     <div className="conteiner-login">
-      <div className="flex-column-center form" onSubmit={handleSubmit}>
+      <div className="flex-column-center form" >
         <div className="input-container flex-column-center">
           <h4>Email</h4>
           <input
@@ -46,7 +35,7 @@ const handleResetState =() => {
             name="email"
             required
             className="input"
-            onChange={handleChangevalues}
+            ref={inputRefEmail}
           />
         </div>
         <div className="input-container flex-column-center">
@@ -56,11 +45,11 @@ const handleResetState =() => {
             name="pass"
             required
             className="input"
-            onChange={handleChangevalues}
+            ref={inputRefPass}
           />
         </div>
         <div className="button-container">
-          <input type="submit" value="Login" className="signin" onClick={sendToServer}/>
+          <button value="Login" className="signin" onClick={sendToServer}>Login </button>
         </div>
       </div>
     </div>
