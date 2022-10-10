@@ -50,30 +50,30 @@ export default function AllCardGames() {
                 game=""
               />
               <Card
-                source=""
-                logo=""
+                source="https://media.contentapi.ea.com/content/dam/gin/images/2021/07/grid-legends-gamebox.jpg.adapt.crop1x1.767p.jpg"
+                logo="https://media.contentapi.ea.com/content/dam/gin/common/logos/grid-legends-logo-gamebox.png"
                 game=""
               />
               <Card
-                source=""
-                logo=""
+                source="https://media.contentapi.ea.com/content/dam/gin/images/2021/08/nhl22-gin-16x9.jpg.adapt.crop1x1.767p.jpg"
+                logo="https://media.contentapi.ea.com/content/dam/gin/common/logos/nhl22-mono-logo.png"
                 game=""
               />
             </div>
             <div className="second-line">
               <Card
-                source=""
-                logo=""
+                source="https://media.contentapi.ea.com/content/dam/gin/images/2020/06/lir-keyart.jpg.adapt.crop1x1.767p.jpg"
+                logo="https://media.contentapi.ea.com/content/dam/gin/common/logos/lir-logo-mono.png"
                 game=""
               />
               <Card
-                source=""
-                logo=""
+                source="https://media.contentapi.ea.com/content/dam/gin/images/2020/07/ufc4-gin-keyart.png.adapt.crop1x1.767p.png"
+                logo="https://media.contentapi.ea.com/content/dam/gin/common/logos/ufc-mono-logo.svg"
                 game=""
               />
               <Card
-                source=""
-                logo=""
+                source="https://media.contentapi.ea.com/content/dam/gin/images/2020/06/rocket-arena-keyart-16x9.jpg.adapt.crop1x1.767p.jpg"
+                logo="https://media.contentapi.ea.com/content/dam/gin/common/logos/rocket-arena-mono-logo.svg"
                 game=""
               />
             </div>
