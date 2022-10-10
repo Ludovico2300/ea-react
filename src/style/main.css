@@ -345,13 +345,13 @@ html {
 .header .nav #dark-navbar .menu-darknav .login-menu .login.Show i {
   position: absolute;
 }
-.header .nav #dark-navbar .menu-darknav .login-menu .login.Show .conteiner-login form {
+.header .nav #dark-navbar .menu-darknav .login-menu .login.Show .conteiner-login .form {
   height: 0%;
 }
-.header .nav #dark-navbar .menu-darknav .login-menu .login.Show .conteiner-login form .input-container {
+.header .nav #dark-navbar .menu-darknav .login-menu .login.Show .conteiner-login .form .input-container {
   margin: 0rem;
 }
-.header .nav #dark-navbar .menu-darknav .login-menu .login.Show .conteiner-login form h4 {
+.header .nav #dark-navbar .menu-darknav .login-menu .login.Show .conteiner-login .form h4 {
   color: #161616;
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) {
@@ -368,14 +368,14 @@ html {
 .header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login {
   height: 100%;
 }
-.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login form {
+.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login .form {
   height: 100%;
   position: relative;
 }
-.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login form .input-container {
+.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login .form .input-container {
   margin: 0.5rem;
 }
-.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login form .input-container .input {
+.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login .form .input-container .input {
   margin: 1rem;
   padding: 0.4rem 1rem;
   border-radius: 0.5rem;
@@ -388,14 +388,14 @@ html {
   font-weight: 550;
   color: "$black-2";
 }
-.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login form .input-container .input:focus {
+.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login .form .input-container .input:focus {
   outline: none;
   border: 2px solid #ff1e3c;
 }
-.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login form h4 {
+.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login .form h4 {
   color: #a3a3a3;
 }
-.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login form .button-container .signin {
+.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login .form .button-container .signin {
   background-color: #ff1e3c;
   padding: 0.8rem 1.2rem;
   color: #fff;
