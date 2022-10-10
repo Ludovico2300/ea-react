@@ -165,6 +165,7 @@
           width: 100%;
           transition: all 0.5s ease-out;
           width: auto;
+
           @include smartphone-media-query {
             flex-direction: column;
           }
@@ -262,6 +263,7 @@
 
                   .input-container {
                     margin: 0.5rem;
+
                     .input {
                       margin: 1rem;
                       padding: 0.4rem 1rem;
@@ -271,7 +273,7 @@
                       border: 2px solid transparent;
                       @include h4(smartphone);
 
-                      &:focus{
+                      &:focus {
                         outline: none;
                         border: 2px solid #ff1e3c;
                       }
@@ -281,6 +283,96 @@
                   h4 {
                     color: $grey-2;
                   }
+
+                  .button-container {
+                    .signin {
+                      background-color: #ff1e3c;
+                      padding: 0.8rem 1.2rem;
+                      color: #fff;
+                      @include h4(smartphone);
+                      @include bold;
+                      border-radius: 0.5rem;
+                      width: 16rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .singup {
+            transition: all 0.3s ease-out;
+            /*             box-shadow: 5px 0px 6px $grey-1; */
+            height: 100%;
+
+            &.Show {
+              height: 0;
+              opacity: 0;
+
+              i {
+                position: absolute;
+              }
+
+              .conteiner-singup {
+                .form {
+                  height: 0%;
+
+                  .input-container {
+                    margin: 0rem;
+                  }
+
+                  h4 {
+                    color: $black-2;
+                  }
+                }
+              }
+            }
+
+            &:not(.Show) {
+              opacity: 1;
+              height: 100%;
+
+              i {
+                position: relative;
+                top: 88%;
+                left: 90%;
+                transform: translate(-50%, -50%);
+                z-index: 3;
+              }
+
+              .conteiner-singup {
+                height: 100%;
+
+                .form {
+                  height: 100%;
+                  position: relative;
+                  width: 32rem;
+                  display: flex;
+                  align-items: center;
+                  justify-content: start;
+
+                  .input-container {
+                    margin: 0.5rem;
+                    .input {
+                      margin: 1rem;
+                      padding: 0.4rem 1rem;
+                      border-radius: 0.5rem;
+                      width: 16rem;
+                      @include bold;
+                      border: 2px solid transparent;
+                      @include h4(smartphone);
+
+                      &:focus {
+                        outline: none;
+                        border: 2px solid #ff1e3c;
+                      }
+                    }
+                  }
+
+                  h4 {
+                    color: $grey-2;
+                  }
+
                   .button-container {
                     .signin {
                       background-color: #ff1e3c;
@@ -297,6 +389,7 @@
             }
           }
         }
+
 
         .Help-menu {
           width: 100%;
@@ -457,12 +550,10 @@
               height: 0;
               transition: all 0.3s ease-in-out;
               background: rgb(0, 0, 0);
-              color: linear-gradient(
-                90deg,
-                rgba(0, 0, 0, 0) 0%,
-                rgba(255, 255, 255, 0.49933476808692223) 50%,
-                rgba(255, 255, 255, 1) 100%
-              );
+              color: linear-gradient(90deg,
+                  rgba(0, 0, 0, 0) 0%,
+                  rgba(255, 255, 255, 0.49933476808692223) 50%,
+                  rgba(255, 255, 255, 1) 100%);
 
               Copy to Clipboard a {
                 color: gradient;
@@ -648,21 +739,15 @@
               .filter {
                 display: flex;
                 background: rgb(132, 35, 222);
-                background: -moz-linear-gradient(
-                  180deg,
-                  rgba(132, 35, 222, 1) 0%,
-                  rgba(255, 88, 184, 1) 100%
-                );
-                background: -webkit-linear-gradient(
-                  180deg,
-                  rgba(132, 35, 222, 1) 0%,
-                  rgba(255, 88, 184, 1) 100%
-                );
-                background: linear-gradient(
-                  180deg,
-                  rgba(132, 35, 222, 1) 0%,
-                  rgba(255, 88, 184, 1) 100%
-                );
+                background: -moz-linear-gradient(180deg,
+                    rgba(132, 35, 222, 1) 0%,
+                    rgba(255, 88, 184, 1) 100%);
+                background: -webkit-linear-gradient(180deg,
+                    rgba(132, 35, 222, 1) 0%,
+                    rgba(255, 88, 184, 1) 100%);
+                background: linear-gradient(180deg,
+                    rgba(132, 35, 222, 1) 0%,
+                    rgba(255, 88, 184, 1) 100%);
                 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8423de", endColorstr="#ff58b8", GradientType=1);
                 z-index: 1;
                 top: 0%;

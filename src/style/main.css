@@ -408,6 +408,85 @@ html {
   border-radius: 0.5rem;
   width: 16rem;
 }
+.header .nav #dark-navbar .menu-darknav .login-menu .singup {
+  transition: all 0.3s ease-out;
+  /*             box-shadow: 5px 0px 6px $grey-1; */
+  height: 100%;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup.Show {
+  height: 0;
+  opacity: 0;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup.Show i {
+  position: absolute;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup.Show .conteiner-singup .form {
+  height: 0%;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup.Show .conteiner-singup .form .input-container {
+  margin: 0rem;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup.Show .conteiner-singup .form h4 {
+  color: #161616;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) {
+  opacity: 1;
+  height: 100%;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) i {
+  position: relative;
+  top: 88%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup {
+  height: 100%;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form {
+  height: 100%;
+  position: relative;
+  width: 32rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form .input-container {
+  margin: 0.5rem;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form .input-container .input {
+  margin: 1rem;
+  padding: 0.4rem 1rem;
+  border-radius: 0.5rem;
+  width: 16rem;
+  font-family: "ElectronicArtsDisplay-Bold";
+  border: 2px solid transparent;
+  font-size: 1.6rem;
+  line-height: 1.65;
+  letter-spacing: normal;
+  font-weight: 550;
+  color: "$black-2";
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form .input-container .input:focus {
+  outline: none;
+  border: 2px solid #ff1e3c;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form h4 {
+  color: #a3a3a3;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form .button-container .signin {
+  background-color: #ff1e3c;
+  padding: 0.8rem 1.2rem;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1.65;
+  letter-spacing: normal;
+  font-weight: 550;
+  color: "$black-2";
+  font-family: "ElectronicArtsDisplay-Bold";
+  border-radius: 0.5rem;
+  width: 16rem;
+}
 .header .nav #dark-navbar .menu-darknav .Help-menu {
   width: 100%;
   transition: all 0.5s ease-out;
