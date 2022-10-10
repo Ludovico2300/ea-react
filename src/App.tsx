@@ -5,11 +5,11 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/allgames" element={<AllGames />} />
-      <Route path="/allnews" element={<AllNews />} />
-    </Routes>
+     <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/allgames" element={<AllGames />} />
+        <Route path="/allnews" element={<AllNews />} />
+      </Routes>
   );
 }
 

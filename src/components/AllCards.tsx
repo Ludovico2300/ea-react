@@ -47,7 +47,7 @@ export default function AllCards() {
               />
             </div>
           </div>
-          <Button buttonSize="btn--medium" buttonStyle="btn--outline-black" onClick={navigate("/allgames")}>
+          <Button buttonSize="btn--medium" buttonStyle="btn--outline-black">
             Ultimi giochi
           </Button>
         </div>
