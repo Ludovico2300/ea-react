@@ -72,6 +72,7 @@ const text = [
     },
   },
 ];
+
 const midiaSrc = [
   {
     source: "./assets/navbar/capiparas/gabbo.jpeg",

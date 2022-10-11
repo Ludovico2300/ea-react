@@ -20,13 +20,8 @@ export function Login() {
         password: inputRefPass.current.value,
       },
     }); 
-
-
     return toast
   }
-
-
-
 
   return (
     <div className="conteiner-login">

@@ -8,6 +8,7 @@ export function Singup() {
   const inputRefEmail: any = useRef();
   const inputRefPass: any = useRef();
 
+
   const { fetch, toast } = useApi({
     path: "signup",
   });

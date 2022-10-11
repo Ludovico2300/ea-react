@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { Login } from "./Login";
 import { Singup } from "./Signup";
-import { midiaSrc } from "./utils/ContentNav";
+
 
 export type DarkNavProps = {
   data: boolean;
@@ -18,8 +18,7 @@ export function DarkNav(props: DarkNavProps) {
   const [showMenu, setShowMenu] = useState(false)
   const [login, setLogin] = useState(true)
   const [signup, setSignup] = useState(true)
-  const [items, setItems]: any = useState();
-  const [source, setSource]: any = useState();
+
 
 
   function showMenuLogin() {
@@ -57,30 +56,18 @@ export function DarkNav(props: DarkNavProps) {
   showMenu ? disableBodyScroll(document) : enableBodyScroll(document)
 
 
-  useEffect(() => {
-    const find = midiaSrc.find((element) => {
-    if (element.name === sessionStorage.getItem('user')) {
-     return element
-      }
-    })
-    const item = find ? find: items
-    setItems(item)
-  }, []);
-
-
-
-
   return (
 
     <div
       className={`${data ? "up" : ""} ${up ? "up" : ""} `}
       id="dark-navbar">
       <div className="flex-center-end ">
-        {sessionStorage.getItem('user')?
+        {sessionStorage.getItem('user') ?
           <div className="user flex-center-center" id="user" onClick={() => showMenuLogin()}>
-            <h4>{items}</h4>  
-            <img src={source} alt={items} className="userimage" /> 
-            <button onClick={()=>sessionStorage.clear()}>logout</button>
+            <h4>{sessionStorage.getItem('user')}</h4>
+            {/* @ts-ignore */}
+            <img src={sessionStorage.getItem("source")} alt={sessionStorage.getItem('user')} className="userimage" />
+            <button onClick={() => sessionStorage.clear()}>logout</button>
           </div>
           :
           <div onClick={() => showMenuLogin()}
@@ -88,7 +75,7 @@ export function DarkNav(props: DarkNavProps) {
             <i className={`fa-regular fa-user ${showLogin ? "show-login" : ""}`}></i>
           </div>
         }
-       
+
         <div onClick={() => showMenuHelp()}
           className="icon-darknav flex-center-center" id="quest-navbar">
           <i className={"fa-regular fa-question fa-solid"}></i>
@@ -111,9 +98,8 @@ export function DarkNav(props: DarkNavProps) {
 
         <div className={`flex-center-center login-menu ${showLogin ? "Show" : ""}`}>
 
-
-          {login ? (
-            <div className="flex-column-center icon" onClick={() => setLogin(false)}>
+          {login ? 
+            (<div className="flex-column-center icon" onClick={() => {setLogin(false); setSignup(true)}}>
               <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 100 100">
                 <g fill="none" fill-rule="evenodd">
                   <rect width="100" height="100" fill="#8423de" rx="12" />
@@ -121,7 +107,8 @@ export function DarkNav(props: DarkNavProps) {
                 </g>
               </svg>
               <h4>Login</h4>
-            </div>)
+            </div>
+           )
             :
             (<div className={`login ${showLogin ? "" : "Show"}`}>
               <i className="fa-solid fa-xmark" onClick={() => setLogin(true)}></i>
@@ -131,7 +118,7 @@ export function DarkNav(props: DarkNavProps) {
 
 
           {signup ? (
-            <div className="flex-column-center icon" onClick={() => setSignup(false)}>
+            <div className="flex-column-center icon" onClick={() =>  {setLogin(true); setSignup(false)}}>
               <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 100 100">
                 <g fill="none" fill-rule="evenodd">
                   <rect width="100" height="100" fill="#8423de" rx="12" />
