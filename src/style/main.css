@@ -360,20 +360,21 @@ html {
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) i {
   position: relative;
-  top: 20%;
+  top: 5%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login {
   height: 100%;
+  width: 50rem;
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login .form {
-  height: 100%;
+  height: 82.5%;
   position: relative;
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login .form .input-container {
-  margin: 0.5rem;
+  margin: 2rem 0rem;
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login .form .input-container .input {
   margin: 1rem;
@@ -390,13 +391,13 @@ html {
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login .form .input-container .input:focus {
   outline: none;
-  border: 2px solid #ff1e3c;
+  border: 2px solid #8423de;
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login .form h4 {
   color: #a3a3a3;
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login .form .button-container .signin {
-  background-color: #ff1e3c;
+  background-color: #8423de;
   padding: 0.8rem 1.2rem;
   color: #fff;
   font-size: 1.6rem;
@@ -407,10 +408,16 @@ html {
   font-family: "ElectronicArtsDisplay-Bold";
   border-radius: 0.5rem;
   width: 16rem;
+  transition: 0.2s all linear;
+  margin-top: 2rem;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login .form .button-container .signin:hover {
+  transition: 0.2s all linear;
+  background-color: #fff;
+  color: #8423de;
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .singup {
   transition: all 0.3s ease-out;
-  /*             box-shadow: 5px 0px 6px $grey-1; */
   height: 100%;
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .singup.Show {
@@ -435,25 +442,38 @@ html {
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) i {
   position: relative;
-  top: 88%;
-  left: 90%;
+  top: 5%;
+  left: 32.5%;
   transform: translate(-50%, -50%);
   z-index: 3;
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup {
-  width: 60rem;
+  width: 50rem;
   height: 100%;
-  position: relative;
-  border: 1px solid red;
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form {
-  height: 100%;
+  width: 100%;
+  height: 80%;
   position: absolute;
   width: 32rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form .first {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form .second {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form .input-container {
   margin: 0.5rem;
@@ -473,13 +493,16 @@ html {
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form .input-container .input:focus {
   outline: none;
-  border: 2px solid #ff1e3c;
+  border: 2px solid #8423de;
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form h4 {
   color: #a3a3a3;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form .button-container .signin {
-  background-color: #ff1e3c;
+  background-color: #8423de;
   padding: 0.8rem 1.2rem;
   color: #fff;
   font-size: 1.6rem;
@@ -490,6 +513,12 @@ html {
   font-family: "ElectronicArtsDisplay-Bold";
   border-radius: 0.5rem;
   width: 16rem;
+  transition: 0.2s all linear;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form .button-container .signin:hover {
+  transition: 0.2s all linear;
+  background-color: #fff;
+  color: #8423de;
 }
 .header .nav #dark-navbar .menu-darknav .Help-menu {
   width: 100%;
