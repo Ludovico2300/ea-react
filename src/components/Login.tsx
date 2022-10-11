@@ -1,51 +1,30 @@
-import { useRef, useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { useRef } from "react";
+import { useApi } from "./hooks/useApi";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import axios from "axios";
 
 export function Login() {
   const inputRefEmail: any = useRef();
   const inputRefPass: any = useRef();
-  const [response, setResponse]: any = useState();
 
-  function sendToServer() {
-    axios
-      .post(`http://localhost:3030/EA-server/signin`, {
+  const { fetch, toast } = useApi({
+    path: "signin",
+  });
+
+  function onfetch() {
+    fetch({
+      path: "signin",
+      user: {
         email: inputRefEmail.current.value,
         password: inputRefPass.current.value,
-      })
-
-      .then((res) => {
-        setResponse(res);
-        if (res.data.data.status === 200) {
-          toast.success(res.data.message, {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-          });
-        } else {
-          toast.error(res.data.message, {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-          });
-        }
-      });
+      },
+    });
+    return toast;
   }
 
   return (
     <div className="conteiner-login">
-      <ToastContainer />
+      <ToastContainer style={{ fontSize: "1.5rem" }} />
       <div className="flex-column-center form">
         <div className="input-container flex-column-center">
           <h4>Email</h4>
@@ -68,7 +47,7 @@ export function Login() {
           />
         </div>
         <div className="button-container">
-          <button value="Login" className="signin" onClick={sendToServer}>
+          <button value="Login" className="signin" onClick={onfetch}>
             Login
           </button>
         </div>

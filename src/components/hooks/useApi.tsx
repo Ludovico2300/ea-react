@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 export type Axios = {
   path: string;
-  user: {
+  user?: {
     email: string;
     password: string;
     username?: string;
@@ -17,7 +17,7 @@ export function useApi(props: Axios) {
   const [tost, setTost]: any = useState();
 
 
-  function fetchdata(){
+  function fetchdata(props: Axios){
   axios
     .post(`http://localhost:3030/EA-server/${props.path}`, props.user)
 

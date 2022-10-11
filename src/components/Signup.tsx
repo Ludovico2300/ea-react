@@ -1,58 +1,37 @@
-import { useRef, useState } from "react";
-import axios from "axios";
-import { ToastContainer, toast } from "react-toastify";
+import { useRef } from "react";
+import { useApi } from "./hooks/useApi";
+import { ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export function Singup() {
   const inputRefUser: any = useRef();
   const inputRefEmail: any = useRef();
   const inputRefPass: any = useRef();
-  const [response, setResponse]: any = useState();
 
-  const fetch = () => {
-    axios
-      .post(`http://localhost:3030/EA-server/signup`, {
+  const { fetch, toast } = useApi({
+    path: "signup",
+  });
+
+  function onfetch() {
+    fetch({
+      path: "signup",
+      user: {
         email: inputRefEmail.current.value,
         password: inputRefPass.current.value,
         username: inputRefUser.current.value,
-      })
+      },
+    });
+    return toast;
+  }
 
-      .then((res) => {
-        setResponse(res);
-        if (res.data.status === 200) {
-          toast.success(res.data.message, {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-          });
-        } else {
-          toast.error(res.data.message, {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: true,
-            progress: undefined,
-            theme: "colored",
-          });
-        }
-      });
-  };
+
+
 
   return (
     <div className="conteiner-singup">
       <ToastContainer style={{ fontSize: "1.5rem" }} />
       <div className="form">
-
-
         <div className="first">
-
           <div className="input-container ">
             <h4>Email</h4>
             <input
@@ -75,9 +54,7 @@ export function Singup() {
           </div>
         </div>
 
-
         <div className="second">
-
           <div className="input-container ">
             <h4>Password</h4>
             <input
@@ -95,8 +72,8 @@ export function Singup() {
         </div>
 
         <div className="button-container">
-          <button value="singup" className="signin" onClick={fetch}>
-            Singup {response ? response.data.status : ""}
+          <button value="singup" className="signin" onClick={onfetch}>
+            Singup 
           </button>
         </div>
       </div>

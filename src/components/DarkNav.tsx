@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { Login } from "./Login";
 import { Singup } from "./Signup";
+import { useApi } from "./hooks/useApi";  
 export type DarkNavProps = {
   data: boolean;
   up: boolean;
@@ -47,12 +48,16 @@ export function DarkNav(props: DarkNavProps) {
   //@ts-ignore
   showMenu ? disableBodyScroll(document) : enableBodyScroll(document)
 
+
+const{res} =useApi({  path: "signup",})
+  
   return (
 
     <div
       className={`${data ? "up" : ""} ${up ? "up" : ""} `}
       id="dark-navbar">
       <div className="flex-center-end ">
+        {res?<p>{res.data}</p>:""}
         <div onClick={() => showMenuLogin()}
           className="icon-darknav flex-center-center" id="user-navbar">
           <i className={`fa-regular fa-user ${showLogin ? "show-login" : ""}`}></i>
