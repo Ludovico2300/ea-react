@@ -7,13 +7,14 @@ export default function Slideshow() {
       <div className="slideshowSlider">
         <Marquee
           className="text-slider"
-          speed={95}
+          speed={50}
           gradient={false}
           loop={0}
+          delay={1}
         >
           <SlideElement />
         </Marquee>
       </div>
-    </div>//Gabbo  Mode
+    </div>
   );
 }

@@ -303,6 +303,7 @@ html {
   -webkit-transition: margin-top 0.3s ease-in-out;
   transition: margin-top 0.3s ease-in-out;
 }
+<<<<<<< HEAD
 
 .header .nav #dark-navbar a {
   width: 5rem;
@@ -314,6 +315,16 @@ html {
 }
 
 .header .nav #dark-navbar a img {
+=======
+.header .nav #dark-navbar .icon-darknav {
+  width: 5rem;
+}
+.header .nav #dark-navbar .icon-darknav i {
+  font-size: 2rem;
+  color: #a3a3a3;
+}
+.header .nav #dark-navbar .icon-darknav img {
+>>>>>>> develop
   height: 3rem;
   width: 4rem;
 }
@@ -325,7 +336,331 @@ html {
 .header .nav #dark-navbar:not(.up) {
   margin-top: -4rem;
 }
+<<<<<<< HEAD
 
+=======
+.header .nav #dark-navbar .menu-darknav {
+  width: 100%;
+  background-color: #000000;
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+  z-index: 10;
+}
+.header .nav #dark-navbar .menu-darknav.Show-menu {
+  height: 40rem;
+}
+.header .nav #dark-navbar .menu-darknav.Show-menu i {
+  color: #ffffff;
+  position: absolute;
+  height: 1.3rem;
+  width: 1.3rem;
+  font-size: 1.5rem;
+  top: 5rem;
+  right: 2rem;
+}
+.header .nav #dark-navbar .menu-darknav:not(.Show-menu) {
+  height: 0;
+}
+.header .nav #dark-navbar .menu-darknav:not(.Show-menu) i {
+  position: hidden;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu {
+  width: 100%;
+  transition: all 0.5s ease-out;
+  width: auto;
+}
+@media (max-width: 767px) {
+  .header .nav #dark-navbar .menu-darknav .login-menu {
+    flex-direction: column;
+  }
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .icon {
+  margin: 0 10rem 0 10rem;
+  transition: all 0.2s ease-out;
+  width: 16rem;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header .nav #dark-navbar .menu-darknav .login-menu .icon {
+    flex-direction: row;
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 767px) {
+  .header .nav #dark-navbar .menu-darknav .login-menu .icon {
+    flex-direction: row;
+    margin-top: 2rem;
+    justify-content: start;
+  }
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .icon:hover {
+  transform: translateY(-8%);
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .icon h4 {
+  margin-top: 1rem;
+  color: #a3a3a3;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header .nav #dark-navbar .menu-darknav .login-menu .icon h4 {
+    margin-left: 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .header .nav #dark-navbar .menu-darknav .login-menu .icon h4 {
+    margin-left: 1rem;
+  }
+}
+.header .nav #dark-navbar .menu-darknav .login-menu.Show {
+  height: 40rem;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu:not(.Show) {
+  height: 0;
+  opacity: 0;
+  z-index: -5;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .login {
+  transition: all 0.3s ease-out;
+  /*             box-shadow: 5px 0px 6px $grey-1; */
+  height: 100%;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .login.Show {
+  height: 0;
+  opacity: 0;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .login.Show i {
+  position: absolute;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .login.Show .conteiner-login .form {
+  height: 0%;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .login.Show .conteiner-login .form .input-container {
+  margin: 0rem;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .login.Show .conteiner-login .form h4 {
+  color: #161616;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) {
+  opacity: 1;
+  height: 100%;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) i {
+  position: relative;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login {
+  height: 100%;
+  width: 50rem;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login .form {
+  height: 82.5%;
+  position: relative;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login .form .input-container {
+  margin: 2rem 0rem;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login .form .input-container .input {
+  margin: 1rem;
+  padding: 0.4rem 1rem;
+  border-radius: 0.5rem;
+  width: 16rem;
+  font-family: "ElectronicArtsDisplay-Bold";
+  border: 2px solid transparent;
+  font-size: 1.6rem;
+  line-height: 1.65;
+  letter-spacing: normal;
+  font-weight: 550;
+  color: "$black-2";
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login .form .input-container .input:focus {
+  outline: none;
+  border: 2px solid #8423de;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login .form h4 {
+  color: #a3a3a3;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login .form .button-container .signin {
+  background-color: #8423de;
+  padding: 0.8rem 1.2rem;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1.65;
+  letter-spacing: normal;
+  font-weight: 550;
+  color: "$black-2";
+  font-family: "ElectronicArtsDisplay-Bold";
+  border-radius: 0.5rem;
+  width: 16rem;
+  transition: 0.2s all linear;
+  margin-top: 2rem;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .login:not(.Show) .conteiner-login .form .button-container .signin:hover {
+  transition: 0.2s all linear;
+  background-color: #fff;
+  color: #8423de;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup {
+  transition: all 0.3s ease-out;
+  height: 100%;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup.Show {
+  height: 0;
+  opacity: 0;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup.Show i {
+  position: absolute;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup.Show .conteiner-singup .form {
+  height: 0%;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup.Show .conteiner-singup .form .input-container {
+  margin: 0rem;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup.Show .conteiner-singup .form h4 {
+  color: #161616;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) {
+  opacity: 1;
+  height: 100%;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) i {
+  position: relative;
+  top: 5%;
+  left: 32.5%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup {
+  width: 50rem;
+  height: 100%;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  width: 32rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form .first {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form .second {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form .input-container {
+  margin: 0.5rem;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form .input-container .input {
+  margin: 1rem;
+  padding: 0.4rem 1rem;
+  border-radius: 0.5rem;
+  width: 16rem;
+  font-family: "ElectronicArtsDisplay-Bold";
+  border: 2px solid transparent;
+  font-size: 1.6rem;
+  line-height: 1.65;
+  letter-spacing: normal;
+  font-weight: 550;
+  color: "$black-2";
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form .input-container .input:focus {
+  outline: none;
+  border: 2px solid #8423de;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form h4 {
+  color: #a3a3a3;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form .button-container .signin {
+  background-color: #8423de;
+  padding: 0.8rem 1.2rem;
+  color: #fff;
+  font-size: 1.6rem;
+  line-height: 1.65;
+  letter-spacing: normal;
+  font-weight: 550;
+  color: "$black-2";
+  font-family: "ElectronicArtsDisplay-Bold";
+  border-radius: 0.5rem;
+  width: 16rem;
+  transition: 0.2s all linear;
+}
+.header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form .button-container .signin:hover {
+  transition: 0.2s all linear;
+  background-color: #fff;
+  color: #8423de;
+}
+.header .nav #dark-navbar .menu-darknav .Help-menu {
+  width: 100%;
+  transition: all 0.5s ease-out;
+}
+.header .nav #dark-navbar .menu-darknav .Help-menu h4,
+.header .nav #dark-navbar .menu-darknav .Help-menu h1 {
+  color: #a3a3a3;
+}
+.header .nav #dark-navbar .menu-darknav .Help-menu .conteiner {
+  width: 50%;
+  flex-wrap: wrap;
+  margin: 2rem 0 2rem 0;
+  z-index: -10;
+}
+@media (max-width: 767px) {
+  .header .nav #dark-navbar .menu-darknav .Help-menu .conteiner {
+    flex-direction: column;
+  }
+}
+.header .nav #dark-navbar .menu-darknav .Help-menu.Show {
+  height: 40rem;
+}
+.header .nav #dark-navbar .menu-darknav .Help-menu.Show .icon {
+  width: 50%;
+  margin: 1rem 0 2rem 0;
+  transition: all 0.2s ease-out;
+  height: auto;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header .nav #dark-navbar .menu-darknav .Help-menu.Show .icon {
+    flex-direction: row;
+  }
+}
+@media (max-width: 767px) {
+  .header .nav #dark-navbar .menu-darknav .Help-menu.Show .icon {
+    flex-direction: row;
+    margin: 1rem 0 0 1rem;
+    justify-content: start;
+    width: 25rem;
+  }
+}
+.header .nav #dark-navbar .menu-darknav .Help-menu.Show .icon:hover {
+  transform: translateY(-8%);
+}
+.header .nav #dark-navbar .menu-darknav .Help-menu.Show .icon h4 {
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+.header .nav #dark-navbar .menu-darknav .Help-menu:not(.Show) {
+  height: 0;
+  opacity: 0;
+  z-index: -10;
+}
+.header .nav #dark-navbar .menu-darknav .Help-menu:not(.Show) .icon {
+  height: 0;
+}
+>>>>>>> develop
 .header .nav #white-navbar {
   background-color: #ffffff;
   height: 6rem;
@@ -531,7 +866,7 @@ html {
 }
 
 .header .nav #aside-navbar:not(.margin) {
-  margin-left: -180%;
+  margin-left: -300%;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -631,10 +966,16 @@ html {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+<<<<<<< HEAD
     background: #8423de;
     background: -webkit-gradient(linear, left top, left bottom, from(#8423de), to(#ff58b8));
     background: linear-gradient(180deg, #8423de 0%, #ff58b8 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8423de",endColorstr="#ff58b8",GradientType=1);
+=======
+    background: rgb(132, 35, 222);
+    background: linear-gradient(180deg, rgb(132, 35, 222) 0%, rgb(255, 88, 184) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8423de", endColorstr="#ff58b8", GradientType=1);
+>>>>>>> develop
     z-index: 1;
     top: 0%;
     opacity: 0.8;
@@ -1073,13 +1414,55 @@ html {
 
 .hero .hero-img {
   position: relative;
-  text-align: center;
   width: 100%;
-  height: 70vh;
+  height: 63vh;
   overflow: hidden;
+<<<<<<< HEAD
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background-size: contain;
+=======
+  box-sizing: border-box;
+}
+.hero .hero-img .herop-img {
+  display: flex;
+  overflow: hidden;
+  width: auto;
+  height: 100%;
+}
+.hero .hero-img .herop-img .fifa-hero {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 20% !important;
+  height: 100%;
+}
+.hero .hero-img .herop-img .battlefield-hero {
+  width: 20% !important;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hero .hero-img .herop-img .apex-slide-hero {
+  width: 20% !important;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: -50px;
+}
+.hero .hero-img .herop-img .f1-hero {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 20% !important;
+  height: 100%;
+  margin-top: -100px;
+}
+.hero .hero-img .herop-img .thesims-hero {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 20% !important;
+  height: 100%;
+  margin-top: -50px;
+>>>>>>> develop
 }
 
 .hero .apex-hero {
@@ -1236,6 +1619,7 @@ html {
 }
 
 @media (max-width: 767px) {
+<<<<<<< HEAD
   .hero-img {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1260,24 +1644,62 @@ html {
     left: 60%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
+=======
+  .hero {
+    width: 100vw;
+    height: 100%;
+    margin-bottom: 5.8rem;
   }
-  p {
+  .hero .hero-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  .hero .hero-img .herop-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 50rem !important;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .hero .hero-img .herop-img .fifa-hero,
+.hero .hero-img .herop-img .battlefield-hero,
+.hero .hero-img .herop-img .apex-slide-hero,
+.hero .hero-img .herop-img .f1-hero,
+.hero .hero-img .herop-img .thesims-hero {
+    -o-object-fit: contain !important;
+       object-fit: contain !important;
+    width: 100% !important;
+    height: 100%;
+    margin-top: 20px;
+>>>>>>> develop
+  }
+  .hero p {
     font-size: 2rem;
     line-height: 1.15;
     letter-spacing: normal;
     color: "$black-2";
     color: #ffffff;
   }
-  .default {
+  .hero .default {
     width: 84%;
+  }
+  .hero .slideshow {
+    height: 10vh;
+    position: absolute;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .hero-img {
-    height: 40vh;
+    height: 50vh;
     width: 100vw;
   }
+<<<<<<< HEAD
   .hero-img-one {
     height: 100%;
     width: 100%;
@@ -1299,6 +1721,9 @@ html {
 }
 
 /* Fine parte Tziano */
+=======
+}
+>>>>>>> develop
 /* INIZIO GABBO */
 #card-section {
   width: auto;
