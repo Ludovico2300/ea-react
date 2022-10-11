@@ -102,8 +102,9 @@ export default function AllTabs() {
               );
             })}
         </div>
-          <Button buttonSize="btn--medium" buttonStyle="btn--outline-black">
+          <Button   onClick={"/allnews" } buttonSize="btn--medium" buttonStyle="btn--outline-black">
             {activeTab === "The Sims 4" ? "Espandi" : "Più dettagli"}
+    
           </Button>
       </div>
     </>

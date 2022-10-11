@@ -16,7 +16,7 @@ interface Props {
 export const Button = ({
   children,
   type,
-  onClick,
+  onClick = "/",
   buttonStyle,
   buttonSize,
 }: Props) => {
@@ -28,10 +28,9 @@ export const Button = ({
     : SIZES[0];
 
   return (
-    <Link to="#" className="btn-mobile">
+    <Link to={onClick} className="btn-mobile">
       <button
         className={`${checkButtonStyle} ${checkButtonSize}`}
-        onClick={onClick}
         type={type}
       >
         {children}
