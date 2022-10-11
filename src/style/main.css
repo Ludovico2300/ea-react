@@ -441,15 +441,19 @@ html {
   z-index: 3;
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup {
+  width: 60rem;
   height: 100%;
+  position: relative;
+  border: 1px solid red;
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form {
   height: 100%;
-  position: relative;
+  position: absolute;
   width: 32rem;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .singup:not(.Show) .conteiner-singup .form .input-container {
   margin: 0.5rem;

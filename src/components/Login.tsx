@@ -1,34 +1,24 @@
 import { useRef, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
 
 export function Login() {
   const inputRefEmail: any = useRef();
   const inputRefPass: any = useRef();
-  const [res, setRes]: any = useState();
-  const [dataSend, setDataSend] = useState({
-    email: inputRefEmail,
-    password: inputRefPass,
-  });
+  const [response, setResponse]: any = useState();
 
-  const sendToServer = async () => {
-    setDataSend({
-      email: inputRefEmail.current.value,
-      password: inputRefPass.current.value,
-    });
+  function sendToServer() {
+    axios
+      .post(`http://localhost:3030/EA-server/signin`, {
+        email: inputRefEmail.current.value,
+        password: inputRefPass.current.value,
+      })
 
-    const requestOptions = {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(dataSend),
-    };
-
-    await fetch("http://localhost:3030/EA-server/signin", requestOptions)
-      .then((response) => response.json())
       .then((res) => {
-        setRes(res);
-        if (res.status === 200) {
-          toast.success(res.message, {
+        setResponse(res);
+        if (res.data.data.status === 200) {
+          toast.success(res.data.message, {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -39,7 +29,7 @@ export function Login() {
             theme: "colored",
           });
         } else {
-          toast.error(res.message, {
+          toast.error(res.data.message, {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -51,7 +41,7 @@ export function Login() {
           });
         }
       });
-  };
+  }
 
   return (
     <div className="conteiner-login">
