@@ -15,7 +15,7 @@
   .cards {
     width: 100%;
     height: 100%;
-    margin-bottom:3rem; 
+    margin-bottom: 3rem;
     @include flex-column-center;
 
     .first-line {
@@ -63,6 +63,36 @@
           transition: 0.3s linear;
         }
 
+        .madden {
+          transition: 0.3s linear;
+          transform: scale(1);
+        }
+
+        .lost {
+          transform: scale(0.5);
+          transition: 0.3s linear;
+        }
+
+        .mass {
+          transform: scale(0.08);
+          transition: 0.3s linear;
+        }
+
+        .grid {
+          transform: scale(0.6);
+          transition: 0.3s linear;
+        }
+
+        .nhl {
+          transform: scale(0.72);
+          transition: 0.3s linear;
+        }
+
+        .f122 {
+          transform: scale(0.08);
+          transition: 0.3s linear;
+        }
+
         h4 {
           @include h4("desktop");
           display: none;
@@ -85,7 +115,7 @@
             );
             background: -webkit-linear-gradient(
               180deg,
-              rgba(132, 35, 222, 1) 0%, 
+              rgba(132, 35, 222, 1) 0%,
               rgba(255, 88, 184, 1) 100%
             );
             background: linear-gradient(
@@ -116,6 +146,36 @@
           .battle {
             transition: 0.3s linear;
             transform: translateY(-7rem) scale(0.3);
+          }
+
+          .madden {
+            transition: 0.3s linear;
+            transform: translateY(-7.8rem) scale(1);
+          }
+
+          .lost {
+            transition: 0.3s linear;
+            transform: translateY(-7rem) scale(0.5);
+          }
+
+          .mass {
+            transition: 0.3s linear;
+            transform: translateY(-7rem) scale(0.08);
+          }
+
+          .grid {
+            transition: 0.3s linear;
+            transform: translateY(-7rem) scale(0.6);
+          }
+
+          .nhl {
+            transition: 0.3s linear;
+            transform: translateY(-7rem) scale(0.72);
+          }
+
+          .f122 {
+            transition: 0.3s linear;
+            transform: translateY(-7rem) scale(0.08);
           }
 
           h4 {
@@ -178,6 +238,36 @@
           transition: 0.3s linear;
         }
 
+        .medal {
+          transform: scale(0.11);
+          transition: 0.3s linear;
+        }
+
+        .arena {
+          transform: scale(0.3);
+          transition: 0.3s linear;
+        }
+
+        .squadrones {
+          transform: scale(0.4);
+          transition: 0.3s linear;
+        }
+
+        .wild {
+          transform: scale(0.26);
+          transition: 0.3s linear;
+        }
+
+        .dead {
+          transform: scale(0.33);
+          transition: 0.3s linear;
+        }
+
+        .crysis {
+          transform: scale(0.28);
+          transition: 0.3s linear;
+        }
+
         h4 {
           @include h4("desktop");
           display: none;
@@ -233,6 +323,35 @@
             transform: translateY(-7.6rem) scale(0.15);
             transition: 0.3s linear;
           }
+          .medal {
+            transform: translateY(-7rem) scale(0.11);
+            transition: 0.3s linear;
+          }
+
+          .arena {
+            transform: translateY(-7rem) scale(0.3);
+            transition: 0.3s linear;
+          }
+
+          .squadrones {
+            transform: translateY(-7rem) scale(0.4);
+            transition: 0.3s linear;
+          }
+
+          .wild {
+            transform: translateY(-7rem) scale(0.26);
+            transition: 0.3s linear;
+          }
+
+          .dead {
+            transform: translateY(-7rem) scale(0.33);
+            transition: 0.3s linear;
+          }
+
+          .crysis {
+            transform: translateY(-7rem) scale(0.28);
+            transition: 0.3s linear;
+          }
 
           h4 {
             z-index: 2;
@@ -247,6 +366,7 @@
 @include tablet-media-query {
   #card-section {
     @include flex-center-center;
+    width: 100vw;
 
     .title {
       @include h1("tablet");
@@ -254,20 +374,24 @@
     }
 
     .cards {
+      width: 100%;
+
       .sub-container {
-        @include flex-center-center;
+        @include flex-column-center;
+        flex-wrap: wrap;
+        width: 100%;
 
         .first-line {
           @include flex-column-center;
 
           .card {
-            width: 35rem;
-            height: 35rem;
+            width: 45rem;
+            height: 45rem;
             margin: 1.2rem;
 
             .filter {
-              width: 35rem;
-              height: 35rem;
+              width: 45rem;
+              height: 45rem;
             }
           }
         }
@@ -277,13 +401,13 @@
           @include flex-column-center;
 
           .card {
-            width: 35rem;
-            height: 35rem;
+            width: 45rem;
+            height: 45rem;
             margin: 1.2rem;
 
             .filter {
-              width: 35rem;
-              height: 35rem;
+              width: 45rem;
+              height: 45rem;
             }
           }
         }
@@ -327,6 +451,62 @@
               width: 33.5rem;
               height: 33.5rem;
             }
+            .mass {
+              transition: 0.3s linear;
+              transform: scale(0.4);
+            }
+
+            &:hover {
+              img {
+                z-index: 0;
+              }
+
+
+              .apex {
+                transition: 0.3s linear;
+                transform: translateY(-7.8rem) scale(0.3);
+              }
+
+              .fifa {
+                transition: 0.3s linear;
+                transform: translateY(-8.8rem) scale(0.3);
+              }
+
+              .battle {
+                transition: 0.3s linear;
+                transform: translateY(-7rem) scale(0.3);
+              }
+
+              .madden {
+                transition: 0.3s linear;
+                transform: translateY(-7.8rem) scale(1);
+              }
+
+              .lost {
+                transition: 0.3s linear;
+                transform: translateY(-7rem) scale(0.5);
+              }
+
+              .mass {
+                transition: 0.3s linear;
+                transform: translateY(-7rem) scale(0.4);
+              }
+
+              .grid {
+                transition: 0.3s linear;
+                transform: translateY(-7rem) scale(0.6);
+              }
+
+              .nhl {
+                transition: 0.3s linear;
+                transform: translateY(-7rem) scale(0.72);
+              }
+
+              .f122 {
+                transition: 0.3s linear;
+                transform: translateY(-7rem) scale(0.08);
+              }
+            }
           }
         }
 
@@ -342,6 +522,18 @@
             .filter {
               width: 33.5rem;
               height: 33.5rem;
+            }
+
+            .medal {
+              transform: scale(0.6);
+              transition: 0.3s linear;
+            }
+
+            &:hover {
+              .medal {
+                transform: translateY(-7rem) scale(0.6);
+                transition: 0.3s linear;
+              }
             }
           }
         }
