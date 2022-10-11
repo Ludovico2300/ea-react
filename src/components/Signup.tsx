@@ -1,33 +1,36 @@
 import { useRef, useState } from "react";
+import axios from "axios";
 
 export function Singup() {
+    const [ready, setReady] = useState()
     const inputRefUser: any = useRef();
     const inputRefEmail: any = useRef();
     const inputRefPass: any = useRef();
     const [res, setRes] = useState()
-    const [dataSend, setDataSend] = useState({ email: inputRefEmail, password: inputRefPass, user: inputRefUser })
+    const [dataSend, setDataSend]: any = useState()
 
 
     function sendToServer() {
         setDataSend({
-            email: inputRefEmail.current.value,
-            password: inputRefPass.current.value,
-            user: inputRefUser.current.value,
-        })
-
-        const requestOptions = {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(dataSend)
-        };
-        try {
-            fetch('http://localhost:3030/EA-server/signup', requestOptions)
-                .then(response => response.json())
-                .then(res => setRes(res));
-        } catch (err) {
-            console.log(err)
-        }
+            body: JSON.stringify({
+                email: inputRefEmail.current.value,
+                password: inputRefPass.current.value,
+                user: inputRefUser.current.value,
+            })
+        })
     }
+
+    if(dataSend){
+    try{
+        fetch('http://localhost:3030/EA-server/signup', (dataSend))
+        .then(response => response.json())
+        .then(res => setRes(res));
+    }catch{
+    throw new Error( "Errore in chiamata POST ")
+    }
+}
 
 
 
