@@ -2,10 +2,12 @@ import { useState } from "react";
 import { Button } from "./utils/Button";
 import Tab from "./utils/Tab";
 import { cards } from "./data";
+import { useNavigate} from "react-router-dom";
 
 export default function AllTabs() {
   const [activeTag, setActiveTag] = useState<string>("Electronic Arts Inc.");
   const [activeTab, setActiveTab] = useState<string>("Electronic Arts Inc.");
+  const navigate = useNavigate();
 
   function handleTag(tag: string, tab: string) {
     setActiveTag(tag);
@@ -15,13 +17,12 @@ export default function AllTabs() {
   return (
     <>
       <div id="content-section">
-        <h3 className="title-content">Ultime novità</h3>
+        <h3 className="title-content" onClick={() => navigate("/allnews")}>Ultime novità</h3>
         <div className="tab-bar-content">
           <div className="first-section">
             <button
-              className={`tablinks ${
-                activeTab === "Electronic Arts Inc." ? "active" : ""
-              }`}
+              className={`tablinks ${activeTab === "Electronic Arts Inc." ? "active" : ""
+                }`}
               onClick={() =>
                 handleTag("Electronic Arts Inc.", "Electronic Arts Inc.")
               }
@@ -55,33 +56,29 @@ export default function AllTabs() {
           </div>
           <div className="second-section">
             <button
-              className={`tablinks ${
-                activeTab === "Apex Legends" ? "active" : ""
-              }`}
+              className={`tablinks ${activeTab === "Apex Legends" ? "active" : ""
+                }`}
               onClick={() => handleTag("Apex Legends", "Apex Legends")}
             >
               Apex Legends
             </button>
             <button
-              className={`tablinks ${
-                activeTab === "The Sims 4" ? "active" : ""
-              }`}
+              className={`tablinks ${activeTab === "The Sims 4" ? "active" : ""
+                }`}
               onClick={() => handleTag("The Sims 4", "The Sims 4")}
             >
               The Sims 4
             </button>
             <button
-              className={`tablinks ${
-                activeTab === "Battlefield 2042" ? "active" : ""
-              }`}
+              className={`tablinks ${activeTab === "Battlefield 2042" ? "active" : ""
+                }`}
               onClick={() => handleTag("Battlefield 2042", "Battlefield 2042")}
             >
               Battlefield
             </button>
             <button
-              className={`tablinks ${
-                activeTab === "Inside EA" ? "active" : ""
-              }`}
+              className={`tablinks ${activeTab === "Inside EA" ? "active" : ""
+                }`}
               onClick={() => handleTag("Inside EA", "Inside EA")}
             >
               Inside EA
@@ -95,6 +92,7 @@ export default function AllTabs() {
             .map((card) => {
               return (
                 <Tab
+                  key={card.id}
                   source={card.source}
                   tag={card.tag}
                   title={card.title}
@@ -104,9 +102,9 @@ export default function AllTabs() {
               );
             })}
         </div>
-        <Button buttonSize="btn--medium" buttonStyle="btn--outline-black">
-          {activeTab === "The Sims 4" ? "Espandi" : "Più dettagli"}
-        </Button>
+          <Button buttonSize="btn--medium" buttonStyle="btn--outline-black">
+            {activeTab === "The Sims 4" ? "Espandi" : "Più dettagli"}
+          </Button>
       </div>
     </>
   );

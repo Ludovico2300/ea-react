@@ -1,16 +1,13 @@
-import { useNavigate } from "react-router-dom";
 import { Button } from "./utils/Button";
 import Card from "./utils/Card";
 
-export default function AllCards() {
-  const navigate = useNavigate();
+export default function AllCardGames() {
+
   return (
     <>
       <div id="card-section">
         <div className="cards">
-          <h1 className="title" onClick={() => navigate("/allgames")}>
-            Giochi in evidenza
-          </h1>
+          <h1 className="title">Ultimi giochi</h1>
           <div className="sub-container">
             <div className="first-line">
               <Card
@@ -46,8 +43,45 @@ export default function AllCards() {
                 game="two"
               />
             </div>
+            <div className="first-line">
+              <Card
+                source="./assets/cards/madden.jpg"
+                logo="./assets/cards/madden-logo.svg"
+                game=""
+              />
+              <Card
+                source=""
+                logo=""
+                game=""
+              />
+              <Card
+                source=""
+                logo=""
+                game=""
+              />
+            </div>
+            <div className="second-line">
+              <Card
+                source=""
+                logo=""
+                game=""
+              />
+              <Card
+                source=""
+                logo=""
+                game=""
+              />
+              <Card
+                source=""
+                logo=""
+                game=""
+              />
+            </div>
           </div>
-          <Button buttonSize="btn--medium" buttonStyle="btn--outline-black">
+          <Button
+            buttonSize="btn--medium"
+            buttonStyle="btn--outline-black"
+          >
             Ultimi giochi
           </Button>
         </div>
@@ -55,3 +89,4 @@ export default function AllCards() {
     </>
   );
 }
+

@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 export type TabProps = {
   source: string;
   tag: string;
@@ -8,10 +10,11 @@ export type TabProps = {
 };
 export default function Tab(props: TabProps) {
   const { source, tag,  date, title, content } = props;
+  const navigate = useNavigate();
 
   return (
 
-    <div className="card-content">
+    <div className="card-content" onClick={() => navigate("/allnews")}>
       <img
         className={`img-content`}
         src={source}
