@@ -2,7 +2,6 @@ import axios from "axios";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { json } from "stream/consumers";
 import { midiaSrc } from "../utils/ContentNav";
 
 export type Axios = {
