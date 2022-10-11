@@ -13,7 +13,7 @@ export type Axios = {
 };
 
 export function useApi(props: Axios) {
-  const [response, setResponse]: any = useState();
+ 
   const [tost, setTost]: any = useState();
 
 
@@ -22,9 +22,9 @@ export function useApi(props: Axios) {
     .post(`http://localhost:3030/EA-server/${props.path}`, props.user)
 
     .then((res) => {
-      setResponse(res);
+      sessionStorage.setItem("user", res.data.user );
       setTost(
-        res.data.status === 200
+        res.status === 200
           ? toast.success(res.data.message, {
               position: "top-right",
               autoClose: 5000,
@@ -49,5 +49,5 @@ export function useApi(props: Axios) {
     });
 }
 
-  return { fetch:fetchdata, res: response, toast:tost } ;
+  return { fetch:fetchdata, toast:tost } ;
 }

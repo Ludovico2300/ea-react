@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 import { Login } from "./Login";
 import { Singup } from "./Signup";
-import { useApi } from "./hooks/useApi";  
+import { midiaSrc } from "./utils/ContentNav";
+
 export type DarkNavProps = {
   data: boolean;
   up: boolean;
 }
+
 
 export function DarkNav(props: DarkNavProps) {
   const { data, up } = props;
@@ -16,6 +18,8 @@ export function DarkNav(props: DarkNavProps) {
   const [showMenu, setShowMenu] = useState(false)
   const [login, setLogin] = useState(true)
   const [signup, setSignup] = useState(true)
+  const [items, setItems]: any = useState();
+  const [source, setSource]: any = useState();
 
 
   function showMenuLogin() {
@@ -44,25 +48,47 @@ export function DarkNav(props: DarkNavProps) {
     setShowLogin(false)
     setShowHelp(false)
     setShowMenu(false)
+
   }
+
+
+
   //@ts-ignore
   showMenu ? disableBodyScroll(document) : enableBodyScroll(document)
 
 
-const{res} =useApi({  path: "signup",})
-  
+  useEffect(() => {
+    const find = midiaSrc.find((element) => {
+    if (element.name === sessionStorage.getItem('user')) {
+     return element
+      }
+    })
+    const item = find ? find: items
+    setItems(item)
+  }, []);
+
+
+
+
   return (
 
     <div
       className={`${data ? "up" : ""} ${up ? "up" : ""} `}
       id="dark-navbar">
       <div className="flex-center-end ">
-        {res?<p>{res.data}</p>:""}
-        <div onClick={() => showMenuLogin()}
-          className="icon-darknav flex-center-center" id="user-navbar">
-          <i className={`fa-regular fa-user ${showLogin ? "show-login" : ""}`}></i>
-        </div>
-
+        {sessionStorage.getItem('user')?
+          <div className="user flex-center-center" id="user" onClick={() => showMenuLogin()}>
+            <h4>{items}</h4>  
+            <img src={source} alt={items} className="userimage" /> 
+            <button onClick={()=>sessionStorage.clear()}>logout</button>
+          </div>
+          :
+          <div onClick={() => showMenuLogin()}
+            className="icon-darknav flex-center-center" id="user-navbar">
+            <i className={`fa-regular fa-user ${showLogin ? "show-login" : ""}`}></i>
+          </div>
+        }
+       
         <div onClick={() => showMenuHelp()}
           className="icon-darknav flex-center-center" id="quest-navbar">
           <i className={"fa-regular fa-question fa-solid"}></i>

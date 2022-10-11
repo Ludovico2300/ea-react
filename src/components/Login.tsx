@@ -12,15 +12,21 @@ export function Login() {
   });
 
   function onfetch() {
+
     fetch({
       path: "signin",
       user: {
         email: inputRefEmail.current.value,
         password: inputRefPass.current.value,
       },
-    });
-    return toast;
+    }); 
+
+
+    return toast
   }
+
+
+
 
   return (
     <div className="conteiner-login">
