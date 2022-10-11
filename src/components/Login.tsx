@@ -28,7 +28,7 @@ export function Login() {
       .then((res) => {
         setRes(res);
         if (res.status === 200) {
-          toast.success("Success", {
+          toast.success(res.message, {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
@@ -39,7 +39,7 @@ export function Login() {
             theme: "colored",
           });
         } else {
-          toast.error("Error ", {
+          toast.error(res.message, {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: false,
