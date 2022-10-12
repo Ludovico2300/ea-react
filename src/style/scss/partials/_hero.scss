@@ -232,6 +232,19 @@
   .hero-img {
     height: 50vh;
     width: 100vw;
+    .herop-img {
+      object-fit: contain;
+
+      .fifa-hero,
+      .battlefield-hero,
+      .apex-slide-hero,
+      .f1-hero,
+      .thesims-hero {
+        object-fit: contain !important;
+        
+      }
+    }
+  }
   }
   
-}
+
