@@ -28,11 +28,12 @@ export function useApi(props: Axios) {
        
        
         //find photo of user
+        if(props.path== "signin"){
         const findUser = midiaSrc.find((element)=> element.name == sessionStorage.getItem("user"))
         const midia = findUser? findUser.source : midiaSrc[5].source
         //@ts-ignore
         sessionStorage.setItem("source", midia)//save path of user photo 
-        
+        }
         
         //set toast
         setTost(
