@@ -14,7 +14,7 @@ export function Singup() {
   });
 
   function onfetch() {
-    if (inputRefPass.current.value === inputcheckRefPass) {
+    if (inputRefPass.current.value == inputcheckRefPass.current.value) {
       fetch({
         path: "signup",
         user: {
