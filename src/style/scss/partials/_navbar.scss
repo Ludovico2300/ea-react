@@ -170,7 +170,7 @@
         .login-menu {
           width: 100%;
           transition: all 0.5s ease-out;
-          transition: top 0.25s ease-out;
+          transition: top 0.2s ease-out;
           width: auto;
 
           @include smartphone-media-query {
@@ -181,6 +181,7 @@
             margin: 0 10rem 0 10rem;
             transition: all 0.2s ease-out;
             width: 16rem;
+            opacity: 1;
 
             @include tablet-media-query {
               flex-direction: row;
@@ -235,6 +236,7 @@
 
               i {
                 position: absolute;
+                top: -50rem;
               }
 
               .conteiner-login {
@@ -659,7 +661,7 @@
           }
         }
 
-        #dropdown-menu-item-nav.hover {
+        #dropdown-menu-item-nav:hover {
           h4 {
             color: $primary-color;
             transition: all 0.3s ease-in-out;

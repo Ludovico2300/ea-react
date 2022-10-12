@@ -24,13 +24,13 @@ export default function Navbar() {
     setTime(seconds);
   };
 
-  useEffect(() => {
+/*   useEffect(() => {
     const interval: number | any = setTime((): number | any =>
       setInterval(() => getDate(), 500)
     );
     clearInterval(interval);
   }, []);
-
+ */
 
   //scroll functiont to darknav shows
   window.onscroll = function () {

@@ -17,15 +17,7 @@ export function Dropdown(props: DropdownProps) {
   const [show, setShow] = useState(Boolean)
   const [showli, setShowli] = useState(Boolean)
   const [showli1, setShowli1] = useState(Boolean)
-  const [isHovering, setIsHovering] = useState(false);
 
-  const handleMouseOver = () => {
-    setIsHovering(true);
-  };
-
-  const handleMouseOut = () => {
-    setIsHovering(false);
-  }
     const {
       content: {
         title,
@@ -44,9 +36,8 @@ export function Dropdown(props: DropdownProps) {
     }
 
     return (
-      <div id="dropdown-menu-item-nav" className={`${show ? "show" : ""}${isHovering?"hover":""}`}
-        onMouseOver={handleMouseOver}
-        onMouseOut={handleMouseOut}>
+      <div id="dropdown-menu-item-nav" className={show ? "show" : ""}>
+
         <div id="drop-title" onClick={() => handleShow()} className="flex-between-center">
           <h4>{title}</h4>
           {/* title of dropdown */}

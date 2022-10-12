@@ -288,7 +288,7 @@ html {
 .header .nav #dark-navbar .menu-darknav .login-menu {
   width: 100%;
   transition: all 0.5s ease-out;
-  transition: top 0.25s ease-out;
+  transition: top 0.2s ease-out;
   width: auto;
 }
 @media (max-width: 767px) {
@@ -300,6 +300,7 @@ html {
   margin: 0 10rem 0 10rem;
   transition: all 0.2s ease-out;
   width: 16rem;
+  opacity: 1;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .header .nav #dark-navbar .menu-darknav .login-menu .icon {
@@ -353,6 +354,7 @@ html {
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .login.Show i {
   position: absolute;
+  top: -50rem;
 }
 .header .nav #dark-navbar .menu-darknav .login-menu .login.Show .conteiner-login {
   height: 0;
@@ -728,16 +730,16 @@ html {
     align-items: flex-start;
   }
 }
-.header .nav #white-navbar #dropdown-menu-nav #dropdown-menu-item-nav.hover h4 {
+.header .nav #white-navbar #dropdown-menu-nav #dropdown-menu-item-nav:hover h4 {
   color: #8423de;
   transition: all 0.3s ease-in-out;
 }
-.header .nav #white-navbar #dropdown-menu-nav #dropdown-menu-item-nav.hover .fa-angle-down {
+.header .nav #white-navbar #dropdown-menu-nav #dropdown-menu-item-nav:hover .fa-angle-down {
   transform: rotateX(180deg);
   color: #8423de;
   transition: all 0.3s ease-in-out;
 }
-.header .nav #white-navbar #dropdown-menu-nav #dropdown-menu-item-nav.hover .dropdown-menu {
+.header .nav #white-navbar #dropdown-menu-nav #dropdown-menu-item-nav:hover .dropdown-menu {
   margin-top: 0.5rem;
   transition: all 0.3s ease-in-out;
   height: auto;
@@ -748,7 +750,7 @@ html {
   color: #a3a3a3;
   width: auto;
 }
-.header .nav #white-navbar #dropdown-menu-nav #dropdown-menu-item-nav.hover .dropdown-menu ul {
+.header .nav #white-navbar #dropdown-menu-nav #dropdown-menu-item-nav:hover .dropdown-menu ul {
   margin-top: 0rem;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
