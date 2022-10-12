@@ -25,7 +25,7 @@ export function Singup() {
       });
       return toast;
     }else{
-      alert("Password not match (ㆆ_ㆆ)")
+      alert("Password not match (≖_≖ )")
     }
   }
 
