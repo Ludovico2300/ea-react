@@ -1,18 +1,31 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "./utils/Button";
 import Tab from "./utils/Tab";
-import { cards } from "./data";
 import { useNavigate} from "react-router-dom";
+import axios from "axios";
+
 
 export default function AllTabs() {
   const [activeTag, setActiveTag] = useState<string>("Electronic Arts Inc.");
   const [activeTab, setActiveTab] = useState<string>("Electronic Arts Inc.");
+  const [data, setData]:any = useState();
   const navigate = useNavigate();
 
   function handleTag(tag: string, tab: string) {
     setActiveTag(tag);
     setActiveTab(tab);
   }
+
+
+
+useEffect(()=>{
+  axios
+      .get(`http://localhost:3030/EA-server/data`)
+      .then((res) => { setData( res.data[0].data)});
+/*  sessionStorage.setItem("data", )sessionStorage.getItem("data") */
+      
+},[])
+
 
   return (
     <>
@@ -87,9 +100,10 @@ export default function AllTabs() {
         </div>
         <br />
         <div className="card-content-container">
-          {cards
-            .filter((card) => card.tag === activeTag)
-            .map((card) => (
+          {data?
+
+            data.filter((card:any) => card.tag === activeTag)
+            .map((card:any) => (
                 <Tab
                   key={card.id}
                   source={card.source}
@@ -99,7 +113,8 @@ export default function AllTabs() {
                   content={card.content}
                 />
               )
-            )}
+            ):
+            <h1>Loading...</h1>}
         </div>
           <Button   onClick={"/allnews" } buttonSize="btn--medium" buttonStyle="btn--outline-black">
             {activeTab === "The Sims 4" ? "Espandi" : "Più dettagli"}
