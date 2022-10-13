@@ -100,21 +100,15 @@
     width: auto;
     height: 10vh;
     background: rgb(132, 35, 222);
-    background: -moz-linear-gradient(
-      30deg,
-      rgba(132, 35, 222, 1) 0%,
-      rgba(255, 88, 184, 1) 100%
-    );
-    background: -webkit-linear-gradient(
-      30deg,
-      rgba(132, 35, 222, 1) 0%,
-      rgba(255, 88, 184, 1) 100%
-    );
-    background: linear-gradient(
-      30deg,
-      rgba(132, 35, 222, 1) 0%,
-      rgba(255, 88, 184, 1) 100%
-    );
+    background: -moz-linear-gradient(30deg,
+        rgba(132, 35, 222, 1) 0%,
+        rgba(255, 88, 184, 1) 100%);
+    background: -webkit-linear-gradient(30deg,
+        rgba(132, 35, 222, 1) 0%,
+        rgba(255, 88, 184, 1) 100%);
+    background: linear-gradient(30deg,
+        rgba(132, 35, 222, 1) 0%,
+        rgba(255, 88, 184, 1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8423de", endColorstr="#ff58b8", GradientType=1);
 
     .slideshowSlider {
@@ -190,7 +184,7 @@
       @include flex-center-center;
       width: 100%;
       height: 100%;
-      
+
 
       .herop-img {
         @include flex-center-center;
@@ -223,7 +217,7 @@
     .slideshow {
       height: 10vh;
       position: absolute;
-     
+
     }
   }
 }
@@ -232,19 +226,5 @@
   .hero-img {
     height: 50vh;
     width: 100vw;
-    .herop-img {
-      object-fit: contain;
-
-      .fifa-hero,
-      .battlefield-hero,
-      .apex-slide-hero,
-      .f1-hero,
-      .thesims-hero {
-        object-fit: contain !important;
-        
-      }
-    }
   }
-  }
-  
-
+}

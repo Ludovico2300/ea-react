@@ -32,7 +32,7 @@ const SlideQuery = () => (
         className="apex-slide-hero"
       />
       <img
-        src="https://media.contentapi.ea.com/content/dam/ea/f1/f1-2022/common/china-return-fpo-1-jpg.adapt.1456w."
+        src="https://www.nerdpool.it/wp-content/uploads/2022/05/f1-22-696x392.jpeg"
         alt=""
         className="f1-hero"
       />

@@ -1434,18 +1434,6 @@ html {
     height: 50vh;
     width: 100vw;
   }
-  .hero-img .herop-img {
-    -o-object-fit: contain;
-       object-fit: contain;
-  }
-  .hero-img .herop-img .fifa-hero,
-.hero-img .herop-img .battlefield-hero,
-.hero-img .herop-img .apex-slide-hero,
-.hero-img .herop-img .f1-hero,
-.hero-img .herop-img .thesims-hero {
-    -o-object-fit: contain !important;
-       object-fit: contain !important;
-  }
 }
 /* INIZIO GABBO */
 #card-section {
