@@ -78,7 +78,7 @@ export function Singup() {
 
         <div className="button-container">
           <button value="singup" className="signin" onClick={onfetch} >
-            Singup
+            Signup
           </button>
         </div>
       </div>
