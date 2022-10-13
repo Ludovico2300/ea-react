@@ -89,8 +89,7 @@ export default function AllTabs() {
         <div className="card-content-container">
           {cards
             .filter((card) => card.tag === activeTag)
-            .map((card) => {
-              return (
+            .map((card) => (
                 <Tab
                   key={card.id}
                   source={card.source}
@@ -99,8 +98,8 @@ export default function AllTabs() {
                   date={card.date}
                   content={card.content}
                 />
-              );
-            })}
+              )
+            )}
         </div>
           <Button   onClick={"/allnews" } buttonSize="btn--medium" buttonStyle="btn--outline-black">
             {activeTab === "The Sims 4" ? "Espandi" : "Più dettagli"}

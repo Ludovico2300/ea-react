@@ -11,17 +11,17 @@ export default function AllCardNews() {
         <br></br>
         <div className="card-content-container">
           {cards
-            .map((card) => {
-              return (
+            .map((card) => (
                 <Tab
+                  key={card.id}
                   source={card.source}
                   tag={card.tag}
                   title={card.title}
                   date={card.date}
                   content={card.content}
                 />
-              );
-            })}
+              )
+            )}
         </div>
         <Button
           buttonSize="btn--medium"
