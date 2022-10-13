@@ -19,7 +19,11 @@ export function Login() {
         email: inputRefEmail.current.value,
         password: inputRefPass.current.value,
       },
-    }); 
+    });
+    
+    inputRefEmail.current.value = ""
+    inputRefPass.current.value = ""
+
     return toast
   }
 

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
 import { Login } from "./Login";
@@ -28,7 +28,6 @@ export function DarkNav(props: DarkNavProps) {
     }
   }
 
-
   function showMenuHelp() {
     if (!showHelp) {
       setShowLogin(false);
@@ -46,14 +45,22 @@ export function DarkNav(props: DarkNavProps) {
     setShowMenu(false);
   }
 
+
+  useEffect(()=>{
+    setShowMenu(false)
+    setShowLogin(false)
+  },[sessionStorage.getItem("user")])
+
+
+
   //@ts-ignore
   showMenu ? disableBodyScroll(document) : enableBodyScroll(document);
 
   return (
     <div className={`${data ? "up" : ""} ${up ? "up" : ""} `} id="dark-navbar">
       <div className="flex-center-end ">
-        {sessionStorage.getItem("user") ? (
-          <div
+        {sessionStorage.getItem("user") ? ( 
+          <div 
             className="user flex-center-center"
             id="user"
           >
