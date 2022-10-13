@@ -1,0 +1,230 @@
+/* Inizio parte Tiziano */
+
+.hero {
+  cursor: pointer;
+  margin-top: 10rem;
+
+  .hero-img {
+    position: relative;
+    width: 100%;
+    height: 63vh;
+    overflow: hidden;
+    box-sizing: border-box;
+
+    .herop-img {
+      display: flex;
+      overflow: hidden;
+      width: auto;
+      height: 100%;
+
+      .fifa-hero {
+        object-fit: cover;
+        width: 20% !important;
+        height: 100%;
+      }
+
+      .battlefield-hero {
+        width: 20% !important;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .apex-slide-hero {
+        width: 20% !important;
+        height: 100%;
+        object-fit: cover;
+        margin-top: -50px;
+      }
+
+      .f1-hero {
+        object-fit: cover;
+        width: 20% !important;
+        height: 100%;
+        margin-top: -100px;
+      }
+
+      .thesims-hero {
+        object-fit: cover;
+        width: 20% !important;
+        height: 100%;
+        margin-top: -50px;
+      }
+    }
+  }
+
+  .apex-hero {
+    @include flex-column-center;
+    position: absolute;
+    width: auto;
+    height: auto;
+    left: 20%;
+    top: 20%;
+    align-items: flex-start;
+
+    p {
+      @include h3("desktop");
+      color: $white-1;
+      padding: 1rem 0rem;
+      margin-bottom: 15px;
+      text-align: left;
+      font-size: 1.8rem;
+    }
+  }
+
+  .bottom-img {
+    width: 100%;
+    position: relative;
+    bottom: 17%;
+    right: 25%;
+
+    p {
+      @include h4("desktop");
+      top: 6%;
+      font-size: 3rem;
+      font-weight: bold;
+      color: white;
+      position: absolute;
+      left: 45%;
+    }
+
+    .btn--outline-white {
+      position: absolute;
+      right: -5%;
+      top: 5%;
+    }
+  }
+
+  /* Slideshow */
+
+  .slideshow {
+    width: auto;
+    height: 10vh;
+    background: rgb(132, 35, 222);
+    background: -moz-linear-gradient(30deg,
+        rgba(132, 35, 222, 1) 0%,
+        rgba(255, 88, 184, 1) 100%);
+    background: -webkit-linear-gradient(30deg,
+        rgba(132, 35, 222, 1) 0%,
+        rgba(255, 88, 184, 1) 100%);
+    background: linear-gradient(30deg,
+        rgba(132, 35, 222, 1) 0%,
+        rgba(255, 88, 184, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8423de", endColorstr="#ff58b8", GradientType=1);
+
+    .slideshowSlider {
+      width: 100%;
+      height: 100%;
+      @include flex-center-center;
+
+      .element-slider {
+        width: auto;
+        height: 10vh;
+        @include flex-center-center;
+        overflow-y: hidden;
+
+        .fifa {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          padding-top: 2.5rem;
+        }
+
+        .f-one {
+          width: 70%;
+          height: 70%;
+          object-fit: contain;
+          padding-top: 1rem;
+        }
+
+        .apex {
+          width: 80% !important;
+          height: 80%;
+          object-fit: contain;
+          padding-bottom: 0.5rem;
+        }
+
+        .battlefield {
+          width: 20rem !important;
+          height: 15rem;
+          object-fit: contain;
+          padding-top: 0.5rem;
+        }
+
+        .team {
+          width: 15.5rem;
+          height: auto;
+          object-fit: contain;
+        }
+
+        h1 {
+          font-size: 4rem;
+          text-transform: uppercase;
+          @include bold;
+          margin: 0rem 10rem;
+        }
+      }
+    }
+  }
+
+  .text-slider {
+    font-size: 4rem;
+    color: $white-1;
+    width: 100vw;
+    letter-spacing: 0.3rem;
+  }
+}
+
+@include smartphone-media-query {
+  .hero {
+    width: 100vw;
+    height: 100%;
+    margin-bottom: 5.8rem;
+
+    .hero-img {
+      @include flex-center-center;
+      width: 100%;
+      height: 100%;
+
+
+      .herop-img {
+        @include flex-center-center;
+        width: auto;
+        height: 50rem !important;
+        object-fit: contain;
+
+        .fifa-hero,
+        .battlefield-hero,
+        .apex-slide-hero,
+        .f1-hero,
+        .thesims-hero {
+          object-fit: contain !important;
+          width: 100% !important;
+          height: 100%;
+          margin-top: 20px;
+        }
+      }
+    }
+
+    p {
+      @include h3("smartphone");
+      color: $white-1;
+    }
+
+    .default {
+      width: 84%;
+    }
+
+    .slideshow {
+      height: 10vh;
+      position: absolute;
+
+    }
+  }
+}
+
+@include tablet-media-query {
+  .hero-img {
+    height: 50vh;
+    width: 100vw;
+  }
+}
