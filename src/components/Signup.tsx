@@ -25,7 +25,16 @@ export function Singup() {
       });
       return toast;
     }else{
-      alert("Password not match (≖_≖ )")
+      toast.error("Le password non corrispondono!", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      })
     }
   }
 
