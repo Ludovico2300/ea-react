@@ -18,7 +18,7 @@ export function useApi(props: Axios) {
 
   function fetchdata(props: Axios) {
     axios
-      .post(`http://localhost:3030/EA-server/${props.path}`, props.user)
+      .post(`https://server-ea.vercel.app/EA-server/${props.path}`, props.user)
 
       .then((res) => {
         //save user in session storage
