@@ -5,11 +5,11 @@ const Desktop = ({ children }: any) => {
   return isDesktop ? children : null;
 };
 const Tablet = ({ children }: any) => {
-  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1022 });
+  const isTablet = useMediaQuery({ minWidth: 769, maxWidth: 1023 });
   return isTablet ? children : null;
 };
 const Mobile = ({ children }: any) => {
-  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isMobile = useMediaQuery({ maxWidth: 768 });
   return isMobile ? children : null;
 };
 
