@@ -7,9 +7,9 @@ export default function route() {
   return (
     <div>
       <BrowserRouter>
-          <Navbar />
-          <App />
-          <Footer />
+        <Navbar />
+        <App />
+        <Footer />
       </BrowserRouter>
     </div>
   );
