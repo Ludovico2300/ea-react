@@ -19,9 +19,8 @@ export default function Navbar() {
   // refresh rate
   const getDate = () => {
     const date = new Date();
-    const milliseconds = date.getTime();
-    const seconds = milliseconds / 1000;
-    setTime(seconds);
+    const milliseconds = date.getMilliseconds();
+    setTime(milliseconds);
   };
 
   useEffect(() => {
@@ -45,7 +44,6 @@ export default function Navbar() {
 
   function asideShow() {
     setAside(true);
-
   }
 
   function asideHidden() {
@@ -76,8 +74,8 @@ export default function Navbar() {
 
           {x && (
             <div className="flex-between-center" id="dropdown-menu-nav">
-              {text.map((text) => (
-                <Dropdown content={text} />
+              {text.map((text, index) => (
+                <Dropdown content={text} key={index} />
               ))}
             </div>
           )}
@@ -132,21 +130,21 @@ export default function Navbar() {
               </div>
 
               <div className="flex-between-center" id="nav-aside-card-menu">
-                {x && midiaSrc.map((content) => <CardNav midia={content} />)}
+                {x && midiaSrc.map((content, index) => <CardNav midia={content} key={index} />)}
               </div>
 
               {y && (
                 <div id="dropdown-menu-nav-media">
-                  {text.map((text) => (
-                    <Dropdown content={text} />
+                  {text.map((text, index) => (
+                    <Dropdown content={text} key={index}/>
                   ))}
                 </div>
               )}
 
               {z && (
                 <div className="flex-between-center" id="dropdown-menu-nav-media">
-                  {text.map((text) => (
-                    <Dropdown content={text} />
+                  {text.map((text, index) => (
+                    <Dropdown content={text} key={index} />
                   ))}
                 </div>
               )}

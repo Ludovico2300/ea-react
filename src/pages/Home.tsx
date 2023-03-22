@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
      <Hero />
-      <AllCards />
+      <AllCards /> 
       <AllTabs />
     </div>
   );
