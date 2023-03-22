@@ -5,8 +5,10 @@ import { useNavigate } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { GET_ARTICLES } from "../queries/articleQueries";
 import { Card } from "../types/Card";
+import { useTranslation } from "react-i18next";
 
 export default function AllTabs() {
+  const { t } = useTranslation();
   const [activeTag, setActiveTag] = useState<string>("Electronic Arts Inc.");
   const [activeTab, setActiveTab] = useState<string>("Electronic Arts Inc.");
   const navigate = useNavigate();
@@ -21,7 +23,7 @@ export default function AllTabs() {
     <>
       <div id="content-section">
         <h3 className="title-content" onClick={() => navigate("/allnews")}>
-          Ultime novità
+          {t("misc.latest_news")}
         </h3>
         <div className="tab-bar-content">
           <div className="first-section">
@@ -117,7 +119,9 @@ export default function AllTabs() {
           buttonSize="btn--medium"
           buttonStyle="btn--outline-black"
         >
-          {activeTab === "The Sims 4" ? "Espandi" : "Più dettagli"}
+          {activeTab === "The Sims 4"
+            ? t("misc.expand")
+            : t("misc.more_details")}
         </Button>
       </div>
     </>

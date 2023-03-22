@@ -1,12 +1,15 @@
 import { Button } from "./utils/Button";
 import Card from "./utils/Card";
+import { useTranslation } from "react-i18next";
 
 export default function AllCardGames() {
+  const { t } = useTranslation();
+
   return (
     <>
       <div id="card-section">
         <div className="cards">
-          <h1 className="title">Ultimi giochi</h1>
+          <h1 className="title">{t("misc.latest_games")}</h1>
           <div className="sub-container">
             <div className="first-line">
               <Card
@@ -112,7 +115,7 @@ export default function AllCardGames() {
             </div>
           </div>
           <Button buttonSize="btn--medium" buttonStyle="btn--outline-black">
-            Ultimi giochi
+            {t("misc.latest_games")}
           </Button>
         </div>
       </div>
