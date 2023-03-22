@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "./utils/Button";
 import Tab from "./utils/Tab";
 import { useNavigate } from "react-router-dom";
@@ -110,7 +110,7 @@ export default function AllTabs() {
                   content={article.content}
                 />
               );
-            })}
+            }) ?? <h1>Loading...</h1>}
         </div>
         <Button
           onClick={"/allnews"}
