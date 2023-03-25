@@ -2,7 +2,8 @@ import { Route, Routes } from "react-router-dom";
 import AllGames from "./pages/AllGames";
 import AllNews from "./pages/AllNews";
 import Home from "./pages/Home";
-
+import Create from "./pages/Create";
+import View from "./pages/View";
 import { ApolloProvider, ApolloClient, InMemoryCache } from "@apollo/client";
 
 const cache = new InMemoryCache({
@@ -30,11 +31,11 @@ const cache = new InMemoryCache({
 });
 
 const client = new ApolloClient({
-  uri: "http://localhost:5000/graphql",
+  uri: "http://localhost:5001/graphql",
   cache,
 });
 const article = new ApolloClient({
-  uri: "http://localhost:5000/graphql",
+  uri: "http://localhost:5001/graphql",
   cache,
 });
 
@@ -46,6 +47,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/allgames" element={<AllGames />} />
           <Route path="/allnews" element={<AllNews />} />
+          <Route path="/create" element={<Create />} />
+          <Route path="/view/:id" element={<View />} />
         </Routes>
       </ApolloProvider>
     </>

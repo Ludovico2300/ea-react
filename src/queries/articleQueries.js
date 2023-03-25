@@ -13,4 +13,17 @@ const GET_ARTICLES = gql`
   }
 `;
 
-export { GET_ARTICLES };
+const GET_ARTICLE = gql`
+  query getArticle($id: ID!) {
+    article(id: $id) {
+      id
+      title
+      content
+      tag
+      source
+      date
+    }
+  }
+`;
+
+export { GET_ARTICLES, GET_ARTICLE };

@@ -8,7 +8,9 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   //media queris
   let x = window.matchMedia("(min-width: 1024px)").matches;
-  let y = window.matchMedia("(min-width: 768px) and (max-width: 1024px)").matches;
+  let y = window.matchMedia(
+    "(min-width: 768px) and (max-width: 1024px)"
+  ).matches;
   let z = window.matchMedia("(max-width: 767px)").matches;
   let prevScrollpos = window.pageYOffset; // scroll page
 
@@ -29,7 +31,6 @@ export default function Navbar() {
     );
     clearInterval(interval);
   }, []);
- 
 
   //scroll functiont to darknav shows
   window.onscroll = function () {
@@ -83,11 +84,16 @@ export default function Navbar() {
           <div className="flex-center-center">
             <div id="aside-navbar" className={aside ? "margin" : ""}>
               <div id="nav-title" className="flex-between-center">
-                <h4>Tutti i giochi </h4>
+                <Link to="#">
+                  <h4>Tutti i giochi</h4>
+                </Link>
+                <Link to="/create">
+                  <h4>Create</h4>
+                </Link>
+
                 {z && (
                   <Link id="logo-home-navbar" to="#">
                     <img
-
                       src="./assets/navbar/ea-wordmark-network-nav-coral.svg"
                       alt="Electronics Arts Home"
                     />
@@ -109,10 +115,7 @@ export default function Navbar() {
                 ></i>
               </div>
               <div className="flex-center-center" id="Eaplay">
-                <img
-                  src="./assets/navbar/ea-purple.jpg"
-                  alt="sfondo ea play"
-                />
+                <img src="./assets/navbar/ea-purple.jpg" alt="sfondo ea play" />
                 <Link to="#">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -130,19 +133,25 @@ export default function Navbar() {
               </div>
 
               <div className="flex-between-center" id="nav-aside-card-menu">
-                {x && midiaSrc.map((content, index) => <CardNav midia={content} key={index} />)}
+                {x &&
+                  midiaSrc.map((content, index) => (
+                    <CardNav midia={content} key={index} />
+                  ))}
               </div>
 
               {y && (
                 <div id="dropdown-menu-nav-media">
                   {text.map((text, index) => (
-                    <Dropdown content={text} key={index}/>
+                    <Dropdown content={text} key={index} />
                   ))}
                 </div>
               )}
 
               {z && (
-                <div className="flex-between-center" id="dropdown-menu-nav-media">
+                <div
+                  className="flex-between-center"
+                  id="dropdown-menu-nav-media"
+                >
                   {text.map((text, index) => (
                     <Dropdown content={text} key={index} />
                   ))}

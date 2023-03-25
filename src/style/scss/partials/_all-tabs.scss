@@ -57,10 +57,10 @@
 
     .card-content {
       background-color: $white-1;
-      @include flex-column-start;
+      @include flex-column-between-center;
       // width: 35.2rem;
       width: 18.3vw;
-      height: 53.8vh;
+      height: 58vh;
       margin: 0rem 0.5rem 1.6rem;
       box-shadow: 0px 23px 13px -4px rgba(0, 0, 0, 0.2);
       -webkit-box-shadow: 0px 23px 13px -4px rgba(0, 0, 0, 0.2);
@@ -73,44 +73,68 @@
         -webkit-box-shadow: 0px 23px 13px 4px rgba(0, 0, 0, 0.4);
         -moz-box-shadow: 0px 23px 13px 4px rgba(0, 0, 0, 0.4);
       }
+      .card-main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        img {
+          width: 100%;
+        }
 
-      img {
-        width: 100%;
+        .info-card-content-container {
+          margin: 1.5rem;
+          letter-spacing: 0.02rem;
+          line-height: 3rem;
+
+          .mark-date-content {
+            @include flex-between-center;
+            @include span("desktop");
+
+            .mark {
+              color: $primary-color;
+              @include bold;
+            }
+
+            div,
+            h3 {
+              margin: 0rem 0.5rem;
+              @include bold;
+            }
+          }
+
+          .title-card-content {
+            @include h3("desktop");
+            margin: 1.5rem 0rem;
+
+            h3 {
+              @include bold;
+            }
+          }
+
+          .text-card-content {
+            @include h4("desktop");
+            /* height: 100%; */
+          }
+        }
       }
+      .btn-card-content {
+        display: flex;
+        width: 70%;
+        flex-direction: column;
+        align-items: end;
+        justify-content: space-between;
+        margin-bottom: 1rem;
 
-      .info-card-content-container {
-        margin: 1.5rem;
-        letter-spacing: 0.02rem;
-        line-height: 3rem;
-
-        .mark-date-content {
-          @include flex-center-start;
-          @include span("desktop");
-
-          .mark {
-            color: $primary-color;
-            @include bold;
+        .btn-view-article {
+          background-color: transparent;
+          border-color: transparent;
+          &:hover {
+            cursor: pointer;
           }
 
-          div,
-          h3 {
-            margin: 0rem 0.5rem;
-            @include bold;
+          .view-icon {
+            color: rgb(0, 0, 0);
           }
-        }
-
-        .title-card-content {
-          @include h3("desktop");
-          margin: 1.5rem 0rem;
-
-          h3 {
-            @include bold;
-          }
-        }
-
-        .text-card-content {
-          @include h4("desktop");
-          /* height: 100%; */
         }
       }
     }
@@ -163,6 +187,7 @@
         transition: 0.5s;
         width: 35rem;
         height: 42rem;
+        text-decoration: none;
 
         &:hover {
           transform: translate(0, -10px);
@@ -181,7 +206,7 @@
           line-height: 3rem;
 
           .mark-date-content {
-            @include flex-center-start;
+            @include flex-between-center;
             @include span("desktop");
             font-family: "ElectronicArtsDisplay-Bold";
 

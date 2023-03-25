@@ -13,17 +13,9 @@ export default function AllCardNews() {
         <h3 className="title-content">Ultime novità</h3>
         <br></br>
         <div className="card-content-container">
-          {data.articles.map((article: Card) => {
-            return (
-              <Tab
-                source={article.source}
-                tag={article.tag}
-                title={article.title}
-                date={article.date}
-                content={article.content}
-              />
-            );
-          })}
+          {data?.articles.map((article: Card) => {
+            return <Tab article={article} key={article.id} />;
+          }) ?? <h1>Loading... </h1>}
         </div>
         <Button buttonSize="btn--medium" buttonStyle="btn--outline-black">
           Ultime Novità

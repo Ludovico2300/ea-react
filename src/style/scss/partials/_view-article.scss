@@ -1,0 +1,103 @@
+#view-article-section {
+  @include flex-center-center;
+  background-color: $white-3;
+
+  .card-content {
+    background-color: $white-1;
+    @include flex-column-between-center;
+    // width: 35.2rem;
+    width: 18.3vw;
+    height: 58vh;
+    margin: 0rem 0.5rem 1.6rem;
+    box-shadow: 0px 23px 13px -4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 23px 13px -4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 23px 13px -4px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+
+    &:hover {
+      transform: translate(0, -10px);
+      box-shadow: 0px 23px 13px 4px rgba(0, 0, 0, 0.4);
+      -webkit-box-shadow: 0px 23px 13px 4px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 0px 23px 13px 4px rgba(0, 0, 0, 0.4);
+    }
+    .card-main-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      img {
+        width: 100%;
+      }
+
+      .info-card-content-container {
+        margin: 1.5rem;
+        letter-spacing: 0.02rem;
+        line-height: 3rem;
+
+        .mark-date-content {
+          @include flex-between-center;
+          @include span("desktop");
+
+          .mark {
+            color: $primary-color;
+            @include bold;
+          }
+
+          div,
+          h3 {
+            margin: 0rem 0.5rem;
+            @include bold;
+          }
+        }
+
+        .title-card-content {
+          @include h3("desktop");
+          margin: 1.5rem 0rem;
+
+          h3 {
+            @include bold;
+          }
+        }
+
+        .text-card-content {
+          @include h4("desktop");
+          /* height: 100%; */
+        }
+      }
+    }
+    .btn-card-content {
+      display: flex;
+      width: 70%;
+      flex-direction: column;
+      align-items: end;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+
+      .btn-view-article {
+        background-color: transparent;
+        border-color: transparent;
+        &:hover {
+          cursor: pointer;
+        }
+
+        .view-icon {
+          color: rgb(0, 0, 0);
+        }
+      }
+    }
+  }
+
+  .edit-article-form-main-container {
+    @include flex-column-between-center;
+
+    justify-content: space-between;
+    // align-items: "center";
+    height: 58vh;
+    width: 40vh;
+
+    .edit-article-form {
+      @include flex-column-between-center;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

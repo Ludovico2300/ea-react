@@ -95,7 +95,8 @@ const midiaSrc = [
     name: "Ludovico",
   },
   {
-    source: "https://thumbs.gfycat.com/MassiveMiserlyLabradorretriever-size_restricted.gif",
+    source:
+      "https://thumbs.gfycat.com/MassiveMiserlyLabradorretriever-size_restricted.gif",
     name: "Capy",
   },
 ];

@@ -102,16 +102,7 @@ export default function AllTabs() {
           {data?.articles
             .filter((article: Card) => article.tag === activeTag)
             .map((article: Card) => {
-              return (
-                <Tab
-                  key={article.id}
-                  source={article.source}
-                  tag={article.tag}
-                  title={article.title}
-                  date={article.date}
-                  content={article.content}
-                />
-              );
+              return <Tab key={article.id} article={article} />;
             }) ?? <h1>Loading...</h1>}
         </div>
         <Button
