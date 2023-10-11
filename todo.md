@@ -1,0 +1,5 @@
+- [ADD] full CRUD features
+- [ADD] admin features
+- [FIX] media query in Auth
+- [ADD] i18next
+- [ADD] full db features (remove hard coded data from codebase --> add to firebase)
