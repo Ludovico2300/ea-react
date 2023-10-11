@@ -1,45 +1,13 @@
-import { useRef } from "react";
-import { useApi } from "./hooks/useApi";
+import { useState } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import useAuthFirebase from "./hooks/useAuthFirebase";
 
 export function Singup() {
-  const inputRefUser: any = useRef();
-  const inputRefEmail: any = useRef();
-  const inputRefPass: any = useRef();
-  const inputcheckRefPass: any = useRef();
-
-  const { fetch, toast } = useApi({
-    path: "signup",
-  });
-
-  function onfetch() {
-    if (inputRefPass.current.value === inputcheckRefPass.current.value) {
-      fetch({
-        path: "signup",
-        user: {
-          email: inputRefEmail.current.value,
-          password: inputRefPass.current.value,
-          username: inputRefUser.current.value,
-        },
-      });
-      return toast;
-    }else{
-      toast.error("Le password non corrispondono!", {
-        position: "bottom-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-      })
-    }
-  }
-
-
-
+  const [username, setUsername] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const { signup } = useAuthFirebase();
 
   return (
     <div className="conteiner-singup">
@@ -53,17 +21,19 @@ export function Singup() {
               name="email"
               required
               className="input"
-              ref={inputRefEmail}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
           </div>
           <div className="input-container">
             <h4>Username</h4>
             <input
               type="text"
-              name="user"
+              name="username"
               required
               className="input"
-              ref={inputRefUser}
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
             />
           </div>
         </div>
@@ -76,17 +46,22 @@ export function Singup() {
               name="pass"
               required
               className="input"
-              ref={inputRefPass}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <div className="input-container ">
+          {/*           <div className="input-container ">
             <h4>Conferm Password</h4>
-            <input type="password" name="pass" required className="input" ref={inputcheckRefPass} />
-          </div>
+            <input type="password" name="pass" required className="input"  />
+          </div> */}
         </div>
 
         <div className="button-container">
-          <button value="singup" className="signin" onClick={onfetch} >
+          <button
+            value="singup"
+            className="signin"
+            onClick={() => signup(email, password, username)}
+          >
             Signup
           </button>
         </div>

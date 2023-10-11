@@ -1,8 +1,9 @@
 import { Button } from "./utils/Button";
 import Tab from "./utils/Tab";
-import { cards } from "./data";
+import useDatabaseFirebase from "./hooks/useDatabaseFirebase";
 
 export default function AllCardNews() {
+  const { cards } = useDatabaseFirebase();
 
   return (
     <>
@@ -10,28 +11,22 @@ export default function AllCardNews() {
         <h3 className="title-content">Ultime novità</h3>
         <br></br>
         <div className="card-content-container">
-          {cards
-            .map((card) => {
-              return (
-                <Tab
-                  source={card.source}
-                  tag={card.tag}
-                  title={card.title}
-                  date={card.date}
-                  content={card.content}
-                />
-              );
-            })}
+          {cards.map((card) => {
+            return (
+              <Tab
+                source={card.source}
+                tag={card.tag}
+                title={card.title}
+                date={card.date}
+                content={card.content}
+              />
+            );
+          })}
         </div>
-        <Button
-          buttonSize="btn--medium"
-          buttonStyle="btn--outline-black"
-          
-        >
+        <Button buttonSize="btn--medium" buttonStyle="btn--outline-black">
           Ultime Novità
         </Button>
       </div>
     </>
   );
 }
-

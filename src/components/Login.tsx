@@ -1,27 +1,12 @@
-import { useRef } from "react";
-import { useApi } from "./hooks/useApi";
+import { useState } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import useAuthFirebase from "./hooks/useAuthFirebase";
 
 export function Login() {
-  const inputRefEmail: any = useRef();
-  const inputRefPass: any = useRef();
-
-  const { fetch, toast } = useApi({
-    path: "signin",
-  });
-
-  function onfetch() {
-
-    fetch({
-      path: "signin",
-      user: {
-        email: inputRefEmail.current.value,
-        password: inputRefPass.current.value,
-      },
-    }); 
-    return toast
-  }
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const { login } = useAuthFirebase();
 
   return (
     <div className="conteiner-login">
@@ -30,25 +15,34 @@ export function Login() {
         <div className="input-container flex-column-center">
           <h4>Email</h4>
           <input
+            placeholder="Email"
             type="text"
             name="email"
             required
             className="input"
-            ref={inputRefEmail}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           />
         </div>
         <div className="input-container flex-column-center">
           <h4>Password</h4>
           <input
+            placeholder="Password"
             type="password"
             name="pass"
             required
             className="input"
-            ref={inputRefPass}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
           />
         </div>
         <div className="button-container">
-          <button value="Login" className="signin" onClick={onfetch}>
+          <button
+            value="Login"
+            className="signin"
+            onSubmit={() => login(email, password)}
+            onClick={() => login(email, password)}
+          >
             Login
           </button>
         </div>
