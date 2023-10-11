@@ -1,5 +1,4 @@
 import React from "react";
-import { ToastContainer } from "react-toastify";
 import useAuthFirebase from "./hooks/useAuthFirebase";
 
 export default function Signout() {
@@ -7,10 +6,20 @@ export default function Signout() {
 
   return (
     <div className="conteiner-singup">
-      <ToastContainer style={{ fontSize: "1.5rem" }} />
       <div className="form">
         <div className="button-container">
-          <button value="singup" className="signin" onClick={signout}>
+          <button
+            style={{
+              padding: "7px",
+              fontSize: "2rem",
+              backgroundColor: "transparent",
+              border: "3px solid black",
+              borderRadius: "10px",
+            }}
+            value="singup"
+            className="signin"
+            onClick={signout}
+          >
             Signout
           </button>
         </div>

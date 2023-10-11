@@ -1,7 +1,6 @@
 import { text } from "./utils/ContentNav";
 import { Dropdown } from "./utils/Dropdown";
 import { Link } from "react-router-dom";
-import { Button } from "./utils/Button";
 
 export default function Navbar() {
   //media queris
@@ -35,14 +34,24 @@ export default function Navbar() {
             </div>
           )}
 
-          <div className="flex-center-center">
-            <Button
-              buttonSize="btn--medium"
-              buttonStyle="btn--outline-black"
-              onClick={"/auth"}
-            >
-              Area Personale
-            </Button>
+          <div
+            style={{
+              width: "80rem",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "end",
+            }}
+          >
+            <Link to={"/auth"}>
+              <div
+                style={{
+                  fontSize: "2rem",
+                  color: "black",
+                }}
+              >
+                Area Personale
+              </div>
+            </Link>
           </div>
         </div>
       </div>

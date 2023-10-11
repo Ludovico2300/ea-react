@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import useAuthFirebase from "./hooks/useAuthFirebase";
 
 export function Singup() {
@@ -10,62 +8,64 @@ export function Singup() {
   const { signup } = useAuthFirebase();
 
   return (
-    <div className="conteiner-singup">
-      <ToastContainer style={{ fontSize: "1.5rem" }} />
-      <div className="form">
-        <div className="first">
-          <div className="input-container ">
-            <h4>Email</h4>
-            <input
-              type="text"
-              name="email"
-              required
-              className="input"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className="input-container">
-            <h4>Username</h4>
-            <input
-              type="text"
-              name="username"
-              required
-              className="input"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </div>
-        </div>
+    <div
+      style={{
+        margin: "0 2rem",
+        height: "30rem",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "space-between",
+      }}
+    >
+      <h1 style={{ fontWeight: "bold" }}>Email</h1>
+      <input
+        placeholder="Email"
+        type="text"
+        name="email"
+        required
+        className="input"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
 
-        <div className="second">
-          <div className="input-container ">
-            <h4>Password</h4>
-            <input
-              type="password"
-              name="pass"
-              required
-              className="input"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-          {/*           <div className="input-container ">
-            <h4>Conferm Password</h4>
-            <input type="password" name="pass" required className="input"  />
-          </div> */}
-        </div>
+      <h1>Username</h1>
+      <input
+        placeholder="Username"
+        type="text"
+        name="username"
+        required
+        className="input"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+      />
 
-        <div className="button-container">
-          <button
-            value="singup"
-            className="signin"
-            onClick={() => signup(email, password, username)}
-          >
-            Signup
-          </button>
-        </div>
-      </div>
+      <h1>Password</h1>
+      <input
+        placeholder="Password"
+        type="password"
+        name="pass"
+        required
+        className="input"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+
+      <button
+        style={{
+          padding: "7px",
+          fontSize: "2rem",
+          backgroundColor: "transparent",
+          border: "3px solid black",
+          borderRadius: "10px",
+        }}
+        value="Signup"
+        className="signin"
+        onSubmit={() => signup(email, password, username)}
+        onClick={() => signup(email, password, username)}
+      >
+        Signup
+      </button>
     </div>
   );
 }

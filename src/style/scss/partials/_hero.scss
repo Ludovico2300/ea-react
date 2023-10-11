@@ -2,7 +2,7 @@
 
 .hero {
   cursor: pointer;
-  margin-top: 10rem;
+  margin-top: 3rem;
 
   .hero-img {
     position: relative;
@@ -100,15 +100,21 @@
     width: auto;
     height: 10vh;
     background: rgb(132, 35, 222);
-    background: -moz-linear-gradient(30deg,
-        rgba(132, 35, 222, 1) 0%,
-        rgba(255, 88, 184, 1) 100%);
-    background: -webkit-linear-gradient(30deg,
-        rgba(132, 35, 222, 1) 0%,
-        rgba(255, 88, 184, 1) 100%);
-    background: linear-gradient(30deg,
-        rgba(132, 35, 222, 1) 0%,
-        rgba(255, 88, 184, 1) 100%);
+    background: -moz-linear-gradient(
+      30deg,
+      rgba(132, 35, 222, 1) 0%,
+      rgba(255, 88, 184, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      30deg,
+      rgba(132, 35, 222, 1) 0%,
+      rgba(255, 88, 184, 1) 100%
+    );
+    background: linear-gradient(
+      30deg,
+      rgba(132, 35, 222, 1) 0%,
+      rgba(255, 88, 184, 1) 100%
+    );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8423de", endColorstr="#ff58b8", GradientType=1);
 
     .slideshowSlider {
@@ -185,7 +191,6 @@
       width: 100%;
       height: 100%;
 
-
       .herop-img {
         @include flex-center-center;
         width: auto;
@@ -217,7 +222,6 @@
     .slideshow {
       height: 10vh;
       position: absolute;
-
     }
   }
 }

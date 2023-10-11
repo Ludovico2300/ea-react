@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import useAuthFirebase from "./hooks/useAuthFirebase";
 
 export function Login() {
@@ -9,44 +7,54 @@ export function Login() {
   const { login } = useAuthFirebase();
 
   return (
-    <div className="conteiner-login">
-      <ToastContainer style={{ fontSize: "1.5rem" }} />
-      <div className="flex-column-center form">
-        <div className="input-container flex-column-center">
-          <h4>Email</h4>
-          <input
-            placeholder="Email"
-            type="text"
-            name="email"
-            required
-            className="input"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div className="input-container flex-column-center">
-          <h4>Password</h4>
-          <input
-            placeholder="Password"
-            type="password"
-            name="pass"
-            required
-            className="input"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <div className="button-container">
-          <button
-            value="Login"
-            className="signin"
-            onSubmit={() => login(email, password)}
-            onClick={() => login(email, password)}
-          >
-            Login
-          </button>
-        </div>
-      </div>
+    <div
+      style={{
+        margin: "0 2rem",
+
+        height: "30rem",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "space-between",
+      }}
+    >
+      <h1>Email</h1>
+      <input
+        placeholder="Email"
+        type="text"
+        name="email"
+        required
+        className="input"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+
+      <h1>Password</h1>
+      <input
+        placeholder="Password"
+        type="password"
+        name="pass"
+        required
+        className="input"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+
+      <button
+        style={{
+          padding: "7px",
+          fontSize: "2rem",
+          backgroundColor: "transparent",
+          border: "3px solid black",
+          borderRadius: "10px",
+        }}
+        value="Login"
+        className="signin"
+        onSubmit={() => login(email, password)}
+        onClick={() => login(email, password)}
+      >
+        Login
+      </button>
     </div>
   );
 }
