@@ -2,10 +2,8 @@ import { text } from "./utils/ContentNav";
 import { Dropdown } from "./utils/Dropdown";
 import { Link } from "react-router-dom";
 import { Button } from "./utils/Button";
-import useAuthFirebase from "./hooks/useAuthFirebase";
 
 export default function Navbar() {
-  const { currentUser } = useAuthFirebase();
   //media queris
   let x = window.matchMedia("(min-width: 1024px)").matches;
 
@@ -42,12 +40,9 @@ export default function Navbar() {
               buttonSize="btn--medium"
               buttonStyle="btn--outline-black"
               onClick={"/auth"}
-            />
-            <div>
-              {currentUser?.displayName
-                ? `Benvenuto ${currentUser.displayName}`
-                : "Effettua l'accesso!"}
-            </div>
+            >
+              Area Personale
+            </Button>
           </div>
         </div>
       </div>

@@ -7,6 +7,7 @@ import useAuthFirebase from "../components/hooks/useAuthFirebase";
 
 export default function Auth() {
   const { currentUser } = useAuthFirebase();
+
   return (
     <div
       style={{
@@ -16,6 +17,9 @@ export default function Auth() {
         justifyContent: "center",
       }}
     >
+      {currentUser?.displayName
+        ? `Benvenuto ${currentUser.displayName}`
+        : "Effettua l'accesso!"}
       {currentUser?.displayName ? (
         <Signout />
       ) : (
