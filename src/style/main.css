@@ -21,7 +21,8 @@ html {
 
 /* VARIABLES */
 /* COLORS */
-/* TYPOGRAPHY */ /* MIXINS */
+/* TYPOGRAPHY */
+/* MIXINS */
 /* FLEX-DIRECTION ROW */
 /* FLEX-DIRECTION COLUMN */
 /* MEDIA QUERIES */
@@ -939,7 +940,6 @@ html {
   }
   .header .nav #aside-navbar #dropdown-menu-nav-media #dropdown-menu-item-nav {
     transition: all 0.5s ease-in-out;
-    height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
     width: 100%;
@@ -980,7 +980,6 @@ html {
     transition: all 0.5s ease-in-out;
   }
   .header .nav #aside-navbar #dropdown-menu-nav-media #dropdown-menu-item-nav.show .dropdown-menu {
-    height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
     position: inherit;
@@ -1090,7 +1089,6 @@ html {
   }
   .header .nav #aside-navbar #dropdown-menu-nav-media #dropdown-menu-item-nav {
     transition: all 0.5s ease-in-out;
-    height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
     width: 100%;
@@ -1135,7 +1133,6 @@ html {
     transition: all 0.5s ease-in-out;
   }
   .header .nav #aside-navbar #dropdown-menu-nav-media #dropdown-menu-item-nav.show .dropdown-menu {
-    height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
     position: inherit;
@@ -1404,10 +1401,10 @@ html {
        object-fit: contain;
   }
   .hero .hero-img .herop-img .fifa-hero,
-.hero .hero-img .herop-img .battlefield-hero,
-.hero .hero-img .herop-img .apex-slide-hero,
-.hero .hero-img .herop-img .f1-hero,
-.hero .hero-img .herop-img .thesims-hero {
+  .hero .hero-img .herop-img .battlefield-hero,
+  .hero .hero-img .herop-img .apex-slide-hero,
+  .hero .hero-img .herop-img .f1-hero,
+  .hero .hero-img .herop-img .thesims-hero {
     -o-object-fit: contain !important;
        object-fit: contain !important;
     width: 100% !important;
@@ -2138,7 +2135,7 @@ html {
     color: #8423de;
   }
   #content-section .card-content-container .card-content .info-card-content-container .mark-date-content div,
-#content-section .card-content-container .card-content .info-card-content-container .mark-date-content h2 {
+  #content-section .card-content-container .card-content .info-card-content-container .mark-date-content h2 {
     margin: 0rem 0.5rem;
   }
   #content-section .card-content-container .card-content .info-card-content-container .title-card-content {
@@ -2295,7 +2292,7 @@ html {
     color: #8423de;
   }
   #content-section .card-content-container .card-content .info-card-content-container .mark-date-content div,
-#content-section .card-content-container .card-content .info-card-content-container .mark-date-content h2 {
+  #content-section .card-content-container .card-content .info-card-content-container .mark-date-content h2 {
     margin: 0rem 0.5rem;
   }
   #content-section .card-content-container .card-content .info-card-content-container .title-card-content {
