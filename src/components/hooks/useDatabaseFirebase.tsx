@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { databaseData } from "../../firebase";
-import { ref, onValue } from "firebase/database";
+import { ref, onValue, set } from "firebase/database";
 import { Card } from "../../type.df";
 
 export default function useDatabaseFirebase() {
@@ -15,6 +15,12 @@ export default function useDatabaseFirebase() {
       }
     });
   }, []);
+  //WRITE DATABASE
+  const writeToDatabase = async (database: any, endpoind: string, plusEndpoint: any, data: Object) => {
+    set(ref(database, 'cards/' + plusEndpoint), {
 
-  return { cards };
+    })
+  }
+
+  return { cards, writeToDatabase };
 }
