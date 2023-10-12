@@ -4,6 +4,7 @@ import { Singup } from "../components/Signup";
 
 import Signout from "../components/Signout";
 import useAuthFirebase from "../components/hooks/useAuthFirebase";
+import { Link } from "react-router-dom";
 
 export default function Auth() {
   const { currentUser } = useAuthFirebase();
@@ -28,11 +29,29 @@ export default function Auth() {
           justifyContent: "center",
         }}
       >
-        {currentUser?.displayName ? (
+        {currentUser?.email ? (
           <>
             <div style={{ fontSize: "5rem", margin: "1rem" }}>
               Benvenuto {currentUser.displayName}
             </div>
+            {currentUser.email === "ludovicocolucci@gmail.com" && (
+              <Link
+                to={"/post"}
+                style={{
+                  color: "black",
+                  textDecoration: "none",
+                  margin: "1rem",
+                  padding: "7px",
+                  fontSize: "2rem",
+                  backgroundColor: "transparent",
+                  border: "3px solid black",
+                  borderRadius: "10px",
+                }}
+              >
+                Create
+              </Link>
+            )}
+
             <Signout />
           </>
         ) : (

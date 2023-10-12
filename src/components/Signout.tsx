@@ -17,7 +17,6 @@ export default function Signout() {
               borderRadius: "10px",
             }}
             value="singup"
-            className="signin"
             onClick={signout}
           >
             Signout

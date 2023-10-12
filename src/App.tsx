@@ -3,6 +3,7 @@ import AllGames from "./pages/AllGames";
 import AllNews from "./pages/AllNews";
 import Home from "./pages/Home";
 import Auth from "./pages/Auth";
+import Post from "./pages/Post";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Route path="/auth" element={<Auth />} />
       <Route path="/allgames" element={<AllGames />} />
       <Route path="/allnews" element={<AllNews />} />
+      <Route path="/post" element={<Post />} />
     </Routes>
   );
 }

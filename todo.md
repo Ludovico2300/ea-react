@@ -1,5 +1,6 @@
-- [ADD] full CRUD features
-- [ADD] admin features
+- [ADD] full CRUD features (CR done)
+- [ADD] test admin features
 - [FIX] media query in Auth
+- [FIX] cursor style for Login - Signout - Signup in Auth
 - [ADD] i18next
-- [ADD] full db features (remove hard coded data from codebase --> add to firebase)
+- [ADD] full db features (remove hardcoded data from codebase --> add to firebase)

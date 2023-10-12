@@ -15,12 +15,23 @@ export default function useDatabaseFirebase() {
       }
     });
   }, []);
-  //WRITE DATABASE
-  const writeToDatabase = async (database: any, endpoind: string, plusEndpoint: any, data: Object) => {
-    set(ref(database, 'cards/' + plusEndpoint), {
 
-    })
-  }
+  //WRITE DATABASE
+  const writeToDatabase = async (
+    database: any,
+    endpoint: string,
+    plusEndpoint: any,
+    newData: Card
+  ) => {
+    set(ref(database, endpoint + plusEndpoint), {
+      id: newData.id,
+      source: newData.source,
+      tag: newData.tag,
+      date: newData.date,
+      title: newData.title,
+      content: newData.content,
+    });
+  };
 
   return { cards, writeToDatabase };
 }
