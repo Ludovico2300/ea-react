@@ -106,6 +106,7 @@ export default function AllTabs() {
                   title={card.title}
                   date={card.date}
                   content={card.content}
+                  id={card.id}
                 />
               );
             })}

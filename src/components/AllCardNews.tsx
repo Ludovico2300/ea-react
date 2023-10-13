@@ -14,6 +14,7 @@ export default function AllCardNews() {
           {cards.map((card) => {
             return (
               <Tab
+                id={card.id}
                 source={card.source}
                 tag={card.tag}
                 title={card.title}

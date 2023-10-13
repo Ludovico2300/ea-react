@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import useDatabaseFirebase from "../components/hooks/useDatabaseFirebase";
 import { databaseData } from "../firebase";
 import useAuthFirebase from "../components/hooks/useAuthFirebase";
+import { useLocation, useNavigate } from "react-router-dom";
+import Tab from "../components/utils/Tab";
+import { Card } from "../type.df";
 
 export default function Post() {
-  const { writeToDatabase, cards } = useDatabaseFirebase();
+  const navigate = useNavigate();
+  const { state } = useLocation(); // state has type of unknown, so i decided to create a new state, originalCard
+  const { cards, writeToDatabase, updateDatabase, deleteFromDatabase } =
+    useDatabaseFirebase();
   const { currentUser } = useAuthFirebase();
+  const [originalCard, setOriginalCard] = useState<Card>();
   const [title, setTitle] = useState<string>("");
   const [content, setContent] = useState<string>("");
   const [tag, setTag] = useState<string>("");
@@ -19,6 +26,25 @@ export default function Post() {
     setDate("");
     setSource("");
   };
+
+  const presetForm = () => {
+    //@ts-ignore
+    setOriginalCard(state);
+    resetForm();
+    if (originalCard) {
+      setTitle(originalCard?.title);
+      setContent(originalCard?.content);
+      setTag(originalCard?.tag);
+      setDate(originalCard?.date);
+      setSource(originalCard?.source);
+    }
+  };
+
+  useEffect(() => {
+    //@ts-ignore
+    console.log(state);
+    presetForm();
+  }, [originalCard]);
 
   const handleAddPost = async () => {
     try {
@@ -37,44 +63,77 @@ export default function Post() {
       alert(e.message);
     }
   };
+  const handleEditPost = async () => {
+    try {
+      if (originalCard)
+        updateDatabase(databaseData, "/cards/", originalCard?.id, {
+          title: title,
+          content: content,
+          tag: tag,
+          date: date,
+          source: source
+            ? source
+            : "./assets/tabs/notizie-ea/generic-electronic-arts.png",
+          id: originalCard?.id,
+        });
+      alert("Success");
+    } catch (e: any) {
+      alert(e.message);
+    }
+  };
+  const handleDeletePost = async () => {
+    try {
+      if (originalCard)
+        deleteFromDatabase(databaseData, "/cards/", originalCard?.id);
+      alert("Success");
+      navigate("/");
+    } catch (e: any) {
+      alert(e.message);
+    }
+  };
 
   return (
     <div
       style={{
-        margin: "2rem 0",
+        backgroundColor: "white",
+        height: "90vh",
+        width: "100%",
         display: "flex",
+        flexDirection: "column",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "space-around",
       }}
     >
-      <div
-        style={{
-          backgroundColor: "white",
-          height: "60vh",
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
+      {currentUser && currentUser?.email === "ludovicocolucci@gmail.com" ? (
         <div
           style={{
-            margin: "0 2rem",
-            height: "30rem",
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
             justifyContent: "space-between",
           }}
         >
-          {currentUser && currentUser?.email === "ludovicocolucci@gmail.com" ? (
-            <>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-around",
+              width: "60vw",
+            }}
+          >
+            {/* FORM SECTION */}
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
               <h1>Title</h1>
               <input
                 placeholder="Title"
                 type="text"
-                name="email"
+                name="title"
                 required
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
@@ -112,54 +171,111 @@ export default function Post() {
               <input
                 placeholder="Source"
                 name="source"
-                required
                 value={source}
                 onChange={(e) => setSource(e.target.value)}
               />
+            </div>
 
+            {/* CARD SECTION */}
+            <div
+              id="content-section"
+              style={{ backgroundColor: "transparent" }}
+            >
               <div
+                className="card-content-container"
                 style={{
-                  width: "23rem",
-                  display: "flex",
-                  margin: "2rem",
-                  justifyContent: "space-between",
-                  alignItems: "center",
+                  width: "100%",
                 }}
               >
-                <button
-                  style={{
-                    margin: "1rem",
-                    padding: "7px",
-                    fontSize: "2rem",
-                    backgroundColor: "red",
-                    border: "3px solid black",
-                    borderRadius: "10px",
-                  }}
-                  onClick={resetForm}
-                >
-                  Reset
-                </button>
-                <button
-                  style={{
-                    margin: "1rem",
-                    padding: "7px",
-                    fontSize: "2rem",
-                    backgroundColor: "lightgreen",
-                    border: "3px solid black",
-                    borderRadius: "10px",
-                  }}
-                  onSubmit={handleAddPost}
-                  onClick={handleAddPost}
-                >
-                  Add Post
-                </button>
+                <Tab
+                  source={source}
+                  tag={tag}
+                  title={title}
+                  date={date}
+                  content={content}
+                />
               </div>
-            </>
-          ) : (
-            <h1>You are not allowed to visit this page!!!</h1>
-          )}
+            </div>
+          </div>
+
+          {/* BUTTON DIV SECTION */}
+          <div
+            style={{
+              width: "35rem",
+              display: "flex",
+              justifyContent: "space-around",
+              alignItems: "center",
+            }}
+          >
+            <button
+              style={{
+                margin: "1rem",
+                padding: "7px",
+                fontSize: "2rem",
+                backgroundColor: "red",
+                border: "3px solid black",
+                borderRadius: "10px",
+                cursor: "pointer",
+              }}
+              onClick={resetForm}
+            >
+              Reset
+            </button>
+
+            {originalCard && (
+              <button
+                style={{
+                  margin: "1rem",
+                  padding: "7px",
+                  fontSize: "1rem",
+                  backgroundColor: "red",
+                  border: "3px solid black",
+                  borderRadius: "10px",
+                  cursor: "pointer",
+                }}
+                onClick={presetForm}
+              >
+                Reload Original Card
+              </button>
+            )}
+
+            <button
+              style={{
+                margin: "1rem",
+                padding: "7px",
+                fontSize: "2rem",
+                backgroundColor: "lightgreen",
+                border: "3px solid black",
+                borderRadius: "10px",
+                cursor: "pointer",
+              }}
+              onSubmit={originalCard ? handleEditPost : handleAddPost}
+              onClick={originalCard ? handleEditPost : handleAddPost}
+            >
+              {originalCard ? "Edit Post" : "Add Post"}
+            </button>
+            {originalCard && (
+              <button
+                style={{
+                  margin: "1rem",
+                  padding: "7px",
+                  fontSize: "2rem",
+                  backgroundColor: "lightgreen",
+                  border: "3px solid black",
+                  borderRadius: "10px",
+                  cursor: "pointer",
+                }}
+                onSubmit={handleDeletePost}
+                onClick={handleDeletePost}
+              >
+                Delete Post
+              </button>
+            )}
+          </div>
         </div>
-      </div>
+      ) : (
+        <h1>You are not allowed to visit this page!!!</h1>
+      )}
     </div>
   );
 }

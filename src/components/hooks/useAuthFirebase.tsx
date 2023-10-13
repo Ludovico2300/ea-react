@@ -6,16 +6,18 @@ import {
 } from "firebase/auth";
 import { databaseUser } from "../../firebase";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function useAuthFirebase() {
   const [loading, setLoading] = useState<boolean>(false);
   let currentUser = databaseUser.currentUser;
+  const navigate = useNavigate();
 
   const login = async (email: string, password: string) => {
     setLoading(true);
     try {
       await signInWithEmailAndPassword(databaseUser, email, password);
-      window.location.href = "/";
+      navigate("/");
     } catch (err: any) {
       alert(err.message);
     } finally {
@@ -34,7 +36,7 @@ export default function useAuthFirebase() {
       const user = data.user;
       await updateProfile(user, { displayName: username });
       // If the updateProfile succeeds, you can perform any additional actions here
-      window.location.href = "/"; // Redirect after successful signup
+      navigate("/");
     } catch (err: any) {
       alert(err.message);
     } finally {
