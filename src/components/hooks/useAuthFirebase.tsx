@@ -35,6 +35,7 @@ export default function useAuthFirebase() {
       );
       const user = data.user;
       await updateProfile(user, { displayName: username });
+      alert(`Welcome to ${username}`);
       // If the updateProfile succeeds, you can perform any additional actions here
       navigate("/");
     } catch (err: any) {

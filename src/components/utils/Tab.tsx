@@ -16,7 +16,9 @@ export default function Tab(props: TabProps) {
     <div
       className="card-content"
       onClick={() =>
-        navigate("/post", { state: { id, title, content, tag, source, date } })
+        navigate("/create", {
+          state: { id, title, content, tag, source, date },
+        })
       }
     >
       <img className={`img-content`} src={source} alt="" />

@@ -42,7 +42,7 @@ export default function Navbar() {
               justifyContent: "end",
             }}
           >
-            <Link to={"/auth"}>
+            <Link to={"/dashboard"}>
               <div
                 style={{
                   fontSize: "2rem",

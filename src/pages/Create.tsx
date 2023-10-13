@@ -6,7 +6,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Tab from "../components/utils/Tab";
 import { Card } from "../type.df";
 
-export default function Post() {
+export default function Create() {
   const navigate = useNavigate();
   const { state } = useLocation(); // state has type of unknown, so i decided to create a new state, originalCard
   const { cards, writeToDatabase, updateDatabase, deleteFromDatabase } =
@@ -201,7 +201,7 @@ export default function Post() {
           {/* BUTTON DIV SECTION */}
           <div
             style={{
-              width: "35rem",
+              width: "auto",
               display: "flex",
               justifyContent: "space-around",
               alignItems: "center",
@@ -212,7 +212,6 @@ export default function Post() {
                 margin: "1rem",
                 padding: "7px",
                 fontSize: "2rem",
-                backgroundColor: "red",
                 border: "3px solid black",
                 borderRadius: "10px",
                 cursor: "pointer",
@@ -227,8 +226,7 @@ export default function Post() {
                 style={{
                   margin: "1rem",
                   padding: "7px",
-                  fontSize: "1rem",
-                  backgroundColor: "red",
+                  fontSize: "2rem",
                   border: "3px solid black",
                   borderRadius: "10px",
                   cursor: "pointer",
@@ -244,7 +242,6 @@ export default function Post() {
                 margin: "1rem",
                 padding: "7px",
                 fontSize: "2rem",
-                backgroundColor: "lightgreen",
                 border: "3px solid black",
                 borderRadius: "10px",
                 cursor: "pointer",
@@ -260,7 +257,6 @@ export default function Post() {
                   margin: "1rem",
                   padding: "7px",
                   fontSize: "2rem",
-                  backgroundColor: "lightgreen",
                   border: "3px solid black",
                   borderRadius: "10px",
                   cursor: "pointer",

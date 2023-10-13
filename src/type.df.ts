@@ -5,4 +5,5 @@ export type Card = {
   date: string;
   title: string;
   content: string;
+  author?: string;
 };

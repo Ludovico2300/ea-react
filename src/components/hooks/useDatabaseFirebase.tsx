@@ -2,9 +2,14 @@ import { useEffect, useState } from "react";
 import { databaseData } from "../../firebase";
 import { ref, onValue, set, update, remove } from "firebase/database";
 import { Card } from "../../type.df";
+import useAuthFirebase from "./useAuthFirebase";
 
 export default function useDatabaseFirebase() {
+  const { currentUser } = useAuthFirebase();
   const [cards, setCards] = useState<Card[]>([]);
+  const currentUserCards = cards.filter(
+    (card) => card.author === currentUser?.displayName
+  );
 
   //READ DATABASE
   useEffect(() => {
@@ -30,6 +35,7 @@ export default function useDatabaseFirebase() {
       date: newData.date,
       title: newData.title,
       content: newData.content,
+      author: currentUser?.displayName,
     });
   };
 
@@ -47,6 +53,7 @@ export default function useDatabaseFirebase() {
       date: newData.date,
       title: newData.title,
       content: newData.content,
+      author: currentUser?.displayName,
     });
   };
   //DELETE FROM DATABASE
@@ -58,5 +65,11 @@ export default function useDatabaseFirebase() {
     remove(ref(database, endpoint + identifierEndpoint));
   };
 
-  return { cards, writeToDatabase, updateDatabase, deleteFromDatabase };
+  return {
+    cards,
+    currentUserCards,
+    writeToDatabase,
+    updateDatabase,
+    deleteFromDatabase,
+  };
 }

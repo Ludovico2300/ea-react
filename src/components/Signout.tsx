@@ -15,6 +15,7 @@ export default function Signout() {
               backgroundColor: "transparent",
               border: "3px solid black",
               borderRadius: "10px",
+              cursor: "pointer",
             }}
             value="singup"
             onClick={signout}
