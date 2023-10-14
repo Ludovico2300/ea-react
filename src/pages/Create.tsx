@@ -93,42 +93,11 @@ export default function Create() {
   };
 
   return (
-    <div
-      style={{
-        backgroundColor: "white",
-        height: "90vh",
-        width: "100%",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "space-around",
-      }}
-    >
+    <div id="create-section">
       {currentUser && currentUser?.email === "ludovicocolucci@gmail.com" ? (
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "space-between",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-around",
-              width: "60vw",
-            }}
-          >
-            {/* FORM SECTION */}
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-            >
+        <>
+          <div className="admin-section">
+            <div className="form-section">
               <h1>Title</h1>
               <input
                 placeholder="Title"
@@ -176,17 +145,8 @@ export default function Create() {
               />
             </div>
 
-            {/* CARD SECTION */}
-            <div
-              id="content-section"
-              style={{ backgroundColor: "transparent" }}
-            >
-              <div
-                className="card-content-container"
-                style={{
-                  width: "100%",
-                }}
-              >
+            <div id="content-section">
+              <div className="card-content-container">
                 <Tab
                   source={source}
                   tag={tag}
@@ -197,80 +157,23 @@ export default function Create() {
               </div>
             </div>
           </div>
-
-          {/* BUTTON DIV SECTION */}
-          <div
-            style={{
-              width: "auto",
-              display: "flex",
-              justifyContent: "space-around",
-              alignItems: "center",
-            }}
-          >
-            <button
-              style={{
-                margin: "1rem",
-                padding: "7px",
-                fontSize: "2rem",
-                border: "3px solid black",
-                borderRadius: "10px",
-                cursor: "pointer",
-              }}
-              onClick={resetForm}
-            >
-              Reset
-            </button>
-
+          <div className="button-section">
+            <button onClick={resetForm}>Reset</button>
             {originalCard && (
-              <button
-                style={{
-                  margin: "1rem",
-                  padding: "7px",
-                  fontSize: "2rem",
-                  border: "3px solid black",
-                  borderRadius: "10px",
-                  cursor: "pointer",
-                }}
-                onClick={presetForm}
-              >
-                Reload Original Card
-              </button>
+              <button onClick={presetForm}>Reload Original Card</button>
             )}
-
-            <button
-              style={{
-                margin: "1rem",
-                padding: "7px",
-                fontSize: "2rem",
-                border: "3px solid black",
-                borderRadius: "10px",
-                cursor: "pointer",
-              }}
-              onSubmit={originalCard ? handleEditPost : handleAddPost}
-              onClick={originalCard ? handleEditPost : handleAddPost}
-            >
+            <button onClick={originalCard ? handleEditPost : handleAddPost}>
               {originalCard ? "Edit Post" : "Add Post"}
             </button>
             {originalCard && (
-              <button
-                style={{
-                  margin: "1rem",
-                  padding: "7px",
-                  fontSize: "2rem",
-                  border: "3px solid black",
-                  borderRadius: "10px",
-                  cursor: "pointer",
-                }}
-                onSubmit={handleDeletePost}
-                onClick={handleDeletePost}
-              >
-                Delete Post
-              </button>
+              <button onClick={handleDeletePost}>Delete Post</button>
             )}
           </div>
-        </div>
+        </>
       ) : (
-        <h1>You are not allowed to visit this page!!!</h1>
+        <div className="no-access">
+          <h1>You are not allowed to visit this page!!</h1>
+        </div>
       )}
     </div>
   );

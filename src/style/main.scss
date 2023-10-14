@@ -1,28 +1,29 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "ElectronicArtsDisplay-Regular";
-  }
-  
-  html {
-    font-size: 10px;
-    /* overflow-x: hidden; */
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "ElectronicArtsDisplay-Regular";
+}
 
-  ::selection {
-    background: transparent;
-  }
-  
-  /* VARIABLES */
-  @import "./scss/content/variables";
-  
-  /* MIXINS */
-  @import "./scss/content/mixins";
-  
-  /* FONT AND ASSETS */
-  @import "./scss/content/fonts";
-  @import "./scss/content/button";
-  
-  /* PARTIALS */
-  @import "./scss/content/all-partials";
+html {
+  font-size: 10px;
+  /* overflow-x: hidden; */
+}
+
+::selection {
+  background: transparent;
+}
+
+/* VARIABLES */
+@import "./scss/content/variables";
+
+/* MIXINS */
+@import "./scss/content/mixins";
+
+/* FONT AND ASSETS */
+@import "./scss/content/fonts";
+@import "./scss/content/button";
+@import "./scss/content/signup-form";
+@import "./scss/content/login";
+/* PARTIALS */
+@import "./scss/content/all-partials";

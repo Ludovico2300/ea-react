@@ -1,6 +1,6 @@
 import React from "react";
 import { Login } from "../components/Login";
-import { Singup } from "../components/Signup";
+import { Signup } from "../components/Signup";
 import Signout from "../components/Signout";
 import useAuthFirebase from "../components/hooks/useAuthFirebase";
 import { Link } from "react-router-dom";
@@ -12,61 +12,23 @@ export default function Dashboard() {
   const { currentUserCards } = useDatabaseFirebase();
 
   return (
-    <div
-      style={{
-        margin: "5rem 0",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <div
-        style={{
-          backgroundColor: "white",
-          height: "100%",
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
+    <div id="dashboard-outer-container">
+      <div className="inner-container">
         {currentUser?.email ? (
           <>
-            <div style={{ fontSize: "5rem", margin: "1rem" }}>
+            <div className="welcome-text">
               Benvenuto {currentUser.displayName}
             </div>
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-around",
-                width: "30%",
-              }}
-            >
+            <div className="button-container">
               {currentUser.email === "ludovicocolucci@gmail.com" && (
-                <Link
-                  to={"/create"}
-                  style={{
-                    color: "black",
-                    textDecoration: "none",
-                    margin: "1rem",
-                    padding: "7px",
-                    fontSize: "2rem",
-                    backgroundColor: "transparent",
-                    border: "3px solid black",
-                    borderRadius: "10px",
-                  }}
-                >
+                <Link to="/create" className="create-link">
                   Create
                 </Link>
               )}
-
               <Signout />
             </div>
 
-            {/* MY POSTS SECTION */}
-            <div id="content-section" style={{ backgroundColor: "white" }}>
+            <div id="content-section">
               <h3 className="title-content">Your News</h3>
               <br></br>
               <div className="card-content-container">
@@ -92,27 +54,11 @@ export default function Dashboard() {
           </>
         ) : (
           <>
-            <div style={{ fontSize: "5rem", margin: "1rem" }}>
-              Effettua l'accesso!
-            </div>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "start",
-              }}
-            >
+            <div className="welcome-text">Effettua l'accesso!</div>
+            <div className="login-signup-container">
               <Login />
-              <div
-                style={{
-                  height: "100%",
-                  width: "1rem",
-                  background: "black",
-                  border: "solid 1px black",
-                  borderRadius: "5px",
-                }}
-              ></div>
-              <Singup />
+              <div className="divider"></div>
+              <Signup />
             </div>
           </>
         )}

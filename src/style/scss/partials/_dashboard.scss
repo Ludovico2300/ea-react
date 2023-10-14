@@ -1,0 +1,96 @@
+// Define SCSS variables for reuse
+$primaryBackgroundColor: white;
+$primaryColor: black;
+$borderColor: black;
+$borderRadius: 10px;
+$fontSize: 5rem;
+$margin1rem: 1rem;
+$margin5rem: 5rem;
+$fontSize2rem: 2rem;
+$padding7px: 7px;
+$borderWidth3px: 3px;
+
+// Define styles for the outer div
+#dashboard-outer-container {
+  margin: $margin5rem 0;
+  @include flex-center-center;
+
+  .inner-container {
+    background-color: $primaryBackgroundColor;
+    height: 100%;
+    width: 100%;
+    @include flex-column-center;
+
+    .welcome-text {
+      font-size: $fontSize;
+      margin: $margin1rem;
+    }
+
+    .button-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      width: 30%;
+
+      .create-link {
+        color: $primaryColor;
+        text-decoration: none;
+        margin: $margin1rem;
+        padding: $padding7px;
+        font-size: $fontSize2rem;
+        background-color: transparent;
+        border: $borderWidth3px solid $primaryColor;
+        border-radius: $borderRadius;
+      }
+    }
+
+    #content-section {
+      background-color: $primaryBackgroundColor;
+
+      .title-content {
+        &.title-content {
+          h3 {
+            &.title-content {
+              &::before,
+              &::after {
+                content: "";
+                width: 100%;
+                background-color: $primaryColor;
+                height: 1px;
+                display: block;
+                margin: 1rem 0;
+              }
+            }
+          }
+        }
+      }
+
+      .card-content-container {
+        // Add styles for your card content here
+      }
+    }
+  }
+
+  .access-text {
+    font-size: $fontSize;
+    margin: $margin1rem;
+  }
+
+  .login-signup-container {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+
+    .login-button {
+      // Add styles for your login button here
+    }
+
+    .divider {
+      height: 100%;
+      width: 1rem;
+      background: $primaryColor;
+      border: solid 1px $borderColor;
+      border-radius: $borderRadius;
+    }
+  }
+}

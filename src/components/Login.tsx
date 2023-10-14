@@ -7,17 +7,7 @@ export function Login() {
   const { login } = useAuthFirebase();
 
   return (
-    <div
-      style={{
-        margin: "0 2rem",
-
-        height: "30rem",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "space-between",
-      }}
-    >
+    <div id="login-form">
       <h1>Email</h1>
       <input
         placeholder="Email"
@@ -41,17 +31,8 @@ export function Login() {
       />
 
       <button
-        style={{
-          padding: "7px",
-          fontSize: "2rem",
-          backgroundColor: "transparent",
-          border: "3px solid black",
-          borderRadius: "10px",
-          cursor: "pointer",
-        }}
         value="Login"
         className="signin"
-        onSubmit={() => login(email, password)}
         onClick={() => login(email, password)}
       >
         Login
