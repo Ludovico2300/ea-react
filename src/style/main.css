@@ -3289,6 +3289,72 @@ html {
   border-radius: 10px;
 }
 
+@media (max-width: 767px) {
+  #dashboard-outer-container {
+    margin: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #dashboard-outer-container .inner-container {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #dashboard-outer-container .inner-container .welcome-text {
+    font-size: 5rem;
+    margin: 1rem;
+    text-align: center;
+  }
+  #dashboard-outer-container .inner-container .button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+  #dashboard-outer-container .inner-container .button-container .create-link {
+    color: black;
+    text-decoration: none;
+    padding: 7px;
+    font-size: 2rem;
+    background-color: transparent;
+    border: 3px solid black;
+    border-radius: 10px;
+  }
+  #dashboard-outer-container .inner-container #content-section {
+    background-color: white;
+  }
+  #dashboard-outer-container .inner-container #content-section .title-content.title-content h3.title-content::before, #dashboard-outer-container .inner-container #content-section .title-content.title-content h3.title-content::after {
+    content: "";
+    width: 100%;
+    background-color: black;
+    height: 1px;
+    display: block;
+    margin: 1rem 0;
+  }
+  #dashboard-outer-container .access-text {
+    font-size: 5rem;
+    margin: 1rem;
+  }
+  #dashboard-outer-container .login-signup-container {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+  }
+  #dashboard-outer-container .login-signup-container .divider {
+    height: 100%;
+    width: 1rem;
+    background: black;
+    border: solid 1px black;
+    border-radius: 10px;
+  }
+}
 #create-section {
   margin-top: 5rem;
   background-color: white;

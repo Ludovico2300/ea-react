@@ -68,6 +68,7 @@
 
 @mixin flex-column-around-center {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
 }
@@ -101,7 +102,7 @@
 
 /* HEADING 1 */
 
-@mixin h1($display: "desktop", $color : "$black-2") {
+@mixin h1($display: "desktop", $color: "$black-2") {
   @if $display == "desktop" {
     font-size: $h1-desktop;
     line-height: 1.15;
@@ -131,7 +132,7 @@
 
 /* HEADING 2 */
 
-@mixin h2($display: "desktop", $color : "$black-2") {
+@mixin h2($display: "desktop", $color: "$black-2") {
   @if $display == "desktop" {
     font-size: $h2-desktop;
     line-height: 1.15;
@@ -161,7 +162,7 @@
 
 /* HEADING 3 */
 
-@mixin h3($display: "desktop", $color : "$black-2") {
+@mixin h3($display: "desktop", $color: "$black-2") {
   @if $display == "desktop" {
     font-size: $h3-desktop;
     line-height: 1.15;
@@ -187,7 +188,7 @@
 
 /* HEADING 4 */
 
-@mixin h4($display: "desktop", $color : "$black-2") {
+@mixin h4($display: "desktop", $color: "$black-2") {
   @if $display == "desktop" {
     font-size: $h4-desktop;
     line-height: 1.15;
@@ -217,7 +218,7 @@
 
 /* SPAN */
 
-@mixin span($display: "desktop", $color : "$black-2") {
+@mixin span($display: "desktop", $color: "$black-2") {
   @if $display == "desktop" {
     font-size: $span-desktop;
     line-height: 1.15;
@@ -247,7 +248,7 @@
 
 /* LINK */
 
-@mixin link($display: "desktop", $color : "$black-2") {
+@mixin link($display: "desktop", $color: "$black-2") {
   @if $display == "desktop" {
     font-size: $link-desktop;
     line-height: 1.15;

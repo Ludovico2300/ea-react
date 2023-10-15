@@ -64,10 +64,6 @@ $borderWidth3px: 3px;
           }
         }
       }
-
-      .card-content-container {
-        // Add styles for your card content here
-      }
     }
   }
 
@@ -81,16 +77,91 @@ $borderWidth3px: 3px;
     flex-direction: row;
     align-items: start;
 
-    .login-button {
-      // Add styles for your login button here
-    }
-
     .divider {
       height: 100%;
       width: 1rem;
       background: $primaryColor;
       border: solid 1px $borderColor;
       border-radius: $borderRadius;
+    }
+  }
+}
+
+@include tablet-media-query {
+}
+
+@include smartphone-media-query {
+  #dashboard-outer-container {
+    margin: $margin5rem 0;
+    @include flex-column-center;
+
+    .inner-container {
+      background-color: $primaryBackgroundColor;
+      height: 100%;
+      width: 100%;
+      @include flex-column-center;
+
+      .welcome-text {
+        font-size: $fontSize;
+        margin: $margin1rem;
+        text-align: center;
+      }
+
+      .button-container {
+        @include flex-column-around-center;
+        width: 100%;
+
+        .create-link {
+          color: $primaryColor;
+          text-decoration: none;
+          padding: $padding7px;
+          font-size: $fontSize2rem;
+          background-color: transparent;
+          border: $borderWidth3px solid $primaryColor;
+          border-radius: $borderRadius;
+        }
+      }
+
+      #content-section {
+        background-color: $primaryBackgroundColor;
+
+        .title-content {
+          &.title-content {
+            h3 {
+              &.title-content {
+                &::before,
+                &::after {
+                  content: "";
+                  width: 100%;
+                  background-color: $primaryColor;
+                  height: 1px;
+                  display: block;
+                  margin: 1rem 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .access-text {
+      font-size: $fontSize;
+      margin: $margin1rem;
+    }
+
+    .login-signup-container {
+      display: flex;
+      flex-direction: row;
+      align-items: start;
+
+      .divider {
+        height: 100%;
+        width: 1rem;
+        background: $primaryColor;
+        border: solid 1px $borderColor;
+        border-radius: $borderRadius;
+      }
     }
   }
 }
