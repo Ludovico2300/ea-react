@@ -71,33 +71,12 @@ const text = [
       ],
     },
   },
-];
-
-const midiaSrc = [
   {
-    source: "./assets/navbar/capiparas/gabbo.jpeg",
-    name: "Gabbo",
-  },
-  {
-    source: "./assets/navbar/capiparas/tiziano.jpeg",
-    name: "Tiziano",
-  },
-  {
-    source: "./assets/navbar/capiparas/jenny.jpeg",
-    name: "Jenny",
-  },
-  {
-    source: "./assets/navbar/capiparas/capibara-bat.jfif",
-    name: "Italo",
-  },
-  {
-    source: "./assets/navbar/capiparas/ludo.jpeg",
-    name: "Ludovico",
-  },
-  {
-    source: "https://thumbs.gfycat.com/MassiveMiserlyLabradorretriever-size_restricted.gif",
-    name: "Capy",
+    title: "Area Peronale",
+    ul: {
+      link: ["Dashboard"],
+    },
   },
 ];
 
-export { text, midiaSrc };
+export { text };

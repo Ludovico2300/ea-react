@@ -10,14 +10,6 @@ export default function Navbar() {
     <div className="header">
       <div className="nav">
         <div className="flex-center-start " id="white-navbar">
-          <div
-            /* onClick={() => asideShow()} */
-            className="flex-center-center"
-            id="aside-menu-icon"
-          >
-            <i className="fa-solid fa-ellipsis-vertical"></i>
-            <i className="fa-solid fa-bars hidden"></i>
-          </div>
           <Link id="logo-home-navbar" to="/">
             <img
               className=""
@@ -33,26 +25,9 @@ export default function Navbar() {
               ))}
             </div>
           )}
-
-          <div
-            style={{
-              width: "80rem",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "end",
-            }}
-          >
-            <Link to={"/dashboard"}>
-              <div
-                style={{
-                  fontSize: "2rem",
-                  color: "black",
-                }}
-              >
-                Area Personale
-              </div>
-            </Link>
-          </div>
+          <Link className="dashboard-link" to={"/dashboard"}>
+            Accedi
+          </Link>
         </div>
       </div>
     </div>
