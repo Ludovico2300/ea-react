@@ -11,7 +11,7 @@ export default function Create() {
   const { state } = useLocation(); // state has type of unknown, so i decided to create a new state, originalCard
   const { cards, writeToDatabase, updateDatabase, deleteFromDatabase } =
     useDatabaseFirebase();
-  const { currentUser } = useAuthFirebase();
+  const { currentUser, checkIsAllowed } = useAuthFirebase();
   const [originalCard, setOriginalCard] = useState<Card>();
   const [title, setTitle] = useState<string>("");
   const [content, setContent] = useState<string>("");
@@ -41,6 +41,7 @@ export default function Create() {
   };
 
   useEffect(() => {
+    checkIsAllowed();
     //@ts-ignore
     console.log(state);
     presetForm();

@@ -12,6 +12,8 @@ export default function useAuthFirebase() {
   const [loading, setLoading] = useState<boolean>(false);
   let currentUser = databaseUser.currentUser;
   const navigate = useNavigate();
+  const allowedUsers = "ludovicocolucci@gmail.com";
+  let isAllowed = currentUser?.displayName === allowedUsers;
 
   const login = async (email: string, password: string) => {
     setLoading(true);
@@ -56,5 +58,18 @@ export default function useAuthFirebase() {
       setLoading(false);
     }
   };
-  return { login, signout, signup, loading, currentUser };
+
+  const checkIsAllowed = async () => {
+    if (!isAllowed) navigate("/notallowed");
+  };
+
+  return {
+    login,
+    signout,
+    signup,
+    loading,
+    currentUser,
+    isAllowed,
+    checkIsAllowed,
+  };
 }

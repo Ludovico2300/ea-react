@@ -4,6 +4,8 @@ import AllNews from "./pages/AllNews";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
 import Create from "./pages/Create";
+import NoPage from "./pages/NoPage";
+import NotAllowed from "./pages/NotAllowed";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <Route path="/allgames" element={<AllGames />} />
       <Route path="/allnews" element={<AllNews />} />
       <Route path="/create" element={<Create />} />
+      <Route path="*" element={<NoPage />} />
+      <Route path="/notallowed" element={<NotAllowed />} />
     </Routes>
   );
 }

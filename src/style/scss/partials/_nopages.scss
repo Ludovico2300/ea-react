@@ -1,0 +1,34 @@
+#no-page-container {
+  @include flex-column-center;
+  margin-top: 3rem;
+  height: 60vh;
+  width: 100%;
+  .main-container {
+    height: 100%;
+    width: 100%;
+    @include flex-column-evenly-center;
+    .button-section {
+      width: auto;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      button {
+        margin: 1rem;
+        padding: 7px;
+        font-size: 2rem;
+        border: 3px solid black;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover {
+          background-color: $grey-2;
+        }
+        .links {
+          @include bold;
+          text-decoration: none;
+          color: black;
+        }
+      }
+    }
+  }
+}
