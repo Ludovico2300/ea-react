@@ -11,7 +11,7 @@ export default function Create() {
   const { state } = useLocation(); // state has type of unknown, so i decided to create a new state, originalCard
   const { cards, writeToDatabase, updateDatabase, deleteFromDatabase } =
     useDatabaseFirebase();
-  const { currentUser, checkIsAllowed } = useAuthFirebase();
+  const { checkIsAllowed } = useAuthFirebase();
   const [originalCard, setOriginalCard] = useState<Card>();
   const [title, setTitle] = useState<string>("");
   const [content, setContent] = useState<string>("");
@@ -95,87 +95,88 @@ export default function Create() {
 
   return (
     <div id="create-section">
-      {currentUser && currentUser?.email === "ludovicocolucci@gmail.com" ? (
-        <>
-          <div className="admin-section">
-            <div className="form-section">
-              <h1>Title</h1>
-              <input
-                placeholder="Title"
-                type="text"
-                name="title"
-                required
-                value={title}
-                onChange={(e) => setTitle(e.target.value)}
-              />
+      <div className="admin-section">
+        <div className="form-section">
+          <h1>Title</h1>
+          <input
+            placeholder="Title"
+            type="text"
+            name="title"
+            required
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
 
-              <h1>Content</h1>
-              <input
-                placeholder="Content"
-                type="content"
-                name="content"
-                required
-                value={content}
-                onChange={(e) => setContent(e.target.value)}
-              />
+          <h1>Content</h1>
+          <input
+            placeholder="Content"
+            type="content"
+            name="content"
+            required
+            value={content}
+            onChange={(e) => setContent(e.target.value)}
+          />
 
-              <h1>Tag</h1>
-              <input
-                placeholder="Tag"
-                type="tag"
-                name="tag"
-                required
-                value={tag}
-                onChange={(e) => setTag(e.target.value)}
-              />
-              <h1>Date</h1>
-              <input
-                placeholder="Date"
-                type="name"
-                name="date"
-                required
-                value={date}
-                onChange={(e) => setDate(e.target.value)}
-              />
-              <h1>Source</h1>
-              <input
-                placeholder="Source"
-                name="source"
-                value={source}
-                onChange={(e) => setSource(e.target.value)}
-              />
-            </div>
+          <h1>Tag</h1>
+          <select
+            name="tag"
+            value={tag}
+            onChange={(e) => setTag(e.target.value)}
+            required
+          >
+            <option value="">Select a Tag</option>
+            <option value="Electronic Arts Inc.">Electronic Arts Inc.</option>
+            <option value="Team 5">Team 5</option>
+            <option value="EA Play">EA Play</option>
+            <option value="FIFA">FIFA</option>
+            <option value="F1® 22">F1® 22</option>
+            <option value="Apex Legends">Apex Legends</option>
+            <option value="The Sims 4">The Sims 4</option>
+            <option value="Battlefield 2042">Battlefield 2042</option>
+            <option value="Inside EA">Inside EA</option>
+          </select>
 
-            <div id="content-section">
-              <div className="card-content-container">
-                <Tab
-                  source={source}
-                  tag={tag}
-                  title={title}
-                  date={date}
-                  content={content}
-                />
-              </div>
-            </div>
-          </div>
-          <div className="button-section">
-            <button onClick={resetForm}>Reset</button>
-            {originalCard && (
-              <button onClick={presetForm}>Reload Original Card</button>
-            )}
-            <button onClick={originalCard ? handleEditPost : handleAddPost}>
-              {originalCard ? "Edit Post" : "Add Post"}
-            </button>
-            {originalCard && (
-              <button onClick={handleDeletePost}>Delete Post</button>
-            )}
-          </div>
-        </>
-      ) : (
-        <div className="no-access">
-          <h1>You are not allowed to visit this page!!</h1>
+          <h1>Date</h1>
+          <input
+            placeholder="Date"
+            name="date"
+            required
+            value={date}
+            onChange={(e) => [setDate(e.target.value), console.log(date)]}
+          />
+          <h1>Source</h1>
+          <input
+            placeholder="Source"
+            name="source"
+            value={source}
+            onChange={(e) => setSource(e.target.value)}
+          />
         </div>
-      )}
+
+        <div id="content-section">
+          <div className="card-content-container">
+            <Tab
+              source={source}
+              tag={tag}
+              title={title}
+              date={date}
+              content={content}
+            />
+          </div>
+        </div>
+      </div>
+      <div className="button-section">
+        <button onClick={resetForm}>Reset</button>
+        {originalCard && (
+          <button onClick={presetForm}>Reload Original Card</button>
+        )}
+        <button onClick={originalCard ? handleEditPost : handleAddPost}>
+          {originalCard ? "Edit Post" : "Add Post"}
+        </button>
+        {originalCard && (
+          <button onClick={handleDeletePost}>Delete Post</button>
+        )}
+      </div>
     </div>
   );
 }

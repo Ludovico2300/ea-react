@@ -13,7 +13,7 @@ export default function useAuthFirebase() {
   let currentUser = databaseUser.currentUser;
   const navigate = useNavigate();
   const allowedUsers = "ludovicocolucci@gmail.com";
-  let isAllowed = currentUser?.displayName === allowedUsers;
+  let isAllowed = currentUser?.email === allowedUsers;
 
   const login = async (email: string, password: string) => {
     setLoading(true);
